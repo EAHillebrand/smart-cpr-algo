@@ -1,0 +1,13 @@
+# Ignore Build folders
+/src/cpr-algo/slprj
+/src/cpr-algo/top_level_algo_ert_rtw
+
+# Ignore all simulink cache files
+*.slxc
+
+# Ignore EEP files, data file that stores information on EEPROM
+*.eep
+
+# Ignore binaries
+*.elf
+*.hex
