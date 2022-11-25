@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.70
+ * Model version                  : 1.77
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Nov 25 11:53:29 2022
+ * C/C++ source code generated on : Fri Nov 25 18:08:36 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -22,6 +22,11 @@
 
 /* Block parameters (default storage) */
 P_top_level_algo_T top_level_algo_P = {
+  /* Mask Parameter: TappedDelay1_vinit
+   * Referenced by: '<S2>/Tapped Delay1'
+   */
+  0.0,
+
   /* Mask Parameter: TappedDelay_vinit
    * Referenced by: '<S2>/Tapped Delay'
    */
@@ -41,6 +46,11 @@ P_top_level_algo_T top_level_algo_P = {
    * Referenced by: '<S2>/Constant'
    */
   5.0,
+
+  /* Expression: 0
+   * Referenced by: '<S2>/Switch'
+   */
+  0.0,
 
   /* Expression: 720
    * Referenced by: '<S2>/degrees per volt'

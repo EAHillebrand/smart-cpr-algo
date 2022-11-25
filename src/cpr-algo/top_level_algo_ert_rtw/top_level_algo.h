@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.70
+ * Model version                  : 1.77
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Nov 25 11:53:29 2022
+ * C/C++ source code generated on : Fri Nov 25 18:08:36 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -42,17 +42,26 @@
 
 /* Block signals (default storage) */
 typedef struct {
+  real_T Product;                      /* '<S2>/Product' */
   uint16_T AnalogInput1;               /* '<Root>/Analog Input1' */
 } B_top_level_algo_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
   codertarget_arduinobase_inter_T obj; /* '<Root>/Analog Input1' */
+  real_T TappedDelay1_X[20];           /* '<S2>/Tapped Delay1' */
+  real_T counter;                      /* '<S2>/timer' */
   uint16_T TappedDelay_X[20];          /* '<S2>/Tapped Delay' */
+  uint8_T is_active_c3_top_level_algo; /* '<S2>/timer' */
+  uint8_T is_c3_top_level_algo;        /* '<S2>/timer' */
+  uint8_T temporalCounter_i1;          /* '<S2>/timer' */
 } DW_top_level_algo_T;
 
 /* Parameters (default storage) */
 struct P_top_level_algo_T_ {
+  real_T TappedDelay1_vinit;           /* Mask Parameter: TappedDelay1_vinit
+                                        * Referenced by: '<S2>/Tapped Delay1'
+                                        */
   uint16_T TappedDelay_vinit;          /* Mask Parameter: TappedDelay_vinit
                                         * Referenced by: '<S2>/Tapped Delay'
                                         */
@@ -64,6 +73,9 @@ struct P_top_level_algo_T_ {
                                         */
   real_T Constant_Value;               /* Expression: 5
                                         * Referenced by: '<S2>/Constant'
+                                        */
+  real_T Switch_Threshold;             /* Expression: 0
+                                        * Referenced by: '<S2>/Switch'
                                         */
   real_T degreespervolt_Gain;          /* Expression: 720
                                         * Referenced by: '<S2>/degrees per volt'
@@ -141,6 +153,7 @@ extern volatile boolean_T runModel;
  * Block '<S1>/Tapped Delay' : Unused code path elimination
  * Block '<S1>/Third Diff' : Unused code path elimination
  * Block '<S1>/Zero' : Unused code path elimination
+ * Block '<S2>/Scope' : Unused code path elimination
  * Block '<Root>/Scope' : Unused code path elimination
  * Block '<Root>/Scope1' : Unused code path elimination
  * Block '<Root>/Scope10' : Unused code path elimination
@@ -171,8 +184,9 @@ extern volatile boolean_T runModel;
  * '<S5>'   : 'top_level_algo/Direction /Negative'
  * '<S6>'   : 'top_level_algo/Direction /Positive'
  * '<S7>'   : 'top_level_algo/Hardware Hiding/force min to zero'
- * '<S8>'   : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem'
- * '<S9>'   : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem1'
+ * '<S8>'   : 'top_level_algo/Hardware Hiding/timer'
+ * '<S9>'   : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem'
+ * '<S10>'  : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem1'
  */
 #endif                                 /* RTW_HEADER_top_level_algo_h_ */
 

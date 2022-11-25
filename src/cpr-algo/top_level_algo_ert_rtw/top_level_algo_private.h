@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.70
+ * Model version                  : 1.77
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Fri Nov 25 11:53:29 2022
+ * C/C++ source code generated on : Fri Nov 25 18:08:36 2022
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -20,6 +20,9 @@
 #ifndef RTW_HEADER_top_level_algo_private_h_
 #define RTW_HEADER_top_level_algo_private_h_
 #include "rtwtypes.h"
+
+extern int32_T div_nde_s32_floor(int32_T numerator, int32_T denominator);
+
 #endif                                /* RTW_HEADER_top_level_algo_private_h_ */
 
 /*

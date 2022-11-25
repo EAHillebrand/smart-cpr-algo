@@ -3,8 +3,8 @@ clear all;
 close all;
 
 % load analogRead_A4.mat
-% load analogRead_A4_35sec.mat
-load analogRead_A4_LotsVariance.mat
+load analogRead_A4_35sec.mat
+% load analogRead_A4_LotsVariance.mat
 x = data.Time;
 y = data.Data;
 y = squeeze(y(1,1,:));
