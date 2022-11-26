@@ -2,7 +2,7 @@
 ## Makefile generated for component 'top_level_algo'. 
 ## 
 ## Makefile     : top_level_algo.mk
-## Generated on : Fri Nov 25 18:08:40 2022
+## Generated on : Fri Nov 25 20:36:35 2022
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/top_level_algo.elf
 ## Product type : executable
 ## 
@@ -210,9 +210,9 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 DEFINES_ = -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DMW_TIMERID=1 -DMW_PRESCALAR=64 -DMW_TIMERCOUNT=65286 -DMW_SCHEDULERCOUNTER=1 -DARDUINO_NUM_SERIAL_PORTS=1 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_ANALOG_REF_=0
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
-DEFINES_OPTS = -DTID01EQ=0
+DEFINES_OPTS = -DTID01EQ=1
 DEFINES_SKIPFORSIL = -DXCP_CUSTOM_PLATFORM -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DSTACK_SIZE=64 -DRT
-DEFINES_STANDARD = -DMODEL=top_level_algo -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
+DEFINES_STANDARD = -DMODEL=top_level_algo -DNUMST=2 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
 
@@ -220,7 +220,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp $(START_DIR)/top_level_algo_ert_rtw/top_level_algo.c $(START_DIR)/top_level_algo_ert_rtw/top_level_algo_data.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/MW_AnalogInput.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/ArduinoPinHandleMap.cpp $(START_DIR)/top_level_algo_ert_rtw/rtGetInf.c $(START_DIR)/top_level_algo_ert_rtw/rtGetNaN.c $(START_DIR)/top_level_algo_ert_rtw/rt_nonfinite.c $(START_DIR)/top_level_algo_ert_rtw/top_level_algo.c $(START_DIR)/top_level_algo_ert_rtw/top_level_algo_data.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../src/MW_ArduinoHWInit.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinobase/src/io_wrappers.cpp C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/arduinotarget/registry/../scheduler/src/arduinoAVRScheduler.cpp
 
 MAIN_SRC = $(START_DIR)/top_level_algo_ert_rtw/ert_main.c
 
@@ -230,7 +230,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = MW_AnalogInput.o ArduinoPinHandleMap.o top_level_algo.o top_level_algo_data.o MW_ArduinoHWInit.o io_wrappers.o arduinoAVRScheduler.o
+OBJS = MW_AnalogInput.o ArduinoPinHandleMap.o rtGetInf.o rtGetNaN.o rt_nonfinite.o top_level_algo.o top_level_algo_data.o MW_ArduinoHWInit.o io_wrappers.o arduinoAVRScheduler.o
 
 MAIN_OBJ = ert_main.o
 
@@ -514,6 +514,18 @@ ArduinoPinHandleMap.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/tar
 
 
 ert_main.o : $(START_DIR)/top_level_algo_ert_rtw/ert_main.c
+	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+
+
+rtGetInf.o : $(START_DIR)/top_level_algo_ert_rtw/rtGetInf.c
+	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+
+
+rtGetNaN.o : $(START_DIR)/top_level_algo_ert_rtw/rtGetNaN.c
+	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
+
+
+rt_nonfinite.o : $(START_DIR)/top_level_algo_ert_rtw/rt_nonfinite.c
 	$(CC) $(CFLAGS) -o "$@" $(subst /,\,"$<")
 
 
