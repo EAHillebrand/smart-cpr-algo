@@ -21,7 +21,7 @@ y = perfectSignal;
 plot(x,y)
 title("ADC Values")
 xlabel("Time (Sec)")
-data = timeseries(y, x);
+data = timeseriestime);
 %%
 % my_time = out.distance.Time;
 % distance = out.distance.data;
