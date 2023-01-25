@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.90
+ * Model version                  : 1.110
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Jan 17 16:34:58 2023
+ * C/C++ source code generated on : Wed Jan 25 13:10:13 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -22,179 +22,383 @@
 
 /* Block parameters (default storage) */
 P_top_level_algo_T top_level_algo_P = {
-  /* Mask Parameter: Longrangemotionup_const
-   * Referenced by: '<S5>/Constant'
+  /* Expression: 120
+   * Referenced by: '<Root>/Constant'
    */
-  3.0,
+  120.0,
 
-  /* Mask Parameter: Positive_const
-   * Referenced by: '<S7>/Constant'
-   */
-  0.0,
-
-  /* Mask Parameter: Negative_const
-   * Referenced by: '<S6>/Constant'
-   */
-  0.0,
-
-  /* Mask Parameter: Longrangemotiondown_const
-   * Referenced by: '<S4>/Constant'
-   */
-  -3.0,
-
-  /* Mask Parameter: MaxBDC_vinit
-   * Referenced by:
-   *   '<S17>/Initial Condition'
-   *   '<S17>/Memory'
-   */
-  0.0,
-
-  /* Mask Parameter: MinBDC_vinit
-   * Referenced by:
-   *   '<S18>/Initial Condition'
-   *   '<S18>/Memory'
+  /* Expression: 100
+   * Referenced by: '<S1>/Constant1'
    */
   100.0,
 
-  /* Mask Parameter: TappedDelay1_vinit
-   * Referenced by: '<S2>/Tapped Delay1'
+  /* Expression: 10
+   * Referenced by: '<S1>/Constant2'
+   */
+  10.0,
+
+  /* Expression: 1
+   * Referenced by: '<Root>/Pulse Generator'
+   */
+  1.0,
+
+  /* Computed Parameter: PulseGenerator_Period
+   * Referenced by: '<Root>/Pulse Generator'
+   */
+  2000.0,
+
+  /* Computed Parameter: PulseGenerator_Duty
+   * Referenced by: '<Root>/Pulse Generator'
+   */
+  2.0,
+
+  /* Expression: 0
+   * Referenced by: '<Root>/Pulse Generator'
    */
   0.0,
 
-  /* Mask Parameter: TappedDelay_vinit
-   * Referenced by: '<S1>/Tapped Delay'
-   */
-  0.0,
-
-  /* Mask Parameter: TappedDelay_vinit_l
-   * Referenced by: '<S2>/Tapped Delay'
+  /* Computed Parameter: Merge_InitialOutput
+   * Referenced by: '<S3>/Merge'
    */
   0U,
 
-  /* Expression: -1
-   * Referenced by: '<Root>/Analog Input1'
+  /* Computed Parameter: Merge_InitialOutput_i
+   * Referenced by: '<S4>/Merge'
    */
-  -1.0,
+  0U,
 
-  /* Expression: 1024
-   * Referenced by: '<S2>/Constant1'
+  /* Computed Parameter: Merge_InitialOutput_j
+   * Referenced by: '<S5>/Merge'
    */
-  1024.0,
+  0U,
 
-  /* Expression: 5
-   * Referenced by: '<S2>/Constant'
-   */
-  5.0,
+  /* Start of '<S5>/If Action Subsystem10' */
+  {
+    /* Expression: 0x6F
+     * Referenced by: '<S28>/Constant'
+     */
+    111U
+  }
+  ,
 
-  /* Expression: 0
-   * Referenced by: '<S2>/Switch'
-   */
-  0.0,
+  /* End of '<S5>/If Action Subsystem10' */
 
-  /* Expression: 720
-   * Referenced by: '<S2>/degrees per volt'
-   */
-  720.0,
+  /* Start of '<S5>/If Action Subsystem8' */
+  {
+    /* Expression: 0x7F
+     * Referenced by: '<S35>/Constant'
+     */
+    127U
+  }
+  ,
 
-  /* Expression: pi/180
-   * Referenced by: '<S2>/Convert to Radians'
-   */
-  0.017453292519943295,
+  /* End of '<S5>/If Action Subsystem8' */
 
-  /* Expression: 15
-   * Referenced by: '<S2>/Radius (mm)'
-   */
-  15.0,
+  /* Start of '<S5>/If Action Subsystem7' */
+  {
+    /* Expression: 0x07
+     * Referenced by: '<S34>/Constant'
+     */
+    7U
+  }
+  ,
 
-  /* Expression: 0
-   * Referenced by: '<S8>/Constant'
-   */
-  0.0,
+  /* End of '<S5>/If Action Subsystem7' */
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay'
-   */
-  0.0,
+  /* Start of '<S5>/If Action Subsystem6' */
+  {
+    /* Expression: 0x7D
+     * Referenced by: '<S33>/Constant'
+     */
+    125U
+  }
+  ,
 
-  /* Expression: 2
-   * Referenced by: '<S1>/Gain'
-   */
-  2.0,
+  /* End of '<S5>/If Action Subsystem6' */
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay1'
-   */
-  0.0,
+  /* Start of '<S5>/If Action Subsystem5' */
+  {
+    /* Expression: 0x6D
+     * Referenced by: '<S32>/Constant'
+     */
+    109U
+  }
+  ,
 
-  /* Expression: 2
-   * Referenced by: '<S1>/Gain1'
-   */
-  2.0,
+  /* End of '<S5>/If Action Subsystem5' */
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay2'
-   */
-  0.0,
+  /* Start of '<S5>/If Action Subsystem4' */
+  {
+    /* Expression: 0x66
+     * Referenced by: '<S31>/Constant'
+     */
+    102U
+  }
+  ,
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay3'
-   */
-  0.0,
+  /* End of '<S5>/If Action Subsystem4' */
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay4'
-   */
-  0.0,
+  /* Start of '<S5>/If Action Subsystem3' */
+  {
+    /* Expression: 0x4F
+     * Referenced by: '<S30>/Constant'
+     */
+    79U
+  }
+  ,
 
-  /* Expression: 0.0
-   * Referenced by: '<S1>/Delay5'
-   */
-  0.0,
+  /* End of '<S5>/If Action Subsystem3' */
 
-  /* Expression: 0
-   * Referenced by: '<S14>/Constant'
-   */
-  0.0,
+  /* Start of '<S5>/If Action Subsystem2' */
+  {
+    /* Expression: 0x5B
+     * Referenced by: '<S29>/Constant'
+     */
+    91U
+  }
+  ,
 
-  /* Computed Parameter: Delay4_InitialCondition_f
-   * Referenced by: '<S3>/Delay4'
-   */
-  false,
+  /* End of '<S5>/If Action Subsystem2' */
 
-  /* Computed Parameter: Delay1_InitialCondition_d
-   * Referenced by: '<S3>/Delay1'
-   */
-  false,
+  /* Start of '<S5>/If Action Subsystem1' */
+  {
+    /* Expression: 0x06
+     * Referenced by: '<S27>/Constant'
+     */
+    6U
+  }
+  ,
 
-  /* Computed Parameter: Delay3_InitialCondition_k
-   * Referenced by: '<S3>/Delay3'
-   */
-  true,
+  /* End of '<S5>/If Action Subsystem1' */
 
-  /* Computed Parameter: Delay_InitialCondition_d
-   * Referenced by: '<S3>/Delay'
-   */
-  false,
+  /* Start of '<S5>/If Action Subsystem' */
+  {
+    /* Expression: 0x3F
+     * Referenced by: '<S26>/Constant'
+     */
+    63U
+  }
+  ,
 
-  /* Computed Parameter: Delay8_InitialCondition
-   * Referenced by: '<S3>/Delay8'
-   */
-  false,
+  /* End of '<S5>/If Action Subsystem' */
 
-  /* Computed Parameter: Delay7_InitialCondition
-   * Referenced by: '<S3>/Delay7'
-   */
-  false,
+  /* Start of '<S4>/If Action Subsystem10' */
+  {
+    /* Expression: 0x6F
+     * Referenced by: '<S18>/Constant'
+     */
+    111U
+  }
+  ,
 
-  /* Computed Parameter: Delay6_InitialCondition
-   * Referenced by: '<S3>/Delay6'
-   */
-  true,
+  /* End of '<S4>/If Action Subsystem10' */
 
-  /* Computed Parameter: Delay2_InitialCondition_c
-   * Referenced by: '<S3>/Delay2'
-   */
-  false
+  /* Start of '<S4>/If Action Subsystem8' */
+  {
+    /* Expression: 0x7F
+     * Referenced by: '<S25>/Constant'
+     */
+    127U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem8' */
+
+  /* Start of '<S4>/If Action Subsystem7' */
+  {
+    /* Expression: 0x07
+     * Referenced by: '<S24>/Constant'
+     */
+    7U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem7' */
+
+  /* Start of '<S4>/If Action Subsystem6' */
+  {
+    /* Expression: 0x7D
+     * Referenced by: '<S23>/Constant'
+     */
+    125U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem6' */
+
+  /* Start of '<S4>/If Action Subsystem5' */
+  {
+    /* Expression: 0x6D
+     * Referenced by: '<S22>/Constant'
+     */
+    109U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem5' */
+
+  /* Start of '<S4>/If Action Subsystem4' */
+  {
+    /* Expression: 0x66
+     * Referenced by: '<S21>/Constant'
+     */
+    102U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem4' */
+
+  /* Start of '<S4>/If Action Subsystem3' */
+  {
+    /* Expression: 0x4F
+     * Referenced by: '<S20>/Constant'
+     */
+    79U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem3' */
+
+  /* Start of '<S4>/If Action Subsystem2' */
+  {
+    /* Expression: 0x5B
+     * Referenced by: '<S19>/Constant'
+     */
+    91U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem2' */
+
+  /* Start of '<S4>/If Action Subsystem1' */
+  {
+    /* Expression: 0x06
+     * Referenced by: '<S17>/Constant'
+     */
+    6U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem1' */
+
+  /* Start of '<S4>/If Action Subsystem' */
+  {
+    /* Expression: 0x3F
+     * Referenced by: '<S16>/Constant'
+     */
+    63U
+  }
+  ,
+
+  /* End of '<S4>/If Action Subsystem' */
+
+  /* Start of '<S3>/If Action Subsystem10' */
+  {
+    /* Expression: 0x6F
+     * Referenced by: '<S8>/Constant'
+     */
+    111U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem10' */
+
+  /* Start of '<S3>/If Action Subsystem8' */
+  {
+    /* Expression: 0x7F
+     * Referenced by: '<S15>/Constant'
+     */
+    127U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem8' */
+
+  /* Start of '<S3>/If Action Subsystem7' */
+  {
+    /* Expression: 0x07
+     * Referenced by: '<S14>/Constant'
+     */
+    7U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem7' */
+
+  /* Start of '<S3>/If Action Subsystem6' */
+  {
+    /* Expression: 0x7D
+     * Referenced by: '<S13>/Constant'
+     */
+    125U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem6' */
+
+  /* Start of '<S3>/If Action Subsystem5' */
+  {
+    /* Expression: 0x6D
+     * Referenced by: '<S12>/Constant'
+     */
+    109U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem5' */
+
+  /* Start of '<S3>/If Action Subsystem4' */
+  {
+    /* Expression: 0x66
+     * Referenced by: '<S11>/Constant'
+     */
+    102U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem4' */
+
+  /* Start of '<S3>/If Action Subsystem3' */
+  {
+    /* Expression: 0x4F
+     * Referenced by: '<S10>/Constant'
+     */
+    79U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem3' */
+
+  /* Start of '<S3>/If Action Subsystem2' */
+  {
+    /* Expression: 0x5B
+     * Referenced by: '<S9>/Constant'
+     */
+    91U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem2' */
+
+  /* Start of '<S3>/If Action Subsystem1' */
+  {
+    /* Expression: 0x06
+     * Referenced by: '<S7>/Constant'
+     */
+    6U
+  }
+  ,
+
+  /* End of '<S3>/If Action Subsystem1' */
+
+  /* Start of '<S3>/If Action Subsystem' */
+  {
+    /* Expression: 0x3F
+     * Referenced by: '<S6>/Constant'
+     */
+    63U
+  }
+  /* End of '<S3>/If Action Subsystem' */
 };
 
 /*

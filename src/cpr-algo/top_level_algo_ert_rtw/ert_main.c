@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.90
+ * Model version                  : 1.110
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Jan 17 16:34:58 2023
+ * C/C++ source code generated on : Wed Jan 25 13:10:13 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -19,15 +19,11 @@
 
 #include "top_level_algo.h"
 #include "rtwtypes.h"
-#include "xcp.h"
-#include "ext_mode.h"
 
 volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
 void rt_OneStep(void)
 {
-  extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T) 0;
-
   /* Check for overrun. Protect OverrunFlag against preemption */
   if (OverrunFlag++) {
     IsrOverrun = 1;
@@ -41,14 +37,9 @@ void rt_OneStep(void)
 
 #endif;
 
-  currentTime = (extmodeSimulationTime_T) top_level_algo_M->Timing.clockTick0;
   top_level_algo_step();
 
   /* Get model outputs here */
-
-  /* Trigger External Mode event */
-  extmodeEvent(0, currentTime);
-
 #ifndef _MW_ARDUINO_LOOP_
 
   cli();
@@ -58,14 +49,12 @@ void rt_OneStep(void)
   OverrunFlag--;
 }
 
-extern void rtIOStreamResync();
 volatile boolean_T stopRequested;
 volatile boolean_T runModel;
 int main(void)
 {
   float modelBaseRate = 0.001;
   float systemClock = 0;
-  extmodeErrorCode_T errorCode = EXTMODE_SUCCESS;
 
   /* Initialize variables */
   stopRequested = false;
@@ -73,40 +62,11 @@ int main(void)
   init();
   MW_Arduino_Init();
   rtmSetErrorStatus(top_level_algo_M, 0);
-
-  /* Set Final Simulation Time in Ticks */
-  errorCode = extmodeSetFinalSimulationTime((extmodeSimulationTime_T) -1);
-
-  /* Parse External Mode command line arguments */
-  errorCode = extmodeParseArgs(0, NULL);
-  if (errorCode != EXTMODE_SUCCESS) {
-    return (errorCode);
-  }
-
   top_level_algo_initialize();
-  cli();
-  sei ();
-
-  /* External Mode initialization */
-  errorCode = extmodeInit(top_level_algo_M->extModeInfo, &rtmGetTFinal
-    (top_level_algo_M));
-  if (errorCode != EXTMODE_SUCCESS) {
-    /* Code to handle External Mode initialization errors
-       may be added here */
-  }
-
-  if (errorCode == EXTMODE_SUCCESS) {
-    /* Wait until a Start or Stop Request has been received from the Host */
-    extmodeWaitForHostRequest(EXTMODE_WAIT_FOREVER);
-    if (extmodeStopRequested()) {
-      rtmSetStopRequested(top_level_algo_M, true);
-    }
-  }
-
   cli();
   configureArduinoAVRTimer();
   runModel =
-    !extmodeSimulationComplete() && !extmodeStopRequested();
+    rtmGetErrorStatus(top_level_algo_M) == (NULL);
 
 #ifndef _MW_ARDUINO_LOOP_
 
@@ -114,32 +74,16 @@ int main(void)
 
 #endif;
 
-  XcpStatus lastXcpState = xcpStatusGet();
   sei ();
   while (runModel) {
-    /* Run External Mode background activities */
-    errorCode = extmodeBackgroundRun();
-    if (errorCode != EXTMODE_SUCCESS) {
-      /* Code to handle External Mode background task errors
-         may be added here */
-    }
-
     stopRequested = !(
-                      !extmodeSimulationComplete() && !extmodeStopRequested());
+                      rtmGetErrorStatus(top_level_algo_M) == (NULL));
     runModel = !(stopRequested);
-    if (stopRequested)
-      disable_rt_OneStep();
-    if (lastXcpState==XCP_CONNECTED && xcpStatusGet()==XCP_DISCONNECTED)
-      rtIOStreamResync();
-    lastXcpState = xcpStatusGet();
     MW_Arduino_Loop();
   }
 
   /* Terminate model */
   top_level_algo_terminate();
-
-  /* External Mode reset */
-  extmodeReset();
   cli();
   return 0;
 }

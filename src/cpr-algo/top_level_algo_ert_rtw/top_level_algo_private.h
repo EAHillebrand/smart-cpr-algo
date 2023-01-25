@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.90
+ * Model version                  : 1.110
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Tue Jan 17 16:34:58 2023
+ * C/C++ source code generated on : Wed Jan 25 13:10:13 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: Atmel->AVR
@@ -20,14 +20,11 @@
 #ifndef RTW_HEADER_top_level_algo_private_h_
 #define RTW_HEADER_top_level_algo_private_h_
 #include "rtwtypes.h"
-#include "multiword_types.h"
+#include "top_level_algo.h"
 
-/* Private macros used by the generated code to access rtModel */
-#ifndef rtmSetTFinal
-#define rtmSetTFinal(rtm, val)         ((rtm)->Timing.tFinal = (val))
-#endif
-
-extern int32_T div_nde_s32_floor(int32_T numerator, int32_T denominator);
+extern real_T rt_modd_snf(real_T u0, real_T u1);
+extern void top_level_alg_IfActionSubsystem(uint8_T *rty_Out1,
+  P_IfActionSubsystem_top_level_T *localP);
 
 #endif                                /* RTW_HEADER_top_level_algo_private_h_ */
 

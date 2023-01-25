@@ -5,8 +5,8 @@ avrdude: NOTE: "flash" memory has been specified, an erase cycle will be perform
          To disable this feature, specify the -D option.
 avrdude: erasing chip
 avrdude: reading input file "C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo/top_level_algo.hex"
-avrdude: writing flash (24644 bytes):
-avrdude: 24644 bytes of flash written
+avrdude: writing flash (21000 bytes):
+avrdude: 21000 bytes of flash written
 
 avrdude done.  Thank you.
 
