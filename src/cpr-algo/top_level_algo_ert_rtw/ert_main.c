@@ -7,12 +7,12 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.110
+ * Model version                  : 1.146
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Wed Jan 25 13:10:13 2023
+ * C/C++ source code generated on : Sat Mar  4 22:35:31 2023
  *
  * Target selection: ert.tlc
- * Embedded hardware selection: Atmel->AVR
+ * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objectives: Unspecified
  * Validation result: Not run
  */
@@ -31,60 +31,73 @@ void rt_OneStep(void)
     return;
   }
 
-#ifndef _MW_ARDUINO_LOOP_
-
-  sei();
-
-#endif;
-
+  __enable_irq();
   top_level_algo_step();
 
   /* Get model outputs here */
-#ifndef _MW_ARDUINO_LOOP_
-
-  cli();
-
-#endif;
-
+  __disable_irq();
   OverrunFlag--;
 }
 
 volatile boolean_T stopRequested;
 volatile boolean_T runModel;
-int main(void)
+int main(int argc, char **argv)
 {
   float modelBaseRate = 0.001;
-  float systemClock = 0;
+  float systemClock = 168.0;
 
   /* Initialize variables */
   stopRequested = false;
   runModel = false;
-  init();
-  MW_Arduino_Init();
+
+#if defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
+
+  MW_ASM (" SVC #1");
+
+#endif
+
+  ;
+
+  /* Peripheral initialization imported from STM32CubeMX project */
+  ;
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_I2C3_Init();
+  MX_SPI5_Init();
+  MX_TIM1_Init();
+  MX_USART1_UART_Init();
+  MX_ADC3_Init();
   rtmSetErrorStatus(top_level_algo_M, 0);
   top_level_algo_initialize();
-  cli();
-  configureArduinoAVRTimer();
+  __disable_irq();
+  ARMCM_SysTick_Config(modelBaseRate);
   runModel =
     rtmGetErrorStatus(top_level_algo_M) == (NULL);
-
-#ifndef _MW_ARDUINO_LOOP_
-
-  sei();
-
-#endif;
-
-  sei ();
+  __enable_irq();
+  __enable_irq();
   while (runModel) {
     stopRequested = !(
                       rtmGetErrorStatus(top_level_algo_M) == (NULL));
-    runModel = !(stopRequested);
-    MW_Arduino_Loop();
+    if (stopRequested) {
+      SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
+    }
+
+    ;
   }
 
   /* Terminate model */
   top_level_algo_terminate();
-  cli();
+
+#ifndef USE_RTX
+
+  (void) systemClock;
+
+#endif
+
+  ;
+  __disable_irq();
   return 0;
 }
 

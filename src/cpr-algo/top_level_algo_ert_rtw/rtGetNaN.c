@@ -7,12 +7,12 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.110
+ * Model version                  : 1.146
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Wed Jan 25 13:10:13 2023
+ * C/C++ source code generated on : Sat Mar  4 22:35:31 2023
  *
  * Target selection: ert.tlc
- * Embedded hardware selection: Atmel->AVR
+ * Embedded hardware selection: ARM Compatible->ARM Cortex
  * Code generation objectives: Unspecified
  * Validation result: Not run
  */
