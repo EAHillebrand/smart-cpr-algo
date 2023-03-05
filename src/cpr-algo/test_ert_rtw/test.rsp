@@ -1,0 +1,10 @@
+ert_main.o
+test.o
+test_data.o
+blapp_support.o
+startup_stm32f4xx.o
+syscalls_stm32f4xx.o
+stm32f4xx_init_board.o
+system_stm32f4xx.o
+SysTickScheduler.o
+m3m4m4f_multitasking.o

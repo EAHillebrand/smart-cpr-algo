@@ -1,0 +1,8 @@
+config load "C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\top_level_algo.ioc"
+project toolchain SW4STM32
+
+SetStructure Advanced
+
+project generate 
+
+exit wait
