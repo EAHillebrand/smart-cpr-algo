@@ -15,14 +15,14 @@ Then run from simulation tab
 
 ## Subsystem Notes
 
- # Hardware Hiding:
+ ### Hardware Hiding:
  - Converts raw ADC value to distance in mm, uses low pass filter to limit bit switching
 
- # Direction:
+ ### Direction:
  - Determines the direction of distance (pos, zero, or neg)
 
- # MinMax:
+ ### MinMax:
  - Identifies Local max and Min displaceent during compression
 
- # Compression Detection:
+ ### Compression Detection:
  - Identifies a complete compression, counts number of compressions, records duration of compression in seconds
