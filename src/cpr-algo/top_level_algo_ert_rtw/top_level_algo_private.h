@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.146
+ * Model version                  : 1.158
  * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 22:35:31 2023
+ * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -86,11 +86,11 @@ preprocessor word size checks.
 /* Skipping ulong_long/long_long check: insufficient preprocessor integer range. */
 extern real_T rt_modd_snf(real_T u0, real_T u1);
 extern int32_T div_nde_s32_floor(int32_T numerator, int32_T denominator);
+extern void top_level_alg_IfActionSubsystem(uint8_T *rty_Out1,
+  P_IfActionSubsystem_top_level_T *localP);
 extern void top_level_al_sampleandhold_Init(real_T *rty_displacement);
 extern void top_level_algo_sampleandhold(real_T rtu_max, boolean_T rtu_read,
   real_T *rty_displacement, DW_sampleandhold_top_level_al_T *localDW);
-extern void top_level_alg_IfActionSubsystem(uint8_T *rty_Out1,
-  P_IfActionSubsystem_top_level_T *localP);
 
 #endif                                /* RTW_HEADER_top_level_algo_private_h_ */
 
