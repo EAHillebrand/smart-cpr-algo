@@ -16,6 +16,8 @@ plot(x,y)%,marker = 'o')
 title("ADC Values")
 xlabel("Time (Sec)")
 
+close all;
+
 %{
 length(x)/(max(x)-min(x)) = 18.3410
 1/18.34 = 0.0545
