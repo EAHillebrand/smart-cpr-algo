@@ -1,2 +1,0 @@
-xcp_platform_timer.o: \
- C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/shared/supportpackages/stm32/src/xcp_platform_timer.c

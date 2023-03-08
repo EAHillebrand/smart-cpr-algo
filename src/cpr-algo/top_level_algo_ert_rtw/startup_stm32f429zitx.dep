@@ -1,0 +1,2 @@
+startup_stm32f429zitx.o: \
+ C:/Users/eahil/Documents/GitHub/smart-cpr-algo/src/cpr-algo/top_level_algo/STM32CubeIDE/Application/User/Startup/startup_stm32f429zitx.s

@@ -1,7 +1,9 @@
 config load "C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\top_level_algo.ioc"
-project toolchain SW4STM32
+project toolchain STM32CubeIDE
 
 SetStructure Advanced
+
+project setCustomFWPath "C:\Users\eahil\STM32Cube\Repository\STM32Cube_FW_F4_V1.26.0"
 
 project generate 
 

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.158
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
+ * Model version                  : 3.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -18,7 +18,6 @@
  */
 
 #include "top_level_algo.h"
-#include "top_level_algo_private.h"
 
 /* Block parameters (default storage) */
 P_top_level_algo_T top_level_algo_P = {
@@ -34,15 +33,15 @@ P_top_level_algo_T top_level_algo_P = {
    */
   10.0,
 
-  /* Mask Parameter: Positive_const
-   * Referenced by: '<S57>/Constant'
-   */
-  0.0,
-
   /* Mask Parameter: Longrangemotionup_const
    * Referenced by: '<S55>/Constant'
    */
   3.0,
+
+  /* Mask Parameter: Positive_const
+   * Referenced by: '<S57>/Constant'
+   */
+  0.0,
 
   /* Mask Parameter: Negative_const
    * Referenced by: '<S56>/Constant'
@@ -113,35 +112,10 @@ P_top_level_algo_T top_level_algo_P = {
    */
   0,
 
-  /* Expression: 1
-   * Referenced by: '<S1>/Pulse Generator'
+  /* Expression: 2
+   * Referenced by: '<S6>/Compression  Sensitivity'
    */
-  1.0,
-
-  /* Computed Parameter: PulseGenerator_Period
-   * Referenced by: '<S1>/Pulse Generator'
-   */
-  1000.0,
-
-  /* Computed Parameter: PulseGenerator_Duty
-   * Referenced by: '<S1>/Pulse Generator'
-   */
-  1.0,
-
-  /* Expression: 0
-   * Referenced by: '<S1>/Pulse Generator'
-   */
-  0.0,
-
-  /* Expression: 100
-   * Referenced by: '<S10>/Constant1'
-   */
-  100.0,
-
-  /* Expression: 10
-   * Referenced by: '<S10>/Constant2'
-   */
-  10.0,
+  2.0,
 
   /* Expression: 4095
    * Referenced by: '<S7>/Constant1'
@@ -203,35 +177,40 @@ P_top_level_algo_T top_level_algo_P = {
    */
   0.0,
 
-  /* Expression: 2
-   * Referenced by: '<S6>/Compression  Sensitivity'
-   */
-  2.0,
-
   /* Expression: 0
    * Referenced by: '<S84>/Constant'
    */
   0.0,
 
-  /* Computed Parameter: Delay8_InitialCondition
-   * Referenced by: '<S9>/Delay8'
+  /* Expression: 100
+   * Referenced by: '<S10>/Constant1'
    */
-  false,
+  100.0,
 
-  /* Computed Parameter: Delay7_InitialCondition
-   * Referenced by: '<S9>/Delay7'
+  /* Expression: 10
+   * Referenced by: '<S10>/Constant2'
    */
-  false,
+  10.0,
 
-  /* Computed Parameter: Delay6_InitialCondition
-   * Referenced by: '<S9>/Delay6'
+  /* Expression: 1
+   * Referenced by: '<S1>/Pulse Generator'
    */
-  true,
+  1.0,
 
-  /* Computed Parameter: Delay2_InitialCondition_c
-   * Referenced by: '<S9>/Delay2'
+  /* Computed Parameter: PulseGenerator_Period
+   * Referenced by: '<S1>/Pulse Generator'
    */
-  false,
+  1000.0,
+
+  /* Computed Parameter: PulseGenerator_Duty
+   * Referenced by: '<S1>/Pulse Generator'
+   */
+  1.0,
+
+  /* Expression: 0
+   * Referenced by: '<S1>/Pulse Generator'
+   */
+  0.0,
 
   /* Computed Parameter: Delay4_InitialCondition_f
    * Referenced by: '<S9>/Delay4'
@@ -250,6 +229,26 @@ P_top_level_algo_T top_level_algo_P = {
 
   /* Computed Parameter: Delay_InitialCondition_d
    * Referenced by: '<S9>/Delay'
+   */
+  false,
+
+  /* Computed Parameter: Delay8_InitialCondition
+   * Referenced by: '<S9>/Delay8'
+   */
+  false,
+
+  /* Computed Parameter: Delay7_InitialCondition
+   * Referenced by: '<S9>/Delay7'
+   */
+  false,
+
+  /* Computed Parameter: Delay6_InitialCondition
+   * Referenced by: '<S9>/Delay6'
+   */
+  true,
+
+  /* Computed Parameter: Delay2_InitialCondition_c
+   * Referenced by: '<S9>/Delay2'
    */
   false,
 

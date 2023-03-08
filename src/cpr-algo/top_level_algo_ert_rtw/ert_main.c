@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.158
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
+ * Model version                  : 3.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,6 +19,7 @@
 
 #include "top_level_algo.h"
 #include "rtwtypes.h"
+#include "MW_target_hardware_resources.h"
 
 volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
@@ -50,7 +51,7 @@ int main(int argc, char **argv)
   stopRequested = false;
   runModel = false;
 
-#if defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
+#if !defined(MW_FREERTOS) && defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
 
   MW_ASM (" SVC #1");
 
@@ -58,10 +59,10 @@ int main(int argc, char **argv)
 
   ;
 
-  /* Peripheral initialization imported from STM32CubeMX project */
-  ;
+  // Peripheral initialization imported from STM32CubeMX project;
   HAL_Init();
   SystemClock_Config();
+  PeriphCommonClock_Config();
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2C3_Init();
@@ -73,13 +74,11 @@ int main(int argc, char **argv)
   top_level_algo_initialize();
   __disable_irq();
   ARMCM_SysTick_Config(modelBaseRate);
-  runModel =
-    rtmGetErrorStatus(top_level_algo_M) == (NULL);
+  runModel = rtmGetErrorStatus(top_level_algo_M) == (NULL);
   __enable_irq();
   __enable_irq();
   while (runModel) {
-    stopRequested = !(
-                      rtmGetErrorStatus(top_level_algo_M) == (NULL));
+    stopRequested = !(rtmGetErrorStatus(top_level_algo_M) == (NULL));
     if (stopRequested) {
       SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
     }
@@ -90,7 +89,7 @@ int main(int argc, char **argv)
   /* Terminate model */
   top_level_algo_terminate();
 
-#ifndef USE_RTX
+#if !defined(MW_FREERTOS) && !defined(USE_RTX)
 
   (void) systemClock;
 

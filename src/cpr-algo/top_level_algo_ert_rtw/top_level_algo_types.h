@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.158
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
+ * Model version                  : 3.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -20,8 +20,7 @@
 #ifndef RTW_HEADER_top_level_algo_types_h_
 #define RTW_HEADER_top_level_algo_types_h_
 #include "rtwtypes.h"
-
-/* Model Code Variants */
+#include "stm_adc_ll.h"
 #ifndef struct_tag_vboetmpsA6pP5KWZSA57JC
 #define struct_tag_vboetmpsA6pP5KWZSA57JC
 
@@ -42,61 +41,43 @@ typedef struct tag_vboetmpsA6pP5KWZSA57JC fixed_system_DivideByConstant_T;
 /* Custom Type definition for MATLABSystem: '<S48>/Analog to Digital Converter' */
 #include "stm_adc_ll.h"
 #include "stm_adc_ll.h"
-#ifndef struct_tag_AQAmVTLzTXfccnSnmJwAiF
-#define struct_tag_AQAmVTLzTXfccnSnmJwAiF
+#ifndef struct_tag_S5MMpcz8vT0FlmhmEl4q5C
+#define struct_tag_S5MMpcz8vT0FlmhmEl4q5C
 
-struct tag_AQAmVTLzTXfccnSnmJwAiF
-{
-  boolean_T matlabCodegenIsDeleted;
-  int32_T isInitialized;
-  boolean_T isSetupComplete;
-  uint16_T ADCInternalBuffer[4];
-  ADC_Type_T* ADCHandle;
-};
-
-#endif                                 /* struct_tag_AQAmVTLzTXfccnSnmJwAiF */
-
-#ifndef typedef_stm32cube_blocks_AnalogInput__T
-#define typedef_stm32cube_blocks_AnalogInput__T
-
-typedef struct tag_AQAmVTLzTXfccnSnmJwAiF stm32cube_blocks_AnalogInput__T;
-
-#endif                             /* typedef_stm32cube_blocks_AnalogInput__T */
-
-#ifndef struct_tag_BlgwLpgj2bjudmbmVKWwDE
-#define struct_tag_BlgwLpgj2bjudmbmVKWwDE
-
-struct tag_BlgwLpgj2bjudmbmVKWwDE
-{
-  uint32_T f1[8];
-};
-
-#endif                                 /* struct_tag_BlgwLpgj2bjudmbmVKWwDE */
-
-#ifndef typedef_cell_wrap_top_level_algo_T
-#define typedef_cell_wrap_top_level_algo_T
-
-typedef struct tag_BlgwLpgj2bjudmbmVKWwDE cell_wrap_top_level_algo_T;
-
-#endif                                 /* typedef_cell_wrap_top_level_algo_T */
-
-#ifndef struct_tag_pXqB0JYFCgtuRHpfOp5C9
-#define struct_tag_pXqB0JYFCgtuRHpfOp5C9
-
-struct tag_pXqB0JYFCgtuRHpfOp5C9
+struct tag_S5MMpcz8vT0FlmhmEl4q5C
 {
   int32_T isInitialized;
-  cell_wrap_top_level_algo_T inputVarSize;
 };
 
-#endif                                 /* struct_tag_pXqB0JYFCgtuRHpfOp5C9 */
+#endif                                 /* struct_tag_S5MMpcz8vT0FlmhmEl4q5C */
 
 #ifndef typedef_stm32cube_blocks_DigitalPortW_T
 #define typedef_stm32cube_blocks_DigitalPortW_T
 
-typedef struct tag_pXqB0JYFCgtuRHpfOp5C9 stm32cube_blocks_DigitalPortW_T;
+typedef struct tag_S5MMpcz8vT0FlmhmEl4q5C stm32cube_blocks_DigitalPortW_T;
 
 #endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
+
+#ifndef struct_tag_eNlr4mnkAt8yejvnq8gf4D
+#define struct_tag_eNlr4mnkAt8yejvnq8gf4D
+
+struct tag_eNlr4mnkAt8yejvnq8gf4D
+{
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  ADC_Type_T* ADCHandle;
+  uint16_T ADCInternalBuffer[2];
+};
+
+#endif                                 /* struct_tag_eNlr4mnkAt8yejvnq8gf4D */
+
+#ifndef typedef_stm32cube_blocks_AnalogInput__T
+#define typedef_stm32cube_blocks_AnalogInput__T
+
+typedef struct tag_eNlr4mnkAt8yejvnq8gf4D stm32cube_blocks_AnalogInput__T;
+
+#endif                             /* typedef_stm32cube_blocks_AnalogInput__T */
 
 /* Parameters for system: '<S12>/If Action Subsystem' */
 typedef struct P_IfActionSubsystem_top_level_T_ P_IfActionSubsystem_top_level_T;

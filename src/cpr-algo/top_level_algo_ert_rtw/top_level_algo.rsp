@@ -6,6 +6,7 @@ rt_nonfinite.o
 top_level_algo.o
 top_level_algo_data.o
 overrideHALDelay.o
+platform_timer.o
 SysTickScheduler.o
 m3m4m4f_multitasking.o
 main.o
@@ -38,5 +39,6 @@ stm32f4xx_hal_tim_ex.o
 stm32f4xx_ll_tim.o
 stm32f4xx_ll_usart.o
 system_stm32f4xx.o
-startup_stm32f429xx.o
 syscalls.o
+sysmem.o
+startup_stm32f429zitx.o

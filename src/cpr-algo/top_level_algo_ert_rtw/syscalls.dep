@@ -1,2 +1,2 @@
 syscalls.o: \
- C:/Users/eahil/Documents/GitHub/smart-cpr-algo/src/cpr-algo/top_level_algo/SW4STM32/syscalls.c
+ C:/Users/eahil/Documents/GitHub/smart-cpr-algo/src/cpr-algo/top_level_algo/STM32CubeIDE/Application/User/Core/syscalls.c

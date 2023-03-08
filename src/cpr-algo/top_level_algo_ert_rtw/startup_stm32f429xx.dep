@@ -1,2 +1,0 @@
-startup_stm32f429xx.o: \
- C:/Users/eahil/Documents/GitHub/smart-cpr-algo/src/cpr-algo/top_level_algo/SW4STM32/startup_stm32f429xx.s

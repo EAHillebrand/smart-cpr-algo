@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.158
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
+ * Model version                  : 3.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,9 +19,7 @@
 
 #ifndef RTW_HEADER_rtGetInf_h_
 #define RTW_HEADER_rtGetInf_h_
-#include <stddef.h>
 #include "rtwtypes.h"
-#include "rt_nonfinite.h"
 
 extern real_T rtGetInf(void);
 extern real32_T rtGetInfF(void);

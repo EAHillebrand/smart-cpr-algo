@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 1.158
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Mon Mar  6 18:47:31 2023
+ * Model version                  : 3.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,10 +19,6 @@
 
 #ifndef RTW_HEADER_top_level_algo_h_
 #define RTW_HEADER_top_level_algo_h_
-#include <float.h>
-#include <math.h>
-#include <string.h>
-#include <stddef.h>
 #ifndef top_level_algo_COMMON_INCLUDES_
 #define top_level_algo_COMMON_INCLUDES_
 #include "rtwtypes.h"
@@ -32,9 +28,10 @@
 #endif                                 /* top_level_algo_COMMON_INCLUDES_ */
 
 #include "top_level_algo_types.h"
-#include "MW_target_hardware_resources.h"
 #include "rt_nonfinite.h"
 #include "rtGetInf.h"
+#include <stddef.h>
+#include "MW_target_hardware_resources.h"
 
 /* Macros for accessing real-time model data structure */
 #ifndef rtmGetErrorStatus
@@ -55,8 +52,8 @@
 
 /* Block states (default storage) for system '<S9>/sample and hold' */
 typedef struct {
-  uint8_T is_active_c1_top_level_algo; /* '<S9>/sample and hold' */
   uint8_T is_c1_top_level_algo;        /* '<S9>/sample and hold' */
+  uint8_T is_active_c1_top_level_algo; /* '<S9>/sample and hold' */
 } DW_sampleandhold_top_level_al_T;
 
 /* Block signals (default storage) */
@@ -69,14 +66,14 @@ typedef struct {
   real_T baseline;                     /* '<S7>/timer' */
   real_T rate;                         /* '<S3>/Chart' */
   real_T CLK;                          /* '<S11>/ClockLogic' */
-  real_T PulseGenerator;               /* '<S1>/Pulse Generator' */
-  real_T TmpMLSysMemLayoutBufferAt_p;/* '<S10>/Divide by Constant and Round1' */
-  real_T TmpMLSysMemLayoutBufferAtDi; /* '<S10>/Divide by Constant and Round' */
   real_T Mod1;                         /* '<S10>/Mod1' */
+  real_T Mean_AccVal_j;
+  real_T Mean1_AccVal;
   real_T u;
   real_T u_m;
   real_T u_c;
   real_T u_k;
+  real_T u_cx;
   uint32_T Add;                        /* '<S10>/Add' */
   uint32_T data;                       /* '<S11>/DataLogic' */
   int32_T CastToDouble;                /* '<Root>/Cast To Double' */
@@ -87,7 +84,7 @@ typedef struct {
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_AnalogInput__T obj_c;/* '<S48>/Analog to Digital Converter' */
+  stm32cube_blocks_AnalogInput__T obj; /* '<S48>/Analog to Digital Converter' */
   real_T TappedDelay_X[5];             /* '<S3>/Tapped Delay' */
   real_T TappedDelay1_X[20];           /* '<S7>/Tapped Delay1' */
   real_T TappedDelay_X_p[100];         /* '<S6>/Tapped Delay' */
@@ -97,8 +94,8 @@ typedef struct {
   real_T Delay3_DSTATE[4];             /* '<S6>/Delay3' */
   real_T Delay4_DSTATE[5];             /* '<S6>/Delay4' */
   real_T Delay5_DSTATE[50];            /* '<S6>/Delay5' */
-  real_T Memory_PreviousInput;         /* '<S88>/Memory' */
-  real_T Memory_PreviousInput_l;       /* '<S87>/Memory' */
+  real_T Memory_PreviousInput;         /* '<S87>/Memory' */
+  real_T Memory_PreviousInput_m;       /* '<S88>/Memory' */
   real_T comp;                         /* '<S3>/Chart' */
   real_T last_count;                   /* '<S3>/Chart' */
   real_T first;                        /* '<S3>/Chart' */
@@ -111,24 +108,24 @@ typedef struct {
   int32_T clockTickCounter;            /* '<S1>/Pulse Generator' */
   uint32_T Holder;                     /* '<S11>/DataLogic' */
   uint16_T temporalCounter_i1;         /* '<S7>/timer' */
-  boolean_T Delay8_DSTATE[2];          /* '<S9>/Delay8' */
-  boolean_T Delay7_DSTATE;             /* '<S9>/Delay7' */
-  boolean_T Delay6_DSTATE[2];          /* '<S9>/Delay6' */
-  boolean_T Delay2_DSTATE_m[5];        /* '<S9>/Delay2' */
   boolean_T Delay4_DSTATE_a[2];        /* '<S9>/Delay4' */
   boolean_T Delay1_DSTATE_m;           /* '<S9>/Delay1' */
   boolean_T Delay3_DSTATE_m[2];        /* '<S9>/Delay3' */
   boolean_T Delay_DSTATE_a[5];         /* '<S9>/Delay' */
-  uint8_T is_active_c3_top_level_algo; /* '<S7>/timer' */
+  boolean_T Delay8_DSTATE[2];          /* '<S9>/Delay8' */
+  boolean_T Delay7_DSTATE;             /* '<S9>/Delay7' */
+  boolean_T Delay6_DSTATE[2];          /* '<S9>/Delay6' */
+  boolean_T Delay2_DSTATE_m[5];        /* '<S9>/Delay2' */
   uint8_T is_c3_top_level_algo;        /* '<S7>/timer' */
-  uint8_T is_active_c4_top_level_algo; /* '<S3>/Chart' */
+  uint8_T is_active_c3_top_level_algo; /* '<S7>/timer' */
   uint8_T is_c4_top_level_algo;        /* '<S3>/Chart' */
-  uint8_T is_active_c6_top_level_algo; /* '<S11>/DataLogic' */
+  uint8_T is_active_c4_top_level_algo; /* '<S3>/Chart' */
   uint8_T is_c6_top_level_algo;        /* '<S11>/DataLogic' */
-  uint8_T temporalCounter_i1_d;        /* '<S11>/DataLogic' */
-  uint8_T is_active_c5_top_level_algo; /* '<S11>/ClockLogic' */
+  uint8_T is_active_c6_top_level_algo; /* '<S11>/DataLogic' */
+  uint8_T temporalCounter_i1_a;        /* '<S11>/DataLogic' */
   uint8_T is_c5_top_level_algo;        /* '<S11>/ClockLogic' */
-  uint8_T temporalCounter_i1_l;        /* '<S11>/ClockLogic' */
+  uint8_T is_active_c5_top_level_algo; /* '<S11>/ClockLogic' */
+  uint8_T temporalCounter_i1_b;        /* '<S11>/ClockLogic' */
   DW_sampleandhold_top_level_al_T sf_sampleandhold1;/* '<S9>/sample and hold1' */
   DW_sampleandhold_top_level_al_T sf_sampleandhold;/* '<S9>/sample and hold' */
 } DW_top_level_algo_T;
@@ -150,12 +147,12 @@ struct P_top_level_algo_T_ {
   real_T gear_ratio;                   /* Variable: gear_ratio
                                         * Referenced by: '<S7>/Gear Down'
                                         */
-  real_T Positive_const;               /* Mask Parameter: Positive_const
-                                        * Referenced by: '<S57>/Constant'
-                                        */
   real_T Longrangemotionup_const;     /* Mask Parameter: Longrangemotionup_const
                                        * Referenced by: '<S55>/Constant'
                                        */
+  real_T Positive_const;               /* Mask Parameter: Positive_const
+                                        * Referenced by: '<S57>/Constant'
+                                        */
   real_T Negative_const;               /* Mask Parameter: Negative_const
                                         * Referenced by: '<S56>/Constant'
                                         */
@@ -199,25 +196,10 @@ struct P_top_level_algo_T_ {
   int32_T TappedDelay_vinit_l;         /* Mask Parameter: TappedDelay_vinit_l
                                         * Referenced by: '<S7>/Tapped Delay'
                                         */
-  real_T PulseGenerator_Amp;           /* Expression: 1
-                                        * Referenced by: '<S1>/Pulse Generator'
+  real_T CompressionSensitivity_Gain;  /* Expression: 2
+                                        * Referenced by: '<S6>/Compression  Sensitivity'
                                         */
-  real_T PulseGenerator_Period;     /* Computed Parameter: PulseGenerator_Period
-                                     * Referenced by: '<S1>/Pulse Generator'
-                                     */
-  real_T PulseGenerator_Duty;         /* Computed Parameter: PulseGenerator_Duty
-                                       * Referenced by: '<S1>/Pulse Generator'
-                                       */
-  real_T PulseGenerator_PhaseDelay;    /* Expression: 0
-                                        * Referenced by: '<S1>/Pulse Generator'
-                                        */
-  real_T Constant1_Value;              /* Expression: 100
-                                        * Referenced by: '<S10>/Constant1'
-                                        */
-  real_T Constant2_Value;              /* Expression: 10
-                                        * Referenced by: '<S10>/Constant2'
-                                        */
-  real_T Constant1_Value_d;            /* Expression: 4095
+  real_T Constant1_Value;              /* Expression: 4095
                                         * Referenced by: '<S7>/Constant1'
                                         */
   real_T Switch_Threshold;             /* Expression: 0
@@ -253,28 +235,27 @@ struct P_top_level_algo_T_ {
   real_T Delay5_InitialCondition;      /* Expression: 0.0
                                         * Referenced by: '<S6>/Delay5'
                                         */
-  real_T CompressionSensitivity_Gain;  /* Expression: 2
-                                        * Referenced by: '<S6>/Compression  Sensitivity'
-                                        */
   real_T Constant_Value_i;             /* Expression: 0
                                         * Referenced by: '<S84>/Constant'
                                         */
-  boolean_T Delay8_InitialCondition;
-                                  /* Computed Parameter: Delay8_InitialCondition
-                                   * Referenced by: '<S9>/Delay8'
-                                   */
-  boolean_T Delay7_InitialCondition;
-                                  /* Computed Parameter: Delay7_InitialCondition
-                                   * Referenced by: '<S9>/Delay7'
-                                   */
-  boolean_T Delay6_InitialCondition;
-                                  /* Computed Parameter: Delay6_InitialCondition
-                                   * Referenced by: '<S9>/Delay6'
-                                   */
-  boolean_T Delay2_InitialCondition_c;
-                                /* Computed Parameter: Delay2_InitialCondition_c
-                                 * Referenced by: '<S9>/Delay2'
-                                 */
+  real_T Constant1_Value_g;            /* Expression: 100
+                                        * Referenced by: '<S10>/Constant1'
+                                        */
+  real_T Constant2_Value;              /* Expression: 10
+                                        * Referenced by: '<S10>/Constant2'
+                                        */
+  real_T PulseGenerator_Amp;           /* Expression: 1
+                                        * Referenced by: '<S1>/Pulse Generator'
+                                        */
+  real_T PulseGenerator_Period;     /* Computed Parameter: PulseGenerator_Period
+                                     * Referenced by: '<S1>/Pulse Generator'
+                                     */
+  real_T PulseGenerator_Duty;         /* Computed Parameter: PulseGenerator_Duty
+                                       * Referenced by: '<S1>/Pulse Generator'
+                                       */
+  real_T PulseGenerator_PhaseDelay;    /* Expression: 0
+                                        * Referenced by: '<S1>/Pulse Generator'
+                                        */
   boolean_T Delay4_InitialCondition_f;
                                 /* Computed Parameter: Delay4_InitialCondition_f
                                  * Referenced by: '<S9>/Delay4'
@@ -291,6 +272,22 @@ struct P_top_level_algo_T_ {
                                  /* Computed Parameter: Delay_InitialCondition_d
                                   * Referenced by: '<S9>/Delay'
                                   */
+  boolean_T Delay8_InitialCondition;
+                                  /* Computed Parameter: Delay8_InitialCondition
+                                   * Referenced by: '<S9>/Delay8'
+                                   */
+  boolean_T Delay7_InitialCondition;
+                                  /* Computed Parameter: Delay7_InitialCondition
+                                   * Referenced by: '<S9>/Delay7'
+                                   */
+  boolean_T Delay6_InitialCondition;
+                                  /* Computed Parameter: Delay6_InitialCondition
+                                   * Referenced by: '<S9>/Delay6'
+                                   */
+  boolean_T Delay2_InitialCondition_c;
+                                /* Computed Parameter: Delay2_InitialCondition_c
+                                 * Referenced by: '<S9>/Delay2'
+                                 */
   uint8_T Merge_InitialOutput;        /* Computed Parameter: Merge_InitialOutput
                                        * Referenced by: '<S12>/Merge'
                                        */
