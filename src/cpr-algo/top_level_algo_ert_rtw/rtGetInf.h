@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.0
+ * Model version                  : 3.4
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
+ * C/C++ source code generated on : Thu Mar  9 17:14:06 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex

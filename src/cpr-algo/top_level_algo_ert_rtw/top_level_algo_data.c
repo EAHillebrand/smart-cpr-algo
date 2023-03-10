@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.0
+ * Model version                  : 3.4
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
+ * C/C++ source code generated on : Thu Mar  9 17:14:06 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -34,75 +34,70 @@ P_top_level_algo_T top_level_algo_P = {
   10.0,
 
   /* Mask Parameter: Longrangemotionup_const
-   * Referenced by: '<S55>/Constant'
+   * Referenced by: '<S57>/Constant'
    */
   3.0,
 
   /* Mask Parameter: Positive_const
-   * Referenced by: '<S57>/Constant'
+   * Referenced by: '<S59>/Constant'
    */
   0.0,
 
   /* Mask Parameter: Negative_const
-   * Referenced by: '<S56>/Constant'
+   * Referenced by: '<S58>/Constant'
    */
   0.0,
 
   /* Mask Parameter: Longrangemotiondown_const
-   * Referenced by: '<S54>/Constant'
+   * Referenced by: '<S56>/Constant'
    */
   -3.0,
 
   /* Mask Parameter: CompareToConstant_const
-   * Referenced by: '<S62>/Constant'
+   * Referenced by: '<S64>/Constant'
    */
   50.0,
 
   /* Mask Parameter: CompareToConstant1_const
-   * Referenced by: '<S63>/Constant'
+   * Referenced by: '<S65>/Constant'
    */
   40.0,
 
   /* Mask Parameter: CompareToConstant2_const
-   * Referenced by: '<S64>/Constant'
+   * Referenced by: '<S66>/Constant'
    */
   30.0,
 
   /* Mask Parameter: CompareToConstant3_const
-   * Referenced by: '<S65>/Constant'
+   * Referenced by: '<S67>/Constant'
    */
   20.0,
 
   /* Mask Parameter: CompareToConstant4_const
-   * Referenced by: '<S66>/Constant'
+   * Referenced by: '<S68>/Constant'
    */
   10.0,
 
   /* Mask Parameter: MaxBDC_vinit
    * Referenced by:
-   *   '<S87>/Initial Condition'
-   *   '<S87>/Memory'
+   *   '<S89>/Initial Condition'
+   *   '<S89>/Memory'
    */
   0.0,
 
   /* Mask Parameter: MinBDC_vinit
    * Referenced by:
-   *   '<S88>/Initial Condition'
-   *   '<S88>/Memory'
+   *   '<S90>/Initial Condition'
+   *   '<S90>/Memory'
    */
   100.0,
-
-  /* Mask Parameter: TappedDelay_vinit
-   * Referenced by: '<S3>/Tapped Delay'
-   */
-  0.0,
 
   /* Mask Parameter: TappedDelay1_vinit
    * Referenced by: '<S7>/Tapped Delay1'
    */
   0.0,
 
-  /* Mask Parameter: TappedDelay_vinit_f
+  /* Mask Parameter: TappedDelay_vinit
    * Referenced by: '<S6>/Tapped Delay'
    */
   0.0,
@@ -133,7 +128,7 @@ P_top_level_algo_T top_level_algo_P = {
   100.0,
 
   /* Expression: 0
-   * Referenced by: '<S58>/Constant'
+   * Referenced by: '<S60>/Constant'
    */
   0.0,
 
@@ -177,11 +172,6 @@ P_top_level_algo_T top_level_algo_P = {
    */
   0.0,
 
-  /* Expression: 0
-   * Referenced by: '<S84>/Constant'
-   */
-  0.0,
-
   /* Expression: 100
    * Referenced by: '<S10>/Constant1'
    */
@@ -191,6 +181,11 @@ P_top_level_algo_T top_level_algo_P = {
    * Referenced by: '<S10>/Constant2'
    */
   10.0,
+
+  /* Expression: 0
+   * Referenced by: '<S86>/Constant'
+   */
+  0.0,
 
   /* Expression: 1
    * Referenced by: '<S1>/Pulse Generator'
@@ -227,11 +222,6 @@ P_top_level_algo_T top_level_algo_P = {
    */
   true,
 
-  /* Computed Parameter: Delay_InitialCondition_d
-   * Referenced by: '<S9>/Delay'
-   */
-  false,
-
   /* Computed Parameter: Delay8_InitialCondition
    * Referenced by: '<S9>/Delay8'
    */
@@ -249,6 +239,11 @@ P_top_level_algo_T top_level_algo_P = {
 
   /* Computed Parameter: Delay2_InitialCondition_c
    * Referenced by: '<S9>/Delay2'
+   */
+  false,
+
+  /* Computed Parameter: Delay_InitialCondition_d
+   * Referenced by: '<S9>/Delay'
    */
   false,
 
