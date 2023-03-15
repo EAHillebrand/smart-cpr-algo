@@ -6,5 +6,5 @@ Vdd = 3;
 
 
 % 7 seg driver
-update_rate = 0.5;
-clk_period = 4; %20ms 
+update_rate = 0.3;
+clk_period = 8; %20ms 
