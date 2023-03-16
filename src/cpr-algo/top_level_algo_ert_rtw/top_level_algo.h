@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.0
+ * Model version                  : 3.11
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Wed Mar  8 13:21:33 2023
+ * C/C++ source code generated on : Tue Mar 14 22:48:37 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -50,90 +50,86 @@
 #define rtmGetTPtr(rtm)                ((rtm)->Timing.t)
 #endif
 
-/* Block states (default storage) for system '<S9>/sample and hold' */
+/* Block states (default storage) for system '<S8>/sample and hold' */
 typedef struct {
-  uint8_T is_c1_top_level_algo;        /* '<S9>/sample and hold' */
-  uint8_T is_active_c1_top_level_algo; /* '<S9>/sample and hold' */
+  uint8_T is_c1_top_level_algo;        /* '<S8>/sample and hold' */
+  uint8_T is_active_c1_top_level_algo; /* '<S8>/sample and hold' */
 } DW_sampleandhold_top_level_al_T;
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T TappedDelay_l[100];           /* '<S6>/Tapped Delay' */
+  real_T TappedDelay[20];              /* '<S5>/Tapped Delay' */
   GPIO_TypeDef * portNameLoc;
   uint16_T triggerType;
-  real_T Product;                      /* '<S7>/Product' */
-  real_T u0Diff;                       /* '<S6>/30 Diff' */
-  real_T baseline;                     /* '<S7>/timer' */
-  real_T rate;                         /* '<S3>/Chart' */
-  real_T CLK;                          /* '<S11>/ClockLogic' */
-  real_T Mod1;                         /* '<S10>/Mod1' */
-  real_T Mean_AccVal_j;
+  real_T Sum;                          /* '<S56>/Sum' */
+  real_T Switch;                       /* '<S56>/Switch' */
+  real_T Product;                      /* '<S6>/Product' */
+  real_T u0Diff;                       /* '<S5>/30 Diff' */
+  real_T baseline;                     /* '<S6>/timer' */
+  real_T paceDetect;                   /* '<S2>/Chart1' */
+  real_T Mod1;                         /* '<S55>/Mod1' */
+  real_T MajorityVoterSlope;           /* '<S5>/Add' */
+  real_T Mean_AccVal;
   real_T Mean1_AccVal;
   real_T u;
   real_T u_m;
   real_T u_c;
   real_T u_k;
-  real_T u_cx;
-  uint32_T Add;                        /* '<S10>/Add' */
-  uint32_T data;                       /* '<S11>/DataLogic' */
+  real_T Reset_b;                      /* '<S51>/Reset' */
+  uint32_T data;                       /* '<S9>/DataLogic' */
   int32_T CastToDouble;                /* '<Root>/Cast To Double' */
-  uint8_T Merge;                       /* '<S12>/Merge' */
-  uint8_T Merge_b;                     /* '<S13>/Merge' */
-  uint8_T Merge_d;                     /* '<S14>/Merge' */
+  uint8_T Merge;                       /* '<S57>/Merge' */
+  uint8_T Merge_a;                     /* '<S58>/Merge' */
+  uint8_T Merge_e;                     /* '<S59>/Merge' */
+  boolean_T AND;                       /* '<S8>/AND' */
 } B_top_level_algo_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_AnalogInput__T obj; /* '<S48>/Analog to Digital Converter' */
-  real_T TappedDelay_X[5];             /* '<S3>/Tapped Delay' */
-  real_T TappedDelay1_X[20];           /* '<S7>/Tapped Delay1' */
-  real_T TappedDelay_X_p[100];         /* '<S6>/Tapped Delay' */
-  real_T Delay_DSTATE;                 /* '<S6>/Delay' */
-  real_T Delay1_DSTATE[2];             /* '<S6>/Delay1' */
-  real_T Delay2_DSTATE[3];             /* '<S6>/Delay2' */
-  real_T Delay3_DSTATE[4];             /* '<S6>/Delay3' */
-  real_T Delay4_DSTATE[5];             /* '<S6>/Delay4' */
-  real_T Delay5_DSTATE[50];            /* '<S6>/Delay5' */
-  real_T Memory_PreviousInput;         /* '<S87>/Memory' */
-  real_T Memory_PreviousInput_m;       /* '<S88>/Memory' */
-  real_T comp;                         /* '<S3>/Chart' */
-  real_T last_count;                   /* '<S3>/Chart' */
-  real_T first;                        /* '<S3>/Chart' */
-  real_T second;                       /* '<S3>/Chart' */
-  real_T third;                        /* '<S3>/Chart' */
-  real_T fourth;                       /* '<S3>/Chart' */
-  real_T zero;                         /* '<S3>/Chart' */
-  real_T counter;                      /* '<S11>/ClockLogic' */
-  int32_T TappedDelay_X_f[20];         /* '<S7>/Tapped Delay' */
-  int32_T clockTickCounter;            /* '<S1>/Pulse Generator' */
-  uint32_T Holder;                     /* '<S11>/DataLogic' */
-  uint16_T temporalCounter_i1;         /* '<S7>/timer' */
-  boolean_T Delay4_DSTATE_a[2];        /* '<S9>/Delay4' */
-  boolean_T Delay1_DSTATE_m;           /* '<S9>/Delay1' */
-  boolean_T Delay3_DSTATE_m[2];        /* '<S9>/Delay3' */
-  boolean_T Delay_DSTATE_a[5];         /* '<S9>/Delay' */
-  boolean_T Delay8_DSTATE[2];          /* '<S9>/Delay8' */
+  stm32cube_blocks_AnalogInput__T obj; /* '<S11>/Analog to Digital Converter' */
+  real_T UnitDelay_DSTATE;             /* '<S56>/Unit Delay' */
+  real_T Delay_DSTATE[4];              /* '<S9>/Delay' */
+  real_T TappedDelay1_X[20];           /* '<S6>/Tapped Delay1' */
+  real_T TappedDelay_X[10];            /* '<S5>/Tapped Delay' */
+  real_T Delay_DSTATE_d;               /* '<S5>/Delay' */
+  real_T Delay1_DSTATE[2];             /* '<S5>/Delay1' */
+  real_T Delay2_DSTATE[3];             /* '<S5>/Delay2' */
+  real_T Delay3_DSTATE[4];             /* '<S5>/Delay3' */
+  real_T Delay4_DSTATE[5];             /* '<S5>/Delay4' */
+  real_T Delay5_DSTATE[10];            /* '<S5>/Delay5' */
+  real_T Memory_PreviousInput;         /* '<S50>/Memory' */
+  real_T Memory_PreviousInput_m;       /* '<S51>/Memory' */
+  real_T lastTs;                       /* '<S2>/Chart1' */
+  int32_T TappedDelay_X_f[10];         /* '<S6>/Tapped Delay' */
+  int32_T clockTickCounter;            /* '<S9>/Pulse Generator' */
+  uint32_T Holder;                     /* '<S9>/DataLogic' */
+  uint32_T temporalCounter_i1;         /* '<S9>/DataLogic' */
+  uint16_T temporalCounter_i1_c;       /* '<S6>/timer' */
+  uint16_T temporalCounter_i1_o;       /* '<S2>/Chart1' */
+  boolean_T Delay8_DSTATE[288];        /* '<S9>/Delay8' */
   boolean_T Delay7_DSTATE;             /* '<S9>/Delay7' */
-  boolean_T Delay6_DSTATE[2];          /* '<S9>/Delay6' */
-  boolean_T Delay2_DSTATE_m[5];        /* '<S9>/Delay2' */
-  uint8_T is_c3_top_level_algo;        /* '<S7>/timer' */
-  uint8_T is_active_c3_top_level_algo; /* '<S7>/timer' */
-  uint8_T is_c4_top_level_algo;        /* '<S3>/Chart' */
-  uint8_T is_active_c4_top_level_algo; /* '<S3>/Chart' */
-  uint8_T is_c6_top_level_algo;        /* '<S11>/DataLogic' */
-  uint8_T is_active_c6_top_level_algo; /* '<S11>/DataLogic' */
-  uint8_T temporalCounter_i1_a;        /* '<S11>/DataLogic' */
-  uint8_T is_c5_top_level_algo;        /* '<S11>/ClockLogic' */
-  uint8_T is_active_c5_top_level_algo; /* '<S11>/ClockLogic' */
-  uint8_T temporalCounter_i1_b;        /* '<S11>/ClockLogic' */
-  DW_sampleandhold_top_level_al_T sf_sampleandhold1;/* '<S9>/sample and hold1' */
-  DW_sampleandhold_top_level_al_T sf_sampleandhold;/* '<S9>/sample and hold' */
+  boolean_T Delay4_DSTATE_a[2];        /* '<S8>/Delay4' */
+  boolean_T Delay1_DSTATE_m;           /* '<S8>/Delay1' */
+  boolean_T Delay3_DSTATE_m[2];        /* '<S8>/Delay3' */
+  boolean_T Delay_DSTATE_a[5];         /* '<S8>/Delay' */
+  boolean_T Delay8_DSTATE_b[2];        /* '<S8>/Delay8' */
+  boolean_T Delay7_DSTATE_l;           /* '<S8>/Delay7' */
+  boolean_T Delay6_DSTATE[2];          /* '<S8>/Delay6' */
+  boolean_T Delay2_DSTATE_m[5];        /* '<S8>/Delay2' */
+  uint8_T is_c15_top_level_algo;       /* '<S9>/DataLogic' */
+  uint8_T is_active_c15_top_level_algo;/* '<S9>/DataLogic' */
+  uint8_T is_c3_top_level_algo;        /* '<S6>/timer' */
+  uint8_T is_active_c3_top_level_algo; /* '<S6>/timer' */
+  uint8_T is_c12_top_level_algo;       /* '<S2>/Chart1' */
+  uint8_T is_active_c12_top_level_algo;/* '<S2>/Chart1' */
+  DW_sampleandhold_top_level_al_T sf_sampleandhold1;/* '<S8>/sample and hold1' */
+  DW_sampleandhold_top_level_al_T sf_sampleandhold;/* '<S8>/sample and hold' */
 } DW_top_level_algo_T;
 
-/* Parameters for system: '<S12>/If Action Subsystem' */
+/* Parameters for system: '<S57>/If Action Subsystem' */
 struct P_IfActionSubsystem_top_level_T_ {
   uint8_T Constant_Value;              /* Expression: 0x3F
-                                        * Referenced by: '<S15>/Constant'
+                                        * Referenced by: '<S60>/Constant'
                                         */
 };
 
@@ -141,137 +137,140 @@ struct P_IfActionSubsystem_top_level_T_ {
 struct P_top_level_algo_T_ {
   real_T Vdd;                          /* Variable: Vdd
                                         * Referenced by:
-                                        *   '<S7>/Constant'
-                                        *   '<S7>/rad  per volt'
+                                        *   '<S6>/Constant'
+                                        *   '<S6>/rad  per volt'
                                         */
   real_T gear_ratio;                   /* Variable: gear_ratio
-                                        * Referenced by: '<S7>/Gear Down'
+                                        * Referenced by: '<S6>/Gear Down'
                                         */
   real_T Longrangemotionup_const;     /* Mask Parameter: Longrangemotionup_const
-                                       * Referenced by: '<S55>/Constant'
+                                       * Referenced by: '<S18>/Constant'
                                        */
   real_T Positive_const;               /* Mask Parameter: Positive_const
-                                        * Referenced by: '<S57>/Constant'
+                                        * Referenced by: '<S20>/Constant'
                                         */
   real_T Negative_const;               /* Mask Parameter: Negative_const
-                                        * Referenced by: '<S56>/Constant'
+                                        * Referenced by: '<S19>/Constant'
                                         */
   real_T Longrangemotiondown_const; /* Mask Parameter: Longrangemotiondown_const
-                                     * Referenced by: '<S54>/Constant'
+                                     * Referenced by: '<S17>/Constant'
                                      */
   real_T CompareToConstant_const;     /* Mask Parameter: CompareToConstant_const
-                                       * Referenced by: '<S62>/Constant'
+                                       * Referenced by: '<S25>/Constant'
                                        */
   real_T CompareToConstant1_const;   /* Mask Parameter: CompareToConstant1_const
-                                      * Referenced by: '<S63>/Constant'
+                                      * Referenced by: '<S26>/Constant'
                                       */
   real_T CompareToConstant2_const;   /* Mask Parameter: CompareToConstant2_const
-                                      * Referenced by: '<S64>/Constant'
+                                      * Referenced by: '<S27>/Constant'
                                       */
   real_T CompareToConstant3_const;   /* Mask Parameter: CompareToConstant3_const
-                                      * Referenced by: '<S65>/Constant'
+                                      * Referenced by: '<S28>/Constant'
                                       */
   real_T CompareToConstant4_const;   /* Mask Parameter: CompareToConstant4_const
-                                      * Referenced by: '<S66>/Constant'
+                                      * Referenced by: '<S29>/Constant'
                                       */
   real_T MaxBDC_vinit;                 /* Mask Parameter: MaxBDC_vinit
                                         * Referenced by:
-                                        *   '<S87>/Initial Condition'
-                                        *   '<S87>/Memory'
+                                        *   '<S50>/Initial Condition'
+                                        *   '<S50>/Memory'
                                         */
   real_T MinBDC_vinit;                 /* Mask Parameter: MinBDC_vinit
                                         * Referenced by:
-                                        *   '<S88>/Initial Condition'
-                                        *   '<S88>/Memory'
-                                        */
-  real_T TappedDelay_vinit;            /* Mask Parameter: TappedDelay_vinit
-                                        * Referenced by: '<S3>/Tapped Delay'
+                                        *   '<S51>/Initial Condition'
+                                        *   '<S51>/Memory'
                                         */
   real_T TappedDelay1_vinit;           /* Mask Parameter: TappedDelay1_vinit
-                                        * Referenced by: '<S7>/Tapped Delay1'
+                                        * Referenced by: '<S6>/Tapped Delay1'
                                         */
-  real_T TappedDelay_vinit_f;          /* Mask Parameter: TappedDelay_vinit_f
-                                        * Referenced by: '<S6>/Tapped Delay'
+  real_T TappedDelay_vinit;            /* Mask Parameter: TappedDelay_vinit
+                                        * Referenced by: '<S5>/Tapped Delay'
                                         */
   int32_T TappedDelay_vinit_l;         /* Mask Parameter: TappedDelay_vinit_l
-                                        * Referenced by: '<S7>/Tapped Delay'
+                                        * Referenced by: '<S6>/Tapped Delay'
                                         */
-  real_T CompressionSensitivity_Gain;  /* Expression: 2
-                                        * Referenced by: '<S6>/Compression  Sensitivity'
-                                        */
-  real_T Constant1_Value;              /* Expression: 4095
-                                        * Referenced by: '<S7>/Constant1'
-                                        */
-  real_T Switch_Threshold;             /* Expression: 0
-                                        * Referenced by: '<S7>/Switch'
-                                        */
-  real_T Radiusmm_Gain;                /* Expression: 100
-                                        * Referenced by: '<S7>/Radius (mm)'
-                                        */
+  real32_T CompareToConstant_const_f;
+                                    /* Mask Parameter: CompareToConstant_const_f
+                                     * Referenced by: '<S90>/Constant'
+                                     */
   real_T Constant_Value;               /* Expression: 0
-                                        * Referenced by: '<S58>/Constant'
+                                        * Referenced by: '<S9>/Constant'
+                                        */
+  real_T Constant1_Value;              /* Expression: 0
+                                        * Referenced by: '<S56>/Constant1'
+                                        */
+  real_T Constant_Value_k;             /* Expression: 1
+                                        * Referenced by: '<S56>/Constant'
+                                        */
+  real_T UnitDelay_InitialCondition;   /* Expression: 0
+                                        * Referenced by: '<S56>/Unit Delay'
                                         */
   real_T Delay_InitialCondition;       /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay'
+                                        * Referenced by: '<S9>/Delay'
                                         */
-  real_T Gain_Gain;                    /* Expression: 2
-                                        * Referenced by: '<S6>/Gain'
+  real_T CompressionSensitivity_Gain;  /* Expression: 0.5
+                                        * Referenced by: '<S5>/Compression  Sensitivity'
                                         */
-  real_T Delay1_InitialCondition;      /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay1'
+  real_T Constant1_Value_d;            /* Expression: 4095
+                                        * Referenced by: '<S6>/Constant1'
+                                        */
+  real_T Switch_Threshold;             /* Expression: 0
+                                        * Referenced by: '<S6>/Switch'
+                                        */
+  real_T Radiusmm_Gain;                /* Expression: 100
+                                        * Referenced by: '<S6>/Radius (mm)'
+                                        */
+  real_T Constant_Value_a;             /* Expression: 0
+                                        * Referenced by: '<S21>/Constant'
                                         */
   real_T Gain1_Gain;                   /* Expression: 2
-                                        * Referenced by: '<S6>/Gain1'
+                                        * Referenced by: '<Root>/Gain1'
+                                        */
+  real_T Delay_InitialCondition_m;     /* Expression: 0.0
+                                        * Referenced by: '<S5>/Delay'
+                                        */
+  real_T Gain_Gain;                    /* Expression: 2
+                                        * Referenced by: '<S5>/Gain'
+                                        */
+  real_T Delay1_InitialCondition;      /* Expression: 0.0
+                                        * Referenced by: '<S5>/Delay1'
+                                        */
+  real_T Gain1_Gain_g;                 /* Expression: 2
+                                        * Referenced by: '<S5>/Gain1'
                                         */
   real_T Delay2_InitialCondition;      /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay2'
+                                        * Referenced by: '<S5>/Delay2'
                                         */
   real_T Delay3_InitialCondition;      /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay3'
+                                        * Referenced by: '<S5>/Delay3'
                                         */
   real_T Delay4_InitialCondition;      /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay4'
+                                        * Referenced by: '<S5>/Delay4'
                                         */
   real_T Delay5_InitialCondition;      /* Expression: 0.0
-                                        * Referenced by: '<S6>/Delay5'
+                                        * Referenced by: '<S5>/Delay5'
                                         */
-  real_T Constant_Value_i;             /* Expression: 0
-                                        * Referenced by: '<S84>/Constant'
-                                        */
-  real_T Constant1_Value_g;            /* Expression: 100
-                                        * Referenced by: '<S10>/Constant1'
+  real_T Constant1_Value_j;            /* Expression: 100
+                                        * Referenced by: '<S55>/Constant1'
                                         */
   real_T Constant2_Value;              /* Expression: 10
-                                        * Referenced by: '<S10>/Constant2'
+                                        * Referenced by: '<S55>/Constant2'
+                                        */
+  real_T Constant_Value_i;             /* Expression: 0
+                                        * Referenced by: '<S47>/Constant'
                                         */
   real_T PulseGenerator_Amp;           /* Expression: 1
-                                        * Referenced by: '<S1>/Pulse Generator'
+                                        * Referenced by: '<S9>/Pulse Generator'
                                         */
   real_T PulseGenerator_Period;     /* Computed Parameter: PulseGenerator_Period
-                                     * Referenced by: '<S1>/Pulse Generator'
+                                     * Referenced by: '<S9>/Pulse Generator'
                                      */
   real_T PulseGenerator_Duty;         /* Computed Parameter: PulseGenerator_Duty
-                                       * Referenced by: '<S1>/Pulse Generator'
+                                       * Referenced by: '<S9>/Pulse Generator'
                                        */
-  real_T PulseGenerator_PhaseDelay;    /* Expression: 0
-                                        * Referenced by: '<S1>/Pulse Generator'
+  real_T PulseGenerator_PhaseDelay;    /* Expression: 2
+                                        * Referenced by: '<S9>/Pulse Generator'
                                         */
-  boolean_T Delay4_InitialCondition_f;
-                                /* Computed Parameter: Delay4_InitialCondition_f
-                                 * Referenced by: '<S9>/Delay4'
-                                 */
-  boolean_T Delay1_InitialCondition_d;
-                                /* Computed Parameter: Delay1_InitialCondition_d
-                                 * Referenced by: '<S9>/Delay1'
-                                 */
-  boolean_T Delay3_InitialCondition_k;
-                                /* Computed Parameter: Delay3_InitialCondition_k
-                                 * Referenced by: '<S9>/Delay3'
-                                 */
-  boolean_T Delay_InitialCondition_d;
-                                 /* Computed Parameter: Delay_InitialCondition_d
-                                  * Referenced by: '<S9>/Delay'
-                                  */
   boolean_T Delay8_InitialCondition;
                                   /* Computed Parameter: Delay8_InitialCondition
                                    * Referenced by: '<S9>/Delay8'
@@ -280,53 +279,77 @@ struct P_top_level_algo_T_ {
                                   /* Computed Parameter: Delay7_InitialCondition
                                    * Referenced by: '<S9>/Delay7'
                                    */
+  boolean_T Delay4_InitialCondition_f;
+                                /* Computed Parameter: Delay4_InitialCondition_f
+                                 * Referenced by: '<S8>/Delay4'
+                                 */
+  boolean_T Delay1_InitialCondition_d;
+                                /* Computed Parameter: Delay1_InitialCondition_d
+                                 * Referenced by: '<S8>/Delay1'
+                                 */
+  boolean_T Delay3_InitialCondition_k;
+                                /* Computed Parameter: Delay3_InitialCondition_k
+                                 * Referenced by: '<S8>/Delay3'
+                                 */
+  boolean_T Delay_InitialCondition_d;
+                                 /* Computed Parameter: Delay_InitialCondition_d
+                                  * Referenced by: '<S8>/Delay'
+                                  */
+  boolean_T Delay8_InitialCondition_o;
+                                /* Computed Parameter: Delay8_InitialCondition_o
+                                 * Referenced by: '<S8>/Delay8'
+                                 */
+  boolean_T Delay7_InitialCondition_o;
+                                /* Computed Parameter: Delay7_InitialCondition_o
+                                 * Referenced by: '<S8>/Delay7'
+                                 */
   boolean_T Delay6_InitialCondition;
                                   /* Computed Parameter: Delay6_InitialCondition
-                                   * Referenced by: '<S9>/Delay6'
+                                   * Referenced by: '<S8>/Delay6'
                                    */
   boolean_T Delay2_InitialCondition_c;
                                 /* Computed Parameter: Delay2_InitialCondition_c
-                                 * Referenced by: '<S9>/Delay2'
+                                 * Referenced by: '<S8>/Delay2'
                                  */
   uint8_T Merge_InitialOutput;        /* Computed Parameter: Merge_InitialOutput
-                                       * Referenced by: '<S12>/Merge'
+                                       * Referenced by: '<S57>/Merge'
                                        */
-  uint8_T Merge_InitialOutput_i;    /* Computed Parameter: Merge_InitialOutput_i
-                                     * Referenced by: '<S13>/Merge'
+  uint8_T Merge_InitialOutput_p;    /* Computed Parameter: Merge_InitialOutput_p
+                                     * Referenced by: '<S58>/Merge'
                                      */
-  uint8_T Merge_InitialOutput_j;    /* Computed Parameter: Merge_InitialOutput_j
-                                     * Referenced by: '<S14>/Merge'
+  uint8_T Merge_InitialOutput_e;    /* Computed Parameter: Merge_InitialOutput_e
+                                     * Referenced by: '<S59>/Merge'
                                      */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem10_m;/* '<S14>/If Action Subsystem10' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem8_f;/* '<S14>/If Action Subsystem8' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem7_n;/* '<S14>/If Action Subsystem7' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem6_c;/* '<S14>/If Action Subsystem6' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem5_hh;/* '<S14>/If Action Subsystem5' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem4_db;/* '<S14>/If Action Subsystem4' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem3_c;/* '<S14>/If Action Subsystem3' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem2_i;/* '<S14>/If Action Subsystem2' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem1_a;/* '<S14>/If Action Subsystem1' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem_j;/* '<S14>/If Action Subsystem' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem10_l;/* '<S13>/If Action Subsystem10' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem8_p;/* '<S13>/If Action Subsystem8' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem7_h;/* '<S13>/If Action Subsystem7' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem6_b;/* '<S13>/If Action Subsystem6' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem5_h;/* '<S13>/If Action Subsystem5' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem4_d;/* '<S13>/If Action Subsystem4' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem3_p;/* '<S13>/If Action Subsystem3' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem2_d;/* '<S13>/If Action Subsystem2' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem1_d;/* '<S13>/If Action Subsystem1' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem_l;/* '<S13>/If Action Subsystem' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem10;/* '<S12>/If Action Subsystem10' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem8;/* '<S12>/If Action Subsystem8' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem7;/* '<S12>/If Action Subsystem7' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem6;/* '<S12>/If Action Subsystem6' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem5;/* '<S12>/If Action Subsystem5' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem4;/* '<S12>/If Action Subsystem4' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem3;/* '<S12>/If Action Subsystem3' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem2;/* '<S12>/If Action Subsystem2' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem1;/* '<S12>/If Action Subsystem1' */
-  P_IfActionSubsystem_top_level_T IfActionSubsystem;/* '<S12>/If Action Subsystem' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem10_o;/* '<S59>/If Action Subsystem10' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem8_p;/* '<S59>/If Action Subsystem8' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem7_he;/* '<S59>/If Action Subsystem7' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem6_o;/* '<S59>/If Action Subsystem6' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem5_l;/* '<S59>/If Action Subsystem5' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem4_b;/* '<S59>/If Action Subsystem4' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem3_a;/* '<S59>/If Action Subsystem3' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem2_o;/* '<S59>/If Action Subsystem2' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem1_dx;/* '<S59>/If Action Subsystem1' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem_a;/* '<S59>/If Action Subsystem' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem10_i;/* '<S58>/If Action Subsystem10' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem8_n;/* '<S58>/If Action Subsystem8' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem7_h;/* '<S58>/If Action Subsystem7' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem6_n;/* '<S58>/If Action Subsystem6' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem5_o;/* '<S58>/If Action Subsystem5' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem4_m;/* '<S58>/If Action Subsystem4' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem3_b;/* '<S58>/If Action Subsystem3' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem2_k;/* '<S58>/If Action Subsystem2' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem1_h;/* '<S58>/If Action Subsystem1' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem_i;/* '<S58>/If Action Subsystem' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem10;/* '<S57>/If Action Subsystem10' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem8;/* '<S57>/If Action Subsystem8' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem7;/* '<S57>/If Action Subsystem7' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem6;/* '<S57>/If Action Subsystem6' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem5;/* '<S57>/If Action Subsystem5' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem4;/* '<S57>/If Action Subsystem4' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem3;/* '<S57>/If Action Subsystem3' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem2;/* '<S57>/If Action Subsystem2' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem1_d;/* '<S57>/If Action Subsystem1' */
+  P_IfActionSubsystem_top_level_T IfActionSubsystem_n;/* '<S57>/If Action Subsystem' */
 };
 
 /* Real-time Model Data Structure */
@@ -344,12 +367,12 @@ struct tag_RTM_top_level_algo_T {
     time_T stepSize0;
     uint32_T clockTick1;
     struct {
-      uint8_T TID[3];
+      uint8_T TID[4];
     } TaskCounters;
 
     SimTimeStep simTimeStep;
     time_T *t;
-    time_T tArray[3];
+    time_T tArray[4];
   } Timing;
 };
 
@@ -375,33 +398,25 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S1>/Display1' : Unused code path elimination
- * Block '<S1>/Display2' : Unused code path elimination
- * Block '<S10>/Add1' : Unused code path elimination
- * Block '<S10>/Constant' : Unused code path elimination
- * Block '<S10>/Display1' : Unused code path elimination
- * Block '<S10>/Display2' : Unused code path elimination
- * Block '<S10>/Shift Arithmetic3' : Unused code path elimination
- * Block '<S1>/Scope12' : Unused code path elimination
- * Block '<S3>/Constant2' : Unused code path elimination
- * Block '<S3>/Counter1' : Unused code path elimination
- * Block '<S3>/Subtract3' : Unused code path elimination
- * Block '<S6>/Scope' : Unused code path elimination
- * Block '<Root>/Gain' : Unused code path elimination
- * Block '<S82>/Data Type Duplicate' : Unused code path elimination
- * Block '<S87>/FixPt Data Type Duplicate2' : Unused code path elimination
- * Block '<S83>/Data Type Duplicate' : Unused code path elimination
- * Block '<S88>/FixPt Data Type Duplicate2' : Unused code path elimination
- * Block '<S9>/Scope' : Unused code path elimination
- * Block '<Root>/Scope' : Unused code path elimination
- * Block '<Root>/Scope1' : Unused code path elimination
- * Block '<Root>/Scope10' : Unused code path elimination
- * Block '<Root>/Scope2' : Unused code path elimination
- * Block '<Root>/Scope7' : Unused code path elimination
+ * Block '<S2>/Constant2' : Unused code path elimination
+ * Block '<S2>/Counter1' : Unused code path elimination
+ * Block '<S2>/Subtract3' : Unused code path elimination
+ * Block '<S5>/Scope' : Unused code path elimination
+ * Block '<S45>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S50>/FixPt Data Type Duplicate2' : Unused code path elimination
+ * Block '<S46>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S51>/FixPt Data Type Duplicate2' : Unused code path elimination
+ * Block '<S8>/Scope' : Unused code path elimination
  * Block '<Root>/Scope8' : Unused code path elimination
  * Block '<Root>/Scope9' : Unused code path elimination
- * Block '<S10>/Shift Arithmetic' : Eliminated trivial shift
- * Block '<S11>/Cast To Double' : Eliminate redundant data type conversion
+ * Block '<S9>/Display1' : Unused code path elimination
+ * Block '<S55>/Display1' : Unused code path elimination
+ * Block '<S55>/Display2' : Unused code path elimination
+ * Block '<S9>/Scope' : Unused code path elimination
+ * Block '<S9>/Scope1' : Unused code path elimination
+ * Block '<S9>/Scope12' : Unused code path elimination
+ * Block '<S9>/Cast To Double' : Eliminate redundant data type conversion
+ * Block '<S55>/Shift Arithmetic' : Eliminated trivial shift
  */
 
 /*-
@@ -419,96 +434,96 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'top_level_algo'
- * '<S1>'   : 'top_level_algo/7seg Driver'
- * '<S2>'   : 'top_level_algo/Analog to Digital Converter'
- * '<S3>'   : 'top_level_algo/Compression Detection'
- * '<S4>'   : 'top_level_algo/Digital Port Write4'
- * '<S5>'   : 'top_level_algo/Digital Port Write5'
- * '<S6>'   : 'top_level_algo/Direction '
- * '<S7>'   : 'top_level_algo/Hardware Hiding'
- * '<S8>'   : 'top_level_algo/LED_display'
- * '<S9>'   : 'top_level_algo/MinMax'
- * '<S10>'  : 'top_level_algo/7seg Driver/HR Encoding'
- * '<S11>'  : 'top_level_algo/7seg Driver/Subsystem'
- * '<S12>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder'
- * '<S13>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1'
- * '<S14>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2'
- * '<S15>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem'
- * '<S16>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem1'
- * '<S17>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem10'
- * '<S18>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem2'
- * '<S19>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem3'
- * '<S20>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem4'
- * '<S21>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem5'
- * '<S22>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem6'
- * '<S23>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem7'
- * '<S24>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder/If Action Subsystem8'
- * '<S25>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem'
- * '<S26>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem1'
- * '<S27>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem10'
- * '<S28>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem2'
- * '<S29>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem3'
- * '<S30>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem4'
- * '<S31>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem5'
- * '<S32>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem6'
- * '<S33>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem7'
- * '<S34>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder1/If Action Subsystem8'
- * '<S35>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem'
- * '<S36>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem1'
- * '<S37>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem10'
- * '<S38>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem2'
- * '<S39>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem3'
- * '<S40>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem4'
- * '<S41>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem5'
- * '<S42>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem6'
- * '<S43>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem7'
- * '<S44>'  : 'top_level_algo/7seg Driver/HR Encoding/7seg encoder2/If Action Subsystem8'
- * '<S45>'  : 'top_level_algo/7seg Driver/Subsystem/ClockLogic'
- * '<S46>'  : 'top_level_algo/7seg Driver/Subsystem/DataLogic'
- * '<S47>'  : 'top_level_algo/Analog to Digital Converter/ECSoC'
- * '<S48>'  : 'top_level_algo/Analog to Digital Converter/ECSoC/ECSimCodegen'
- * '<S49>'  : 'top_level_algo/Compression Detection/Chart'
- * '<S50>'  : 'top_level_algo/Digital Port Write4/ECSoC'
- * '<S51>'  : 'top_level_algo/Digital Port Write4/ECSoC/ECSimCodegen'
- * '<S52>'  : 'top_level_algo/Digital Port Write5/ECSoC'
- * '<S53>'  : 'top_level_algo/Digital Port Write5/ECSoC/ECSimCodegen'
- * '<S54>'  : 'top_level_algo/Direction /Long range motion down'
- * '<S55>'  : 'top_level_algo/Direction /Long range motion up'
- * '<S56>'  : 'top_level_algo/Direction /Negative'
- * '<S57>'  : 'top_level_algo/Direction /Positive'
- * '<S58>'  : 'top_level_algo/Hardware Hiding/force min to zero'
- * '<S59>'  : 'top_level_algo/Hardware Hiding/timer'
- * '<S60>'  : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem'
- * '<S61>'  : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem1'
- * '<S62>'  : 'top_level_algo/LED_display/Compare To Constant'
- * '<S63>'  : 'top_level_algo/LED_display/Compare To Constant1'
- * '<S64>'  : 'top_level_algo/LED_display/Compare To Constant2'
- * '<S65>'  : 'top_level_algo/LED_display/Compare To Constant3'
- * '<S66>'  : 'top_level_algo/LED_display/Compare To Constant4'
- * '<S67>'  : 'top_level_algo/LED_display/Digital Port Write'
- * '<S68>'  : 'top_level_algo/LED_display/Digital Port Write1'
- * '<S69>'  : 'top_level_algo/LED_display/Digital Port Write2'
- * '<S70>'  : 'top_level_algo/LED_display/Digital Port Write3'
- * '<S71>'  : 'top_level_algo/LED_display/Digital Port Write4'
- * '<S72>'  : 'top_level_algo/LED_display/Digital Port Write/ECSoC'
- * '<S73>'  : 'top_level_algo/LED_display/Digital Port Write/ECSoC/ECSimCodegen'
- * '<S74>'  : 'top_level_algo/LED_display/Digital Port Write1/ECSoC'
- * '<S75>'  : 'top_level_algo/LED_display/Digital Port Write1/ECSoC/ECSimCodegen'
- * '<S76>'  : 'top_level_algo/LED_display/Digital Port Write2/ECSoC'
- * '<S77>'  : 'top_level_algo/LED_display/Digital Port Write2/ECSoC/ECSimCodegen'
- * '<S78>'  : 'top_level_algo/LED_display/Digital Port Write3/ECSoC'
- * '<S79>'  : 'top_level_algo/LED_display/Digital Port Write3/ECSoC/ECSimCodegen'
- * '<S80>'  : 'top_level_algo/LED_display/Digital Port Write4/ECSoC'
- * '<S81>'  : 'top_level_algo/LED_display/Digital Port Write4/ECSoC/ECSimCodegen'
- * '<S82>'  : 'top_level_algo/MinMax/Max (BDC)'
- * '<S83>'  : 'top_level_algo/MinMax/Min (BDC)'
- * '<S84>'  : 'top_level_algo/MinMax/force min to zero'
- * '<S85>'  : 'top_level_algo/MinMax/sample and hold'
- * '<S86>'  : 'top_level_algo/MinMax/sample and hold1'
- * '<S87>'  : 'top_level_algo/MinMax/Max (BDC)/Subsystem'
- * '<S88>'  : 'top_level_algo/MinMax/Min (BDC)/Subsystem'
- * '<S89>'  : 'top_level_algo/MinMax/force min to zero/If Action Subsystem'
- * '<S90>'  : 'top_level_algo/MinMax/force min to zero/If Action Subsystem1'
+ * '<S1>'   : 'top_level_algo/Analog to Digital Converter'
+ * '<S2>'   : 'top_level_algo/Compression Detection'
+ * '<S3>'   : 'top_level_algo/Digital Port Write4'
+ * '<S4>'   : 'top_level_algo/Digital Port Write5'
+ * '<S5>'   : 'top_level_algo/Direction '
+ * '<S6>'   : 'top_level_algo/Hardware Hiding'
+ * '<S7>'   : 'top_level_algo/LED_display'
+ * '<S8>'   : 'top_level_algo/MinMax'
+ * '<S9>'   : 'top_level_algo/Speed up 7seg Driver1'
+ * '<S10>'  : 'top_level_algo/Analog to Digital Converter/ECSoC'
+ * '<S11>'  : 'top_level_algo/Analog to Digital Converter/ECSoC/ECSimCodegen'
+ * '<S12>'  : 'top_level_algo/Compression Detection/Chart1'
+ * '<S13>'  : 'top_level_algo/Digital Port Write4/ECSoC'
+ * '<S14>'  : 'top_level_algo/Digital Port Write4/ECSoC/ECSimCodegen'
+ * '<S15>'  : 'top_level_algo/Digital Port Write5/ECSoC'
+ * '<S16>'  : 'top_level_algo/Digital Port Write5/ECSoC/ECSimCodegen'
+ * '<S17>'  : 'top_level_algo/Direction /Long range motion down'
+ * '<S18>'  : 'top_level_algo/Direction /Long range motion up'
+ * '<S19>'  : 'top_level_algo/Direction /Negative'
+ * '<S20>'  : 'top_level_algo/Direction /Positive'
+ * '<S21>'  : 'top_level_algo/Hardware Hiding/force min to zero'
+ * '<S22>'  : 'top_level_algo/Hardware Hiding/timer'
+ * '<S23>'  : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem'
+ * '<S24>'  : 'top_level_algo/Hardware Hiding/force min to zero/If Action Subsystem1'
+ * '<S25>'  : 'top_level_algo/LED_display/Compare To Constant'
+ * '<S26>'  : 'top_level_algo/LED_display/Compare To Constant1'
+ * '<S27>'  : 'top_level_algo/LED_display/Compare To Constant2'
+ * '<S28>'  : 'top_level_algo/LED_display/Compare To Constant3'
+ * '<S29>'  : 'top_level_algo/LED_display/Compare To Constant4'
+ * '<S30>'  : 'top_level_algo/LED_display/Digital Port Write'
+ * '<S31>'  : 'top_level_algo/LED_display/Digital Port Write1'
+ * '<S32>'  : 'top_level_algo/LED_display/Digital Port Write2'
+ * '<S33>'  : 'top_level_algo/LED_display/Digital Port Write3'
+ * '<S34>'  : 'top_level_algo/LED_display/Digital Port Write4'
+ * '<S35>'  : 'top_level_algo/LED_display/Digital Port Write/ECSoC'
+ * '<S36>'  : 'top_level_algo/LED_display/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S37>'  : 'top_level_algo/LED_display/Digital Port Write1/ECSoC'
+ * '<S38>'  : 'top_level_algo/LED_display/Digital Port Write1/ECSoC/ECSimCodegen'
+ * '<S39>'  : 'top_level_algo/LED_display/Digital Port Write2/ECSoC'
+ * '<S40>'  : 'top_level_algo/LED_display/Digital Port Write2/ECSoC/ECSimCodegen'
+ * '<S41>'  : 'top_level_algo/LED_display/Digital Port Write3/ECSoC'
+ * '<S42>'  : 'top_level_algo/LED_display/Digital Port Write3/ECSoC/ECSimCodegen'
+ * '<S43>'  : 'top_level_algo/LED_display/Digital Port Write4/ECSoC'
+ * '<S44>'  : 'top_level_algo/LED_display/Digital Port Write4/ECSoC/ECSimCodegen'
+ * '<S45>'  : 'top_level_algo/MinMax/Max (BDC)'
+ * '<S46>'  : 'top_level_algo/MinMax/Min (BDC)'
+ * '<S47>'  : 'top_level_algo/MinMax/force min to zero'
+ * '<S48>'  : 'top_level_algo/MinMax/sample and hold'
+ * '<S49>'  : 'top_level_algo/MinMax/sample and hold1'
+ * '<S50>'  : 'top_level_algo/MinMax/Max (BDC)/Subsystem'
+ * '<S51>'  : 'top_level_algo/MinMax/Min (BDC)/Subsystem'
+ * '<S52>'  : 'top_level_algo/MinMax/force min to zero/If Action Subsystem'
+ * '<S53>'  : 'top_level_algo/MinMax/force min to zero/If Action Subsystem1'
+ * '<S54>'  : 'top_level_algo/Speed up 7seg Driver1/DataLogic'
+ * '<S55>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding'
+ * '<S56>'  : 'top_level_algo/Speed up 7seg Driver1/clk'
+ * '<S57>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder'
+ * '<S58>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1'
+ * '<S59>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2'
+ * '<S60>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem'
+ * '<S61>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem1'
+ * '<S62>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem10'
+ * '<S63>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem2'
+ * '<S64>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem3'
+ * '<S65>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem4'
+ * '<S66>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem5'
+ * '<S67>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem6'
+ * '<S68>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem7'
+ * '<S69>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder/If Action Subsystem8'
+ * '<S70>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem'
+ * '<S71>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem1'
+ * '<S72>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem10'
+ * '<S73>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem2'
+ * '<S74>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem3'
+ * '<S75>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem4'
+ * '<S76>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem5'
+ * '<S77>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem6'
+ * '<S78>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem7'
+ * '<S79>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder1/If Action Subsystem8'
+ * '<S80>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem'
+ * '<S81>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem1'
+ * '<S82>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem10'
+ * '<S83>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem2'
+ * '<S84>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem3'
+ * '<S85>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem4'
+ * '<S86>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem5'
+ * '<S87>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem6'
+ * '<S88>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem7'
+ * '<S89>'  : 'top_level_algo/Speed up 7seg Driver1/HR Encoding/7seg encoder2/If Action Subsystem8'
+ * '<S90>'  : 'top_level_algo/Speed up 7seg Driver1/clk/Compare To Constant'
  */
 #endif                                 /* RTW_HEADER_top_level_algo_h_ */
 

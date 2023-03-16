@@ -15,8 +15,7 @@ y = squeeze(y(1,1,:));
 plot(x,y)%,marker = 'o')
 title("ADC Values")
 xlabel("Time (Sec)")
-
-close all;
+% close all;
 
 %{
 length(x)/(max(x)-min(x)) = 18.3410
