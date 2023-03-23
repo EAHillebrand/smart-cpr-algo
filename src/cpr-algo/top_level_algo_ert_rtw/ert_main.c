@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.11
+ * Model version                  : 3.24
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Tue Mar 14 22:48:37 2023
+ * C/C++ source code generated on : Mon Mar 20 19:10:56 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -17,86 +17,97 @@
  * Validation result: Not run
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "top_level_algo.h"
+#include "top_level_algo_private.h"
 #include "rtwtypes.h"
-#include "MW_target_hardware_resources.h"
+#include "limits.h"
+#include "rt_nonfinite.h"
+#include "MW_ArduinoHWInit.h"
+#include "mw_freertos.h"
+#define UNUSED(x)                      x = x
+#define NAMELEN                        16
 
-volatile int IsrOverrun = 0;
-static boolean_T OverrunFlag = 0;
-void rt_OneStep(void)
+/* Function prototype declaration*/
+void exitFcn(int sig);
+void *terminateTask(void *arg);
+void *baseRateTask(void *arg);
+void *subrateTask(void *arg);
+volatile boolean_T stopRequested = false;
+volatile boolean_T runModel = true;
+SemaphoreHandle_t stopSem;
+SemaphoreHandle_t baserateTaskSem;
+mw_thread_t schedulerThread;
+mw_thread_t baseRateThread;
+void *threadJoinStatus;
+int terminatingmodel = 0;
+void *baseRateTask(void *arg)
 {
-  /* Check for overrun. Protect OverrunFlag against preemption */
-  if (OverrunFlag++) {
-    IsrOverrun = 1;
-    OverrunFlag--;
-    return;
+  runModel = (rtmGetErrorStatus(top_level_algo_M) == (NULL));
+  while (runModel) {
+    mw_osSemaphoreWaitEver(&baserateTaskSem);
+    top_level_algo_step();
+
+    /* Get model outputs here */
+    stopRequested = !((rtmGetErrorStatus(top_level_algo_M) == (NULL)));
+    runModel = !stopRequested;
   }
 
-  __enable_irq();
-  top_level_algo_step();
-
-  /* Get model outputs here */
-  __disable_irq();
-  OverrunFlag--;
+  runModel = 0;
+  terminateTask(arg);
+  mw_osThreadExit((void *)0);
+  return NULL;
 }
 
-volatile boolean_T stopRequested;
-volatile boolean_T runModel;
-int main(int argc, char **argv)
+void exitFcn(int sig)
 {
-  float modelBaseRate = 0.001;
-  float systemClock = 168.0;
+  UNUSED(sig);
+  rtmSetErrorStatus(top_level_algo_M, "stopping the model");
+}
 
-  /* Initialize variables */
-  stopRequested = false;
-  runModel = false;
+void *terminateTask(void *arg)
+{
+  UNUSED(arg);
+  terminatingmodel = 1;
 
-#if !defined(MW_FREERTOS) && defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
-
-  MW_ASM (" SVC #1");
-
-#endif
-
-  ;
-
-  // Peripheral initialization imported from STM32CubeMX project;
-  HAL_Init();
-  SystemClock_Config();
-  PeriphCommonClock_Config();
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_I2C3_Init();
-  MX_SPI5_Init();
-  MX_TIM1_Init();
-  MX_USART1_UART_Init();
-  MX_ADC3_Init();
-  rtmSetErrorStatus(top_level_algo_M, 0);
-  top_level_algo_initialize();
-  __disable_irq();
-  ARMCM_SysTick_Config(modelBaseRate);
-  runModel = rtmGetErrorStatus(top_level_algo_M) == (NULL);
-  __enable_irq();
-  __enable_irq();
-  while (runModel) {
-    stopRequested = !(rtmGetErrorStatus(top_level_algo_M) == (NULL));
-    if (stopRequested) {
-      SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
-    }
-
-    ;
+  {
+    runModel = 0;
   }
 
   /* Terminate model */
   top_level_algo_terminate();
+  mw_osSemaphoreRelease(&stopSem);
+  return NULL;
+}
 
-#if !defined(MW_FREERTOS) && !defined(USE_RTX)
+int app_main(int argc, char **argv)
+{
+  init();
+  MW_Arduino_Init();
+  rtmSetErrorStatus(top_level_algo_M, 0);
 
-  (void) systemClock;
+  /* Initialize model */
+  top_level_algo_initialize();
+
+  /* Call RTOS Initialization function */
+  mw_RTOSInit(0.001, 0);
+
+  /* Wait for stop semaphore */
+  mw_osSemaphoreWaitEver(&stopSem);
+
+#if (MW_NUMBER_TIMER_DRIVEN_TASKS > 0)
+
+  {
+    int i;
+    for (i=0; i < MW_NUMBER_TIMER_DRIVEN_TASKS; i++) {
+      CHECK_STATUS(mw_osSemaphoreDelete(&timerTaskSem[i]), 0,
+                   "mw_osSemaphoreDelete");
+    }
+  }
 
 #endif
 
-  ;
-  __disable_irq();
   return 0;
 }
 

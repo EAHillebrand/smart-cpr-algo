@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'stm32f4discovery_gettingstarted'.
  *
- * Model version                  : 10.3
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 19:53:33 2023
+ * Model version                  : 12.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Sat Mar 18 09:36:49 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,6 +19,7 @@
 
 #include "stm32f4discovery_gettingstarted.h"
 #include "rtwtypes.h"
+#include "MW_target_hardware_resources.h"
 
 volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
@@ -43,14 +44,14 @@ volatile boolean_T stopRequested;
 volatile boolean_T runModel;
 int main(int argc, char **argv)
 {
-  float modelBaseRate = 0.3;
+  float modelBaseRate = 0.1;
   float systemClock = 168.0;
 
   /* Initialize variables */
   stopRequested = false;
   runModel = false;
 
-#if defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
+#if !defined(MW_FREERTOS) && defined(MW_MULTI_TASKING_MODE) && (MW_MULTI_TASKING_MODE == 1)
 
   MW_ASM (" SVC #1");
 
@@ -58,27 +59,26 @@ int main(int argc, char **argv)
 
   ;
 
-  /* Peripheral initialization imported from STM32CubeMX project */
-  ;
+  // Peripheral initialization imported from STM32CubeMX project;
   HAL_Init();
   SystemClock_Config();
+  PeriphCommonClock_Config();
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2C3_Init();
   MX_SPI5_Init();
   MX_TIM1_Init();
   MX_USART1_UART_Init();
+  MX_ADC3_Init();
   rtmSetErrorStatus(stm32f4discovery_gettingstar_M, 0);
   stm32f4discovery_gettingstarted_initialize();
   __disable_irq();
   ARMCM_SysTick_Config(modelBaseRate);
-  runModel =
-    rtmGetErrorStatus(stm32f4discovery_gettingstar_M) == (NULL);
+  runModel = rtmGetErrorStatus(stm32f4discovery_gettingstar_M) == (NULL);
   __enable_irq();
   __enable_irq();
   while (runModel) {
-    stopRequested = !(
-                      rtmGetErrorStatus(stm32f4discovery_gettingstar_M) == (NULL));
+    stopRequested = !(rtmGetErrorStatus(stm32f4discovery_gettingstar_M) == (NULL));
     if (stopRequested) {
       SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
     }
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
   /* Terminate model */
   stm32f4discovery_gettingstarted_terminate();
 
-#ifndef USE_RTX
+#if !defined(MW_FREERTOS) && !defined(USE_RTX)
 
   (void) systemClock;
 

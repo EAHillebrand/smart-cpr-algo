@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'stm32f4discovery_gettingstarted'.
  *
- * Model version                  : 10.3
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 19:53:33 2023
+ * Model version                  : 12.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Sat Mar 18 09:36:49 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -20,6 +20,7 @@
 #ifndef RTW_HEADER_stm32f4discovery_gettingstarted_private_h_
 #define RTW_HEADER_stm32f4discovery_gettingstarted_private_h_
 #include "rtwtypes.h"
+#include "stm32f4discovery_gettingstarted_types.h"
 #endif               /* RTW_HEADER_stm32f4discovery_gettingstarted_private_h_ */
 
 /*

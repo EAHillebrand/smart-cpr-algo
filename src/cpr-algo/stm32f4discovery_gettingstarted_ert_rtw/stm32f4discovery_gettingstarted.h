@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'stm32f4discovery_gettingstarted'.
  *
- * Model version                  : 10.3
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 19:53:33 2023
+ * Model version                  : 12.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Sat Mar 18 09:36:49 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -19,8 +19,6 @@
 
 #ifndef RTW_HEADER_stm32f4discovery_gettingstarted_h_
 #define RTW_HEADER_stm32f4discovery_gettingstarted_h_
-#include <stddef.h>
-#include <string.h>
 #ifndef stm32f4discovery_gettingstarted_COMMON_INCLUDES_
 #define stm32f4discovery_gettingstarted_COMMON_INCLUDES_
 #include "rtwtypes.h"
@@ -28,6 +26,8 @@
 #endif                    /* stm32f4discovery_gettingstarted_COMMON_INCLUDES_ */
 
 #include "stm32f4discovery_gettingstarted_types.h"
+#include <stddef.h>
+#include <string.h>
 #include "MW_target_hardware_resources.h"
 
 /* Macros for accessing real-time model data structure */
@@ -43,22 +43,22 @@
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  int32_T clockTickCounter;            /* '<Root>/Pulse Generator1' */
+  int32_T clockTickCounter;            /* '<Root>/Pulse Generator' */
 } DW_stm32f4discovery_gettingst_T;
 
 /* Parameters (default storage) */
 struct P_stm32f4discovery_gettingsta_T_ {
-  real_T PulseGenerator1_Amp;          /* Expression: 1
-                                        * Referenced by: '<Root>/Pulse Generator1'
+  real_T PulseGenerator_Amp;           /* Expression: 1
+                                        * Referenced by: '<Root>/Pulse Generator'
                                         */
-  real_T PulseGenerator1_Period;   /* Computed Parameter: PulseGenerator1_Period
-                                    * Referenced by: '<Root>/Pulse Generator1'
-                                    */
-  real_T PulseGenerator1_Duty;       /* Computed Parameter: PulseGenerator1_Duty
-                                      * Referenced by: '<Root>/Pulse Generator1'
-                                      */
-  real_T PulseGenerator1_PhaseDelay;   /* Expression: 0
-                                        * Referenced by: '<Root>/Pulse Generator1'
+  real_T PulseGenerator_Period;        /* Expression: 10
+                                        * Referenced by: '<Root>/Pulse Generator'
+                                        */
+  real_T PulseGenerator_Duty;          /* Expression: 5
+                                        * Referenced by: '<Root>/Pulse Generator'
+                                        */
+  real_T PulseGenerator_PhaseDelay;    /* Expression: 0
+                                        * Referenced by: '<Root>/Pulse Generator'
                                         */
 };
 

@@ -2,7 +2,7 @@
 ## Makefile generated for component 'stm32f4discovery_gettingstarted'. 
 ## 
 ## Makefile     : stm32f4discovery_gettingstarted.mk
-## Generated on : Sat Mar 04 19:53:41 2023
+## Generated on : Sat Mar 18 09:35:56 2023
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/stm32f4discovery_gettingstarted.elf
 ## Product type : executable
 ## 
@@ -20,8 +20,8 @@
 
 PRODUCT_NAME              = stm32f4discovery_gettingstarted
 MAKEFILE                  = stm32f4discovery_gettingstarted.mk
-MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2021b
-MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2021b/bin
+MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2022b
+MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2022b/bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)/win64
 START_DIR                 = C:/Users/eahil/Documents/GitHub/smart-cpr-algo/src/cpr-algo
 SOLVER                    = 
@@ -41,7 +41,7 @@ CPP_STANDARD_OPTS         =
 
 # Toolchain Name:          GNU Tools for ARM Embedded Processors
 # Supported Version(s):    
-# ToolchainInfo Version:   2021b
+# ToolchainInfo Version:   2022b
 # Specification Revision:  1.0
 # 
 #-------------------------------------------
@@ -211,7 +211,7 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F429xx -DUSE_HAL_DRIVER
+DEFINES_ = -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIVER -DSTM32F429xx -DUSE_HAL_DRIVER -DMW_TIMEBASESOURCE=TIM5
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
 DEFINES_OPTS = -DTID01EQ=0
@@ -224,7 +224,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/stm32f4discovery_gettingstarted_ert_rtw/stm32f4discovery_gettingstarted.c $(START_DIR)/stm32f4discovery_gettingstarted_ert_rtw/stm32f4discovery_gettingstarted_data.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/main.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_it.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_hal_msp.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_hal_timebase_tim.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/system_stm32f4xx.c C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/startup_stm32f429xx.s C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/syscalls.c
+SRCS = $(START_DIR)/stm32f4discovery_gettingstarted_ert_rtw/stm32f4discovery_gettingstarted.c $(START_DIR)/stm32f4discovery_gettingstarted_ert_rtw/stm32f4discovery_gettingstarted_data.c C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/shared/supportpackages/stm32/src/platform_timer.c C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c $(START_DIR)/top_level_algo/Core/Src/main.c $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_it.c $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_hal_msp.c $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_hal_timebase_tim.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c $(START_DIR)/top_level_algo/Core/Src/system_stm32f4xx.c $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Core/syscalls.c $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Core/sysmem.c $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Startup/startup_stm32f429zitx.s
 
 MAIN_SRC = $(START_DIR)/stm32f4discovery_gettingstarted_ert_rtw/ert_main.c
 
@@ -234,7 +234,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = stm32f4discovery_gettingstarted.o stm32f4discovery_gettingstarted_data.o overrideHALDelay.o SysTickScheduler.o m3m4m4f_multitasking.o main.o stm32f4xx_it.o stm32f4xx_hal_msp.o stm32f4xx_hal_timebase_tim.o stm32f4xx_ll_gpio.o stm32f4xx_ll_dma.o stm32f4xx_ll_i2c.o stm32f4xx_ll_rcc.o stm32f4xx_ll_utils.o stm32f4xx_ll_exti.o stm32f4xx_hal_rcc.o stm32f4xx_hal_rcc_ex.o stm32f4xx_hal_flash.o stm32f4xx_hal_flash_ex.o stm32f4xx_hal_flash_ramfunc.o stm32f4xx_hal_gpio.o stm32f4xx_hal_dma_ex.o stm32f4xx_hal_dma.o stm32f4xx_hal_pwr.o stm32f4xx_hal_pwr_ex.o stm32f4xx_hal_cortex.o stm32f4xx_hal.o stm32f4xx_hal_exti.o stm32f4xx_ll_spi.o stm32f4xx_hal_tim.o stm32f4xx_hal_tim_ex.o stm32f4xx_ll_tim.o stm32f4xx_ll_usart.o system_stm32f4xx.o startup_stm32f429xx.o syscalls.o
+OBJS = stm32f4discovery_gettingstarted.o stm32f4discovery_gettingstarted_data.o overrideHALDelay.o platform_timer.o SysTickScheduler.o m3m4m4f_multitasking.o main.o stm32f4xx_it.o stm32f4xx_hal_msp.o stm32f4xx_hal_timebase_tim.o stm32f4xx_ll_gpio.o stm32f4xx_ll_adc.o stm32f4xx_ll_dma.o stm32f4xx_ll_rcc.o stm32f4xx_ll_utils.o stm32f4xx_ll_exti.o stm32f4xx_hal_rcc.o stm32f4xx_hal_rcc_ex.o stm32f4xx_hal_flash.o stm32f4xx_hal_flash_ex.o stm32f4xx_hal_flash_ramfunc.o stm32f4xx_hal_gpio.o stm32f4xx_hal_dma_ex.o stm32f4xx_hal_dma.o stm32f4xx_hal_pwr.o stm32f4xx_hal_pwr_ex.o stm32f4xx_hal_cortex.o stm32f4xx_hal.o stm32f4xx_hal_exti.o stm32f4xx_ll_i2c.o stm32f4xx_ll_spi.o stm32f4xx_hal_tim.o stm32f4xx_hal_tim_ex.o stm32f4xx_ll_tim.o stm32f4xx_ll_usart.o system_stm32f4xx.o syscalls.o sysmem.o startup_stm32f429zitx.o
 
 MAIN_OBJ = ert_main.o
 
@@ -250,7 +250,7 @@ PREBUILT_OBJS =
 ## LIBRARIES
 ###########################################################################
 
-LIBS = C:/ProgramData/MATLAB/SupportPackages/R2021b/3P.instrset/cmsis.instrset/CMSIS/DSP/Lib/GCC/libarm_cortexM4lf_math.a
+LIBS = C:/ProgramData/MATLAB/SupportPackages/R2022b/3P.instrset/cmsis.instrset/CMSIS/DSP/Lib/GCC/libarm_cortexM4lf_math.a
 
 ###########################################################################
 ## SYSTEM LIBRARIES
@@ -284,25 +284,28 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nano.specs --specs=nosys.specs  -T"C:\ProgramData\MATLAB\SupportPackages\R2021b\toolbox\target\supportpackages\stm32f4discovery\stm32f4discoveryexamples\stm32f4discovery_gettingstarted\SW4STM32\stm32f4discovery_gettingstarted\STM32F429ZITx_FLASH.ld"
+CPP_LDFLAGS_ = --specs=nano.specs
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\STM32CubeIDE\STM32F429ZITX_FLASH.ld"
 
-CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
+CPP_LDFLAGS += $(CPP_LDFLAGS_) $(CPP_LDFLAGS_SKIPFORSIL)
 
 #------------------------------
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nano.specs --specs=nosys.specs  -T"C:\ProgramData\MATLAB\SupportPackages\R2021b\toolbox\target\supportpackages\stm32f4discovery\stm32f4discoveryexamples\stm32f4discovery_gettingstarted\SW4STM32\stm32f4discovery_gettingstarted\STM32F429ZITx_FLASH.ld"
+CPP_SHAREDLIB_LDFLAGS_ = --specs=nano.specs
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\STM32CubeIDE\STM32F429ZITX_FLASH.ld"
 
-CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
+CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_) $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 #-----------
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nano.specs --specs=nosys.specs  -T"C:\ProgramData\MATLAB\SupportPackages\R2021b\toolbox\target\supportpackages\stm32f4discovery\stm32f4discoveryexamples\stm32f4discovery_gettingstarted\SW4STM32\stm32f4discovery_gettingstarted\STM32F429ZITx_FLASH.ld"
+LDFLAGS_ = --specs=nano.specs
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\STM32CubeIDE\STM32F429ZITX_FLASH.ld"
 
-LDFLAGS += $(LDFLAGS_SKIPFORSIL)
+LDFLAGS += $(LDFLAGS_) $(LDFLAGS_SKIPFORSIL)
 
 #---------------------
 # MEX C++ Compiler
@@ -324,9 +327,10 @@ MEX_CFLAGS += $(MEX_Compiler_BASIC)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nano.specs --specs=nosys.specs  -T"C:\ProgramData\MATLAB\SupportPackages\R2021b\toolbox\target\supportpackages\stm32f4discovery\stm32f4discoveryexamples\stm32f4discovery_gettingstarted\SW4STM32\stm32f4discovery_gettingstarted\STM32F429ZITx_FLASH.ld"
+SHAREDLIB_LDFLAGS_ = --specs=nano.specs
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m4 -mthumb -mlittle-endian -mthumb-interwork -mfpu=fpv4-sp-d16 -mfloat-abi=hard --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\eahil\Documents\GitHub\smart-cpr-algo\src\cpr-algo\top_level_algo\STM32CubeIDE\STM32F429ZITX_FLASH.ld"
 
-SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
+SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_) $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
 ###########################################################################
 ## INLINED COMMANDS
@@ -592,140 +596,152 @@ stm32f4discovery_gettingstarted_data.o : $(START_DIR)/stm32f4discovery_gettingst
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-overrideHALDelay.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c
+overrideHALDelay.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-SysTickScheduler.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c
+platform_timer.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/shared/supportpackages/stm32/src/platform_timer.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-m3m4m4f_multitasking.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c
+SysTickScheduler.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/SysTickScheduler.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-main.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/main.c
+m3m4m4f_multitasking.o : C:/ProgramData/MATLAB/SupportPackages/R2022b/toolbox/target/supportpackages/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_it.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_it.c
+main.o : $(START_DIR)/top_level_algo/Core/Src/main.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_msp.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_hal_msp.c
+stm32f4xx_it.o : $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_it.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_timebase_tim.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/stm32f4xx_hal_timebase_tim.c
+stm32f4xx_hal_msp.o : $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_hal_msp.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_gpio.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c
+stm32f4xx_hal_timebase_tim.o : $(START_DIR)/top_level_algo/Core/Src/stm32f4xx_hal_timebase_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_dma.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
+stm32f4xx_ll_gpio.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_i2c.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c
+stm32f4xx_ll_adc.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_rcc.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c
+stm32f4xx_ll_dma.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_utils.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c
+stm32f4xx_ll_rcc.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_exti.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
+stm32f4xx_ll_utils.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_rcc.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+stm32f4xx_ll_exti.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_rcc_ex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+stm32f4xx_hal_rcc.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+stm32f4xx_hal_rcc_ex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash_ex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+stm32f4xx_hal_flash.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_flash_ramfunc.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+stm32f4xx_hal_flash_ex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_gpio.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+stm32f4xx_hal_flash_ramfunc.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_dma_ex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+stm32f4xx_hal_gpio.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_dma.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+stm32f4xx_hal_dma_ex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_pwr.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+stm32f4xx_hal_dma.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_pwr_ex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+stm32f4xx_hal_pwr.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_cortex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+stm32f4xx_hal_pwr_ex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+stm32f4xx_hal_cortex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_exti.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+stm32f4xx_hal.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_spi.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c
+stm32f4xx_hal_exti.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_tim.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+stm32f4xx_ll_i2c.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_i2c.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_hal_tim_ex.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+stm32f4xx_ll_spi.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_tim.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c
+stm32f4xx_hal_tim.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-stm32f4xx_ll_usart.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c
+stm32f4xx_hal_tim_ex.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-system_stm32f4xx.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/../Core/Src/system_stm32f4xx.c
+stm32f4xx_ll_tim.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
-startup_stm32f429xx.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/startup_stm32f429xx.s
+stm32f4xx_ll_usart.o : $(START_DIR)/top_level_algo/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+system_stm32f4xx.o : $(START_DIR)/top_level_algo/Core/Src/system_stm32f4xx.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+syscalls.o : $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Core/syscalls.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+sysmem.o : $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Core/sysmem.c
+	$(CC) $(CFLAGS) -o "$@" "$<"
+
+
+startup_stm32f429zitx.o : $(START_DIR)/top_level_algo/STM32CubeIDE/Application/User/Startup/startup_stm32f429zitx.s
 	$(AS) $(ASFLAGS) -o "$@" "$<"
-
-
-syscalls.o : C:/ProgramData/MATLAB/SupportPackages/R2021b/toolbox/target/supportpackages/stm32f4discovery/stm32f4discoveryexamples/stm32f4discovery_gettingstarted/SW4STM32/syscalls.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
 
 
 ###########################################################################

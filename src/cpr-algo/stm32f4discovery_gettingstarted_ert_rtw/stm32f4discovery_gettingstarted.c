@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'stm32f4discovery_gettingstarted'.
  *
- * Model version                  : 10.3
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 19:53:33 2023
+ * Model version                  : 12.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Sat Mar 18 09:36:49 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -18,7 +18,8 @@
  */
 
 #include "stm32f4discovery_gettingstarted.h"
-#include "stm32f4discovery_gettingstarted_private.h"
+#include "rtwtypes.h"
+#include <string.h>
 
 /* Block states (default storage) */
 DW_stm32f4discovery_gettingst_T stm32f4discovery_gettingstar_DW;
@@ -32,33 +33,33 @@ RT_MODEL_stm32f4discovery_get_T *const stm32f4discovery_gettingstar_M =
 void stm32f4discovery_gettingstarted_step(void)
 {
   GPIO_TypeDef * portNameLoc;
-  real_T rtb_PulseGenerator1;
+  real_T rtb_PulseGenerator;
   int32_T pinWriteLoc;
 
-  /* DiscretePulseGenerator: '<Root>/Pulse Generator1' */
-  rtb_PulseGenerator1 = (stm32f4discovery_gettingstar_DW.clockTickCounter <
-    stm32f4discovery_gettingstart_P.PulseGenerator1_Duty) &&
+  /* DiscretePulseGenerator: '<Root>/Pulse Generator' */
+  rtb_PulseGenerator = (stm32f4discovery_gettingstar_DW.clockTickCounter <
+                        stm32f4discovery_gettingstart_P.PulseGenerator_Duty) &&
     (stm32f4discovery_gettingstar_DW.clockTickCounter >= 0) ?
-    stm32f4discovery_gettingstart_P.PulseGenerator1_Amp : 0.0;
+    stm32f4discovery_gettingstart_P.PulseGenerator_Amp : 0.0;
   if (stm32f4discovery_gettingstar_DW.clockTickCounter >=
-      stm32f4discovery_gettingstart_P.PulseGenerator1_Period - 1.0) {
+      stm32f4discovery_gettingstart_P.PulseGenerator_Period - 1.0) {
     stm32f4discovery_gettingstar_DW.clockTickCounter = 0;
   } else {
     stm32f4discovery_gettingstar_DW.clockTickCounter++;
   }
 
-  /* End of DiscretePulseGenerator: '<Root>/Pulse Generator1' */
+  /* End of DiscretePulseGenerator: '<Root>/Pulse Generator' */
 
   /* MATLABSystem: '<S3>/Digital Port Write' */
-  portNameLoc = GPIOD;
-  if (rtb_PulseGenerator1 != 0.0) {
-    pinWriteLoc = 4;
+  portNameLoc = GPIOE;
+  if (rtb_PulseGenerator != 0.0) {
+    pinWriteLoc = 16;
   } else {
     pinWriteLoc = 0;
   }
 
   LL_GPIO_SetOutputPin(portNameLoc, (uint32_T)pinWriteLoc);
-  LL_GPIO_ResetOutputPin(portNameLoc, ~(uint32_T)pinWriteLoc & 4U);
+  LL_GPIO_ResetOutputPin(portNameLoc, ~(uint32_T)pinWriteLoc & 16U);
 
   /* End of MATLABSystem: '<S3>/Digital Port Write' */
 }
@@ -75,7 +76,7 @@ void stm32f4discovery_gettingstarted_initialize(void)
   (void) memset((void *)&stm32f4discovery_gettingstar_DW, 0,
                 sizeof(DW_stm32f4discovery_gettingst_T));
 
-  /* Start for DiscretePulseGenerator: '<Root>/Pulse Generator1' */
+  /* InitializeConditions for DiscretePulseGenerator: '<Root>/Pulse Generator' */
   stm32f4discovery_gettingstar_DW.clockTickCounter = 0;
 }
 

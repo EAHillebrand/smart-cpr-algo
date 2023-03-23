@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'stm32f4discovery_gettingstarted'.
  *
- * Model version                  : 10.3
- * Simulink Coder version         : 9.6 (R2021b) 14-May-2021
- * C/C++ source code generated on : Sat Mar  4 19:53:33 2023
+ * Model version                  : 12.0
+ * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ * C/C++ source code generated on : Sat Mar 18 09:36:49 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -18,27 +18,26 @@
  */
 
 #include "stm32f4discovery_gettingstarted.h"
-#include "stm32f4discovery_gettingstarted_private.h"
 
 /* Block parameters (default storage) */
 P_stm32f4discovery_gettingsta_T stm32f4discovery_gettingstart_P = {
   /* Expression: 1
-   * Referenced by: '<Root>/Pulse Generator1'
+   * Referenced by: '<Root>/Pulse Generator'
    */
   1.0,
 
-  /* Computed Parameter: PulseGenerator1_Period
-   * Referenced by: '<Root>/Pulse Generator1'
+  /* Expression: 10
+   * Referenced by: '<Root>/Pulse Generator'
    */
   10.0,
 
-  /* Computed Parameter: PulseGenerator1_Duty
-   * Referenced by: '<Root>/Pulse Generator1'
+  /* Expression: 5
+   * Referenced by: '<Root>/Pulse Generator'
    */
-  3.0,
+  5.0,
 
   /* Expression: 0
-   * Referenced by: '<Root>/Pulse Generator1'
+   * Referenced by: '<Root>/Pulse Generator'
    */
   0.0
 };

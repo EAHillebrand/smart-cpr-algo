@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.11
+ * Model version                  : 3.24
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Tue Mar 14 22:48:37 2023
+ * C/C++ source code generated on : Mon Mar 20 19:10:56 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -20,28 +20,6 @@
 #ifndef RTW_HEADER_top_level_algo_types_h_
 #define RTW_HEADER_top_level_algo_types_h_
 #include "rtwtypes.h"
-#include "stm_adc_ll.h"
-
-/* Custom Type definition for MATLABSystem: '<S11>/Analog to Digital Converter' */
-#include "stm_adc_ll.h"
-#include "stm_adc_ll.h"
-#ifndef struct_tag_S5MMpcz8vT0FlmhmEl4q5C
-#define struct_tag_S5MMpcz8vT0FlmhmEl4q5C
-
-struct tag_S5MMpcz8vT0FlmhmEl4q5C
-{
-  int32_T isInitialized;
-};
-
-#endif                                 /* struct_tag_S5MMpcz8vT0FlmhmEl4q5C */
-
-#ifndef typedef_stm32cube_blocks_DigitalPortW_T
-#define typedef_stm32cube_blocks_DigitalPortW_T
-
-typedef struct tag_S5MMpcz8vT0FlmhmEl4q5C stm32cube_blocks_DigitalPortW_T;
-
-#endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
-
 #ifndef struct_tag_vboetmpsA6pP5KWZSA57JC
 #define struct_tag_vboetmpsA6pP5KWZSA57JC
 
@@ -59,28 +37,44 @@ typedef struct tag_vboetmpsA6pP5KWZSA57JC fixed_system_DivideByConstant_T;
 
 #endif                             /* typedef_fixed_system_DivideByConstant_T */
 
-#ifndef struct_tag_eNlr4mnkAt8yejvnq8gf4D
-#define struct_tag_eNlr4mnkAt8yejvnq8gf4D
+#ifndef struct_tag_9aqKbsbsI7JI0RwgnVwU0C
+#define struct_tag_9aqKbsbsI7JI0RwgnVwU0C
 
-struct tag_eNlr4mnkAt8yejvnq8gf4D
+struct tag_9aqKbsbsI7JI0RwgnVwU0C
+{
+  int32_T __dummy;
+};
+
+#endif                                 /* struct_tag_9aqKbsbsI7JI0RwgnVwU0C */
+
+#ifndef typedef_b_arduinodriver_ArduinoDigita_T
+#define typedef_b_arduinodriver_ArduinoDigita_T
+
+typedef struct tag_9aqKbsbsI7JI0RwgnVwU0C b_arduinodriver_ArduinoDigita_T;
+
+#endif                             /* typedef_b_arduinodriver_ArduinoDigita_T */
+
+#ifndef struct_tag_qrLkTWTW64zZK0sqwALTyG
+#define struct_tag_qrLkTWTW64zZK0sqwALTyG
+
+struct tag_qrLkTWTW64zZK0sqwALTyG
 {
   boolean_T matlabCodegenIsDeleted;
   int32_T isInitialized;
   boolean_T isSetupComplete;
-  ADC_Type_T* ADCHandle;
-  uint16_T ADCInternalBuffer[2];
+  b_arduinodriver_ArduinoDigita_T DigitalIODriverObj;
 };
 
-#endif                                 /* struct_tag_eNlr4mnkAt8yejvnq8gf4D */
+#endif                                 /* struct_tag_qrLkTWTW64zZK0sqwALTyG */
 
-#ifndef typedef_stm32cube_blocks_AnalogInput__T
-#define typedef_stm32cube_blocks_AnalogInput__T
+#ifndef typedef_codertarget_arduinobase_block_T
+#define typedef_codertarget_arduinobase_block_T
 
-typedef struct tag_eNlr4mnkAt8yejvnq8gf4D stm32cube_blocks_AnalogInput__T;
+typedef struct tag_qrLkTWTW64zZK0sqwALTyG codertarget_arduinobase_block_T;
 
-#endif                             /* typedef_stm32cube_blocks_AnalogInput__T */
+#endif                             /* typedef_codertarget_arduinobase_block_T */
 
-/* Parameters for system: '<S57>/If Action Subsystem' */
+/* Parameters for system: '<S4>/If Action Subsystem' */
 typedef struct P_IfActionSubsystem_top_level_T_ P_IfActionSubsystem_top_level_T;
 
 /* Parameters (default storage) */

@@ -1,25 +1,25 @@
 Archive member included to satisfy reference by file (symbol)
 
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
                               stm32f4discovery_gettingstarted.o (__aeabi_dsub)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
                               stm32f4discovery_gettingstarted.o (__aeabi_dcmpeq)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
                               stm32f4xx_hal_rcc.o (__aeabi_uldivmod)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
                               syscalls.o (__errno)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (__libc_init_array)
-c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                              c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (memset)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (__libc_init_array)
+c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                              c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (memset)
 
 Allocating common symbols
 Common symbol       size              file
@@ -37,17 +37,17 @@ stopRequested       0x1               ert_main.o
 
 Discarded input sections
 
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
- .data          0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
- .text          0x00000000       0x7c c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .ARM.extab     0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .ARM.exidx     0x00000000       0x10 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+ .data          0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x00000000       0x7c c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.exidx     0x00000000       0x10 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
-                0x00000000       0x1c c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+                0x00000000       0x1c c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .text          0x00000000        0x0 ert_main.o
  .data          0x00000000        0x0 ert_main.o
  .bss           0x00000000        0x0 ert_main.o
@@ -121,6 +121,33 @@ Discarded input sections
  .comment       0x00000000       0x4d overrideHALDelay.o
  .ARM.attributes
                 0x00000000       0x34 overrideHALDelay.o
+ .text          0x00000000        0x0 platform_timer.o
+ .data          0x00000000        0x0 platform_timer.o
+ .bss           0x00000000        0x0 platform_timer.o
+ .rodata.STREAM_OFFSET_TAB
+                0x00000000        0x8 platform_timer.o
+ .rodata.aRCC_PLLSAIDIVRPrescTable
+                0x00000000        0x4 platform_timer.o
+ .rodata.OFFSET_TAB_CCMRx
+                0x00000000        0x7 platform_timer.o
+ .rodata.SHIFT_TAB_OCxx
+                0x00000000        0x7 platform_timer.o
+ .rodata.SHIFT_TAB_ICxx
+                0x00000000        0x7 platform_timer.o
+ .rodata.SHIFT_TAB_CCxP
+                0x00000000        0x7 platform_timer.o
+ .rodata.SHIFT_TAB_OISx
+                0x00000000        0x7 platform_timer.o
+ .bss.timestampInitialized
+                0x00000000        0x4 platform_timer.o
+ .bss.timestampStartTime
+                0x00000000        0x4 platform_timer.o
+ .text.timestampInit
+                0x00000000       0x3c platform_timer.o
+ .text.returnTimeElapsed
+                0x00000000       0x3c platform_timer.o
+ .bss.currentTime.12810
+                0x00000000        0x4 platform_timer.o
  .text          0x00000000        0x0 SysTickScheduler.o
  .data          0x00000000        0x0 SysTickScheduler.o
  .bss           0x00000000        0x0 SysTickScheduler.o
@@ -230,6 +257,35 @@ Discarded input sections
                 0x00000000      0x144 stm32f4xx_ll_gpio.o
  .text.LL_GPIO_StructInit
                 0x00000000       0x3a stm32f4xx_ll_gpio.o
+ .text          0x00000000        0x0 stm32f4xx_ll_adc.o
+ .data          0x00000000        0x0 stm32f4xx_ll_adc.o
+ .bss           0x00000000        0x0 stm32f4xx_ll_adc.o
+ .text.LL_ADC_REG_SetTriggerSource
+                0x00000000       0x2a stm32f4xx_ll_adc.o
+ .text.LL_ADC_INJ_SetTriggerSource
+                0x00000000       0x2a stm32f4xx_ll_adc.o
+ .text.LL_ADC_INJ_SetSequencerLength
+                0x00000000       0x26 stm32f4xx_ll_adc.o
+ .text.LL_ADC_Disable
+                0x00000000       0x20 stm32f4xx_ll_adc.o
+ .text.LL_APB2_GRP1_ForceReset
+                0x00000000       0x24 stm32f4xx_ll_adc.o
+ .text.LL_APB2_GRP1_ReleaseReset
+                0x00000000       0x28 stm32f4xx_ll_adc.o
+ .text.LL_ADC_CommonDeInit
+                0x00000000       0x22 stm32f4xx_ll_adc.o
+ .text.LL_ADC_CommonStructInit
+                0x00000000       0x2c stm32f4xx_ll_adc.o
+ .text.LL_ADC_DeInit
+                0x00000000      0x11c stm32f4xx_ll_adc.o
+ .text.LL_ADC_StructInit
+                0x00000000       0x28 stm32f4xx_ll_adc.o
+ .text.LL_ADC_REG_StructInit
+                0x00000000       0x32 stm32f4xx_ll_adc.o
+ .text.LL_ADC_INJ_Init
+                0x00000000       0x80 stm32f4xx_ll_adc.o
+ .text.LL_ADC_INJ_StructInit
+                0x00000000       0x2c stm32f4xx_ll_adc.o
  .text          0x00000000        0x0 stm32f4xx_ll_dma.o
  .data          0x00000000        0x0 stm32f4xx_ll_dma.o
  .bss           0x00000000        0x0 stm32f4xx_ll_dma.o
@@ -266,19 +322,6 @@ Discarded input sections
  .comment       0x00000000       0x4d stm32f4xx_ll_dma.o
  .ARM.attributes
                 0x00000000       0x34 stm32f4xx_ll_dma.o
- .text          0x00000000        0x0 stm32f4xx_ll_i2c.o
- .data          0x00000000        0x0 stm32f4xx_ll_i2c.o
- .bss           0x00000000        0x0 stm32f4xx_ll_i2c.o
- .text.LL_APB1_GRP1_ForceReset
-                0x00000000       0x24 stm32f4xx_ll_i2c.o
- .text.LL_APB1_GRP1_ReleaseReset
-                0x00000000       0x28 stm32f4xx_ll_i2c.o
- .rodata.aRCC_PLLSAIDIVRPrescTable
-                0x00000000        0x4 stm32f4xx_ll_i2c.o
- .text.LL_I2C_DeInit
-                0x00000000       0x74 stm32f4xx_ll_i2c.o
- .text.LL_I2C_StructInit
-                0x00000000       0x48 stm32f4xx_ll_i2c.o
  .text          0x00000000        0x0 stm32f4xx_ll_rcc.o
  .data          0x00000000        0x0 stm32f4xx_ll_rcc.o
  .bss           0x00000000        0x0 stm32f4xx_ll_rcc.o
@@ -838,6 +881,19 @@ Discarded input sections
  .comment       0x00000000       0x4d stm32f4xx_hal_exti.o
  .ARM.attributes
                 0x00000000       0x34 stm32f4xx_hal_exti.o
+ .text          0x00000000        0x0 stm32f4xx_ll_i2c.o
+ .data          0x00000000        0x0 stm32f4xx_ll_i2c.o
+ .bss           0x00000000        0x0 stm32f4xx_ll_i2c.o
+ .text.LL_APB1_GRP1_ForceReset
+                0x00000000       0x24 stm32f4xx_ll_i2c.o
+ .text.LL_APB1_GRP1_ReleaseReset
+                0x00000000       0x28 stm32f4xx_ll_i2c.o
+ .rodata.aRCC_PLLSAIDIVRPrescTable
+                0x00000000        0x4 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_DeInit
+                0x00000000       0x74 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_StructInit
+                0x00000000       0x48 stm32f4xx_ll_i2c.o
  .text          0x00000000        0x0 stm32f4xx_ll_spi.o
  .data          0x00000000        0x0 stm32f4xx_ll_spi.o
  .bss           0x00000000        0x0 stm32f4xx_ll_spi.o
@@ -1272,9 +1328,6 @@ Discarded input sections
  .bss           0x00000000        0x0 system_stm32f4xx.o
  .text.SystemCoreClockUpdate
                 0x00000000      0x100 system_stm32f4xx.o
- .text          0x00000000       0x14 startup_stm32f429xx.o
- .data          0x00000000        0x0 startup_stm32f429xx.o
- .bss           0x00000000        0x0 startup_stm32f429xx.o
  .text          0x00000000        0x0 syscalls.o
  .data          0x00000000        0x0 syscalls.o
  .bss           0x00000000        0x0 syscalls.o
@@ -1287,9 +1340,6 @@ Discarded input sections
  .text._exit    0x00000000       0x14 syscalls.o
  .text._read    0x00000000       0x3a syscalls.o
  .text._write   0x00000000       0x38 syscalls.o
- .bss.heap_end.7385
-                0x00000000        0x4 syscalls.o
- .text._sbrk    0x00000000       0x58 syscalls.o
  .text._close   0x00000000       0x18 syscalls.o
  .text._fstat   0x00000000       0x20 syscalls.o
  .text._isatty  0x00000000       0x16 syscalls.o
@@ -1305,75 +1355,88 @@ Discarded input sections
  .comment       0x00000000       0x4d syscalls.o
  .ARM.attributes
                 0x00000000       0x34 syscalls.o
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .ARM.extab     0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
- .text.__errno  0x00000000        0xc c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
- .debug_frame   0x00000000       0x20 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 sysmem.o
+ .data          0x00000000        0x0 sysmem.o
+ .bss           0x00000000        0x0 sysmem.o
+ .bss.__sbrk_heap_end
+                0x00000000        0x4 sysmem.o
+ .text._sbrk    0x00000000       0x6c sysmem.o
+ .comment       0x00000000       0x4d sysmem.o
  .ARM.attributes
-                0x00000000       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
- .text.exit     0x00000000       0x28 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
- .debug_frame   0x00000000       0x28 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+                0x00000000       0x34 sysmem.o
+ .text          0x00000000       0x14 startup_stm32f429zitx.o
+ .data          0x00000000        0x0 startup_stm32f429zitx.o
+ .bss           0x00000000        0x0 startup_stm32f429zitx.o
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .text.__errno  0x00000000        0xc c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000000       0x20 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000000       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x00000000       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x28 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
  .data._impure_ptr
-                0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
  .data.impure_data
-                0x00000000       0x60 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x00000000       0x60 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+                0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000000       0x32 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
- .eh_frame      0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+                0x00000000       0x32 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x00000000        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
  .ARM.attributes
-                0x00000000       0x32 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
- .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
- .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
- .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x00000000       0x32 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .text          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .data          0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .bss           0x00000000        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
 
 Memory Configuration
 
 Name             Origin             Length             Attributes
-RAM              0x20000000         0x00030000         xrw
 CCMRAM           0x10000000         0x00010000         xrw
+RAM              0x20000000         0x00030000         xrw
 FLASH            0x08000000         0x00200000         xr
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
 
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
 LOAD ert_main.o
 LOAD stm32f4discovery_gettingstarted.o
 LOAD stm32f4discovery_gettingstarted_data.o
 LOAD overrideHALDelay.o
+LOAD platform_timer.o
 LOAD SysTickScheduler.o
 LOAD m3m4m4f_multitasking.o
 LOAD main.o
@@ -1381,8 +1444,8 @@ LOAD stm32f4xx_it.o
 LOAD stm32f4xx_hal_msp.o
 LOAD stm32f4xx_hal_timebase_tim.o
 LOAD stm32f4xx_ll_gpio.o
+LOAD stm32f4xx_ll_adc.o
 LOAD stm32f4xx_ll_dma.o
-LOAD stm32f4xx_ll_i2c.o
 LOAD stm32f4xx_ll_rcc.o
 LOAD stm32f4xx_ll_utils.o
 LOAD stm32f4xx_ll_exti.o
@@ -1399,49 +1462,51 @@ LOAD stm32f4xx_hal_pwr_ex.o
 LOAD stm32f4xx_hal_cortex.o
 LOAD stm32f4xx_hal.o
 LOAD stm32f4xx_hal_exti.o
+LOAD stm32f4xx_ll_i2c.o
 LOAD stm32f4xx_ll_spi.o
 LOAD stm32f4xx_hal_tim.o
 LOAD stm32f4xx_hal_tim_ex.o
 LOAD stm32f4xx_ll_tim.o
 LOAD stm32f4xx_ll_usart.o
 LOAD system_stm32f4xx.o
-LOAD startup_stm32f429xx.o
 LOAD syscalls.o
-LOAD C:/ProgramData/MATLAB/SupportPackages/R2021b/3P.instrset/cmsis.instrset/CMSIS/DSP/Lib/GCC/libarm_cortexM4lf_math.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
+LOAD sysmem.o
+LOAD startup_stm32f429zitx.o
+LOAD C:/ProgramData/MATLAB/SupportPackages/R2022b/3P.instrset/cmsis.instrset/CMSIS/DSP/Lib/GCC/libarm_cortexM4lf_math.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libstdc++_nano.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 START GROUP
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
 END GROUP
 START GROUP
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a
 END GROUP
 START GROUP
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libnosys.a
 END GROUP
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x20030000                _estack = 0x20030000
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtend.o
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x20030000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
                 0x00000200                _Min_Heap_Size = 0x200
                 0x00000400                _Min_Stack_Size = 0x400
 
 .isr_vector     0x08000000      0x1ac
                 0x08000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x08000000      0x1ac startup_stm32f429xx.o
+ .isr_vector    0x08000000      0x1ac startup_stm32f429zitx.o
                 0x08000000                g_pfnVectors
                 0x080001ac                . = ALIGN (0x4)
 
-.text           0x080001ac     0x3b28
+.text           0x080001ac     0x4000
                 0x080001ac                . = ALIGN (0x4)
  *(.text)
- .text          0x080001ac       0x40 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
- .text          0x080001ec      0x378 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .text          0x080001ac       0x40 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x080001ec      0x378 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
                 0x080001ec                __aeabi_drsub
                 0x080001f4                __aeabi_dsub
                 0x080001f4                __subdf3
@@ -1457,7 +1522,7 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
                 0x080004f8                __aeabi_ul2d
                 0x08000508                __floatdidf
                 0x08000508                __aeabi_l2d
- .text          0x08000564      0x110 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .text          0x08000564      0x110 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
                 0x08000564                __gtdf2
                 0x08000564                __gedf2
                 0x0800056c                __ltdf2
@@ -1473,571 +1538,606 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
                 0x08000638                __aeabi_dcmple
                 0x0800064c                __aeabi_dcmpge
                 0x08000660                __aeabi_dcmpgt
- .text          0x08000674       0x30 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x08000674       0x30 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
                 0x08000674                __aeabi_uldivmod
- .text          0x080006a4      0x2c4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .text          0x080006a4      0x2c4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
                 0x080006a4                __udivmoddi4
- .text          0x08000968        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .text          0x08000968        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
                 0x08000968                __aeabi_idiv0
                 0x08000968                __aeabi_ldiv0
  *(.text*)
  .text.rt_OneStep
                 0x0800096c       0x4c ert_main.o
                 0x0800096c                rt_OneStep
- .text.main     0x080009b8       0xd8 ert_main.o
+ .text.main     0x080009b8       0xe0 ert_main.o
                 0x080009b8                main
  .text.LL_GPIO_SetOutputPin
-                0x08000a90       0x1c stm32f4discovery_gettingstarted.o
+                0x08000a98       0x1c stm32f4discovery_gettingstarted.o
  .text.LL_GPIO_ResetOutputPin
-                0x08000aac       0x1e stm32f4discovery_gettingstarted.o
- *fill*         0x08000aca        0x2 
+                0x08000ab4       0x1e stm32f4discovery_gettingstarted.o
+ *fill*         0x08000ad2        0x2 
  .text.stm32f4discovery_gettingstarted_step
-                0x08000acc       0xd4 stm32f4discovery_gettingstarted.o
-                0x08000acc                stm32f4discovery_gettingstarted_step
+                0x08000ad4       0xd4 stm32f4discovery_gettingstarted.o
+                0x08000ad4                stm32f4discovery_gettingstarted_step
  .text.stm32f4discovery_gettingstarted_initialize
-                0x08000ba0       0x28 stm32f4discovery_gettingstarted.o
-                0x08000ba0                stm32f4discovery_gettingstarted_initialize
+                0x08000ba8       0x28 stm32f4discovery_gettingstarted.o
+                0x08000ba8                stm32f4discovery_gettingstarted_initialize
  .text.stm32f4discovery_gettingstarted_terminate
-                0x08000bc8        0xe stm32f4discovery_gettingstarted.o
-                0x08000bc8                stm32f4discovery_gettingstarted_terminate
- *fill*         0x08000bd6        0x2 
+                0x08000bd0        0xe stm32f4discovery_gettingstarted.o
+                0x08000bd0                stm32f4discovery_gettingstarted_terminate
+ *fill*         0x08000bde        0x2 
+ .text.PeriphCommonClock_Config
+                0x08000be0       0x10 platform_timer.o
+                0x08000be0                PeriphCommonClock_Config
  .text.__NVIC_SetPriority
-                0x08000bd8       0x54 SysTickScheduler.o
+                0x08000bf0       0x54 SysTickScheduler.o
  .text.SysTick_Config
-                0x08000c2c       0x44 SysTickScheduler.o
+                0x08000c44       0x44 SysTickScheduler.o
  .text.SysTick_Isr
-                0x08000c70       0x48 SysTickScheduler.o
+                0x08000c88       0x48 SysTickScheduler.o
  .text.SysTick_Handler
-                0x08000cb8       0x20 SysTickScheduler.o
-                0x08000cb8                SysTick_Handler
+                0x08000cd0       0x20 SysTickScheduler.o
+                0x08000cd0                SysTick_Handler
  .text.ARMCM_SysTick_Config
-                0x08000cd8       0xb0 SysTickScheduler.o
-                0x08000cd8                ARMCM_SysTick_Config
+                0x08000cf0       0xb0 SysTickScheduler.o
+                0x08000cf0                ARMCM_SysTick_Config
  .text.PendSV_Handler
-                0x08000d88       0x44 m3m4m4f_multitasking.o
-                0x08000d88                PendSV_Handler
+                0x08000da0       0x44 m3m4m4f_multitasking.o
+                0x08000da0                PendSV_Handler
  .text.SVC_Handler
-                0x08000dcc       0x58 m3m4m4f_multitasking.o
-                0x08000dcc                SVC_Handler
+                0x08000de4       0x58 m3m4m4f_multitasking.o
+                0x08000de4                SVC_Handler
  .text.__NVIC_GetPriorityGrouping
-                0x08000e24       0x1c main.o
+                0x08000e3c       0x1c main.o
  .text.__NVIC_EnableIRQ
-                0x08000e40       0x3c main.o
+                0x08000e58       0x3c main.o
  .text.__NVIC_SetPriority
-                0x08000e7c       0x54 main.o
+                0x08000e94       0x54 main.o
  .text.NVIC_EncodePriority
-                0x08000ed0       0x66 main.o
- *fill*         0x08000f36        0x2 
+                0x08000ee8       0x66 main.o
+ .text.LL_ADC_REG_SetSequencerRanks
+                0x08000f4e       0x7a main.o
+ .text.LL_ADC_REG_SetFlagEndOfConversion
+                0x08000fc8       0x26 main.o
+ .text.LL_ADC_SetChannelSamplingTime
+                0x08000fee       0xc2 main.o
  .text.LL_DMA_SetDataTransferDirection
-                0x08000f38       0x48 main.o
+                0x080010b0       0x48 main.o
  .text.LL_DMA_SetMode
-                0x08000f80       0x48 main.o
+                0x080010f8       0x48 main.o
  .text.LL_DMA_SetPeriphIncMode
-                0x08000fc8       0x48 main.o
+                0x08001140       0x48 main.o
  .text.LL_DMA_SetMemoryIncMode
-                0x08001010       0x48 main.o
+                0x08001188       0x48 main.o
  .text.LL_DMA_SetPeriphSize
-                0x08001058       0x48 main.o
+                0x080011d0       0x48 main.o
  .text.LL_DMA_SetMemorySize
-                0x080010a0       0x48 main.o
+                0x08001218       0x48 main.o
  .text.LL_DMA_SetStreamPriorityLevel
-                0x080010e8       0x48 main.o
+                0x08001260       0x48 main.o
  .text.LL_DMA_SetChannelSelection
-                0x08001130       0x48 main.o
+                0x080012a8       0x48 main.o
  .text.LL_DMA_DisableFifoMode
-                0x08001178       0x40 main.o
+                0x080012f0       0x40 main.o
  .text.LL_I2C_EnableClockStretching
-                0x080011b8       0x20 main.o
+                0x08001330       0x20 main.o
  .text.LL_I2C_DisableGeneralCall
-                0x080011d8       0x20 main.o
+                0x08001350       0x20 main.o
  .text.LL_I2C_SetOwnAddress2
-                0x080011f8       0x26 main.o
+                0x08001370       0x26 main.o
  .text.LL_I2C_DisableOwnAddress2
-                0x0800121e       0x20 main.o
- *fill*         0x0800123e        0x2 
+                0x08001396       0x20 main.o
+ *fill*         0x080013b6        0x2 
  .text.LL_RCC_HSE_Enable
-                0x08001240       0x20 main.o
+                0x080013b8       0x20 main.o
  .text.LL_RCC_HSE_IsReady
-                0x08001260       0x28 main.o
+                0x080013d8       0x28 main.o
  .text.LL_RCC_SetSysClkSource
-                0x08001288       0x28 main.o
+                0x08001400       0x28 main.o
  .text.LL_RCC_GetSysClkSource
-                0x080012b0       0x1c main.o
+                0x08001428       0x1c main.o
  .text.LL_RCC_SetAHBPrescaler
-                0x080012cc       0x28 main.o
+                0x08001444       0x28 main.o
  .text.LL_RCC_SetAPB1Prescaler
-                0x080012f4       0x28 main.o
+                0x0800146c       0x28 main.o
  .text.LL_RCC_SetAPB2Prescaler
-                0x0800131c       0x28 main.o
+                0x08001494       0x28 main.o
  .text.LL_RCC_SetTIMPrescaler
-                0x08001344       0x2c main.o
+                0x080014bc       0x2c main.o
  .text.LL_RCC_PLL_Enable
-                0x08001370       0x20 main.o
+                0x080014e8       0x20 main.o
  .text.LL_RCC_PLL_IsReady
-                0x08001390       0x28 main.o
+                0x08001508       0x28 main.o
  .text.LL_RCC_PLL_ConfigDomain_SYS
-                0x080013b8       0x4c main.o
+                0x08001530       0x4c main.o
  .text.LL_AHB1_GRP1_EnableClock
-                0x08001404       0x30 main.o
+                0x0800157c       0x30 main.o
  .text.LL_APB1_GRP1_EnableClock
-                0x08001434       0x30 main.o
+                0x080015ac       0x30 main.o
  .text.LL_APB2_GRP1_EnableClock
-                0x08001464       0x30 main.o
+                0x080015dc       0x30 main.o
  .text.LL_SYSCFG_SetEXTISource
-                0x08001494       0x6c main.o
+                0x0800160c       0x6c main.o
  .text.LL_FLASH_SetLatency
-                0x08001500       0x28 main.o
+                0x08001678       0x28 main.o
  .text.LL_FLASH_GetLatency
-                0x08001528       0x1c main.o
+                0x080016a0       0x1c main.o
  .text.LL_PWR_DisableOverDriveMode
-                0x08001544       0x20 main.o
+                0x080016bc       0x20 main.o
  .text.LL_PWR_SetRegulVoltageScaling
-                0x08001564       0x28 main.o
+                0x080016dc       0x28 main.o
  .text.LL_SPI_SetStandard
-                0x0800158c       0x26 main.o
+                0x08001704       0x26 main.o
  .text.LL_TIM_DisableARRPreload
-                0x080015b2       0x20 main.o
+                0x0800172a       0x20 main.o
  .text.LL_TIM_SetClockSource
-                0x080015d2       0x2a main.o
+                0x0800174a       0x2a main.o
  .text.LL_TIM_SetTriggerOutput
-                0x080015fc       0x26 main.o
+                0x08001774       0x26 main.o
  .text.LL_TIM_DisableMasterSlaveMode
-                0x08001622       0x20 main.o
+                0x0800179a       0x20 main.o
  .text.LL_USART_Enable
-                0x08001642       0x20 main.o
+                0x080017ba       0x20 main.o
  .text.LL_USART_ConfigAsyncMode
-                0x08001662       0x2c main.o
+                0x080017da       0x2c main.o
  .text.LL_GPIO_SetPinMode
-                0x0800168e       0x7a main.o
+                0x08001806       0x7a main.o
  .text.LL_GPIO_SetPinPull
-                0x08001708       0x7a main.o
+                0x08001880       0x7a main.o
  .text.LL_GPIO_ResetOutputPin
-                0x08001782       0x1e main.o
+                0x080018fa       0x1e main.o
  .text.SystemClock_Config
-                0x080017a0       0x9c main.o
-                0x080017a0                SystemClock_Config
+                0x08001918       0x9c main.o
+                0x08001918                SystemClock_Config
+ .text.MX_ADC3_Init
+                0x080019b4      0x150 main.o
+                0x080019b4                MX_ADC3_Init
  .text.MX_I2C3_Init
-                0x0800183c       0xe4 main.o
-                0x0800183c                MX_I2C3_Init
+                0x08001b04       0xe4 main.o
+                0x08001b04                MX_I2C3_Init
  .text.MX_SPI5_Init
-                0x08001920       0xa8 main.o
-                0x08001920                MX_SPI5_Init
+                0x08001be8       0xa8 main.o
+                0x08001be8                MX_SPI5_Init
  .text.MX_TIM1_Init
-                0x080019c8       0x64 main.o
-                0x080019c8                MX_TIM1_Init
+                0x08001c90       0x64 main.o
+                0x08001c90                MX_TIM1_Init
  .text.MX_USART1_UART_Init
-                0x08001a2c      0x100 main.o
-                0x08001a2c                MX_USART1_UART_Init
+                0x08001cf4      0x100 main.o
+                0x08001cf4                MX_USART1_UART_Init
  .text.MX_DMA_Init
-                0x08001b2c       0x30 main.o
-                0x08001b2c                MX_DMA_Init
+                0x08001df4       0x50 main.o
+                0x08001df4                MX_DMA_Init
  .text.MX_GPIO_Init
-                0x08001b5c      0x4a0 main.o
-                0x08001b5c                MX_GPIO_Init
+                0x08001e44      0x4cc main.o
+                0x08001e44                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08001ffc       0x24 main.o
-                0x08001ffc                HAL_TIM_PeriodElapsedCallback
+                0x08002310       0x24 main.o
+                0x08002310                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x08002020        0xa main.o
-                0x08002020                Error_Handler
+                0x08002334        0xa main.o
+                0x08002334                Error_Handler
  .text.NMI_Handler
-                0x0800202a        0x6 stm32f4xx_it.o
-                0x0800202a                NMI_Handler
+                0x0800233e        0x6 stm32f4xx_it.o
+                0x0800233e                NMI_Handler
  .text.HardFault_Handler
-                0x08002030        0x6 stm32f4xx_it.o
-                0x08002030                HardFault_Handler
+                0x08002344        0x6 stm32f4xx_it.o
+                0x08002344                HardFault_Handler
  .text.MemManage_Handler
-                0x08002036        0x6 stm32f4xx_it.o
-                0x08002036                MemManage_Handler
+                0x0800234a        0x6 stm32f4xx_it.o
+                0x0800234a                MemManage_Handler
  .text.BusFault_Handler
-                0x0800203c        0x6 stm32f4xx_it.o
-                0x0800203c                BusFault_Handler
+                0x08002350        0x6 stm32f4xx_it.o
+                0x08002350                BusFault_Handler
  .text.UsageFault_Handler
-                0x08002042        0x6 stm32f4xx_it.o
-                0x08002042                UsageFault_Handler
+                0x08002356        0x6 stm32f4xx_it.o
+                0x08002356                UsageFault_Handler
  .text.DebugMon_Handler
-                0x08002048        0xe stm32f4xx_it.o
-                0x08002048                DebugMon_Handler
- *fill*         0x08002056        0x2 
+                0x0800235c        0xe stm32f4xx_it.o
+                0x0800235c                DebugMon_Handler
+ *fill*         0x0800236a        0x2 
  .text.TIM5_IRQHandler
-                0x08002058       0x14 stm32f4xx_it.o
-                0x08002058                TIM5_IRQHandler
+                0x0800236c       0x14 stm32f4xx_it.o
+                0x0800236c                TIM5_IRQHandler
+ .text.DMA2_Stream0_IRQHandler
+                0x08002380        0xe stm32f4xx_it.o
+                0x08002380                DMA2_Stream0_IRQHandler
  .text.DMA2_Stream2_IRQHandler
-                0x0800206c        0xe stm32f4xx_it.o
-                0x0800206c                DMA2_Stream2_IRQHandler
- *fill*         0x0800207a        0x2 
+                0x0800238e        0xe stm32f4xx_it.o
+                0x0800238e                DMA2_Stream2_IRQHandler
  .text.HAL_MspInit
-                0x0800207c       0x58 stm32f4xx_hal_msp.o
-                0x0800207c                HAL_MspInit
+                0x0800239c       0x58 stm32f4xx_hal_msp.o
+                0x0800239c                HAL_MspInit
  .text.HAL_InitTick
-                0x080020d4       0xb4 stm32f4xx_hal_timebase_tim.o
-                0x080020d4                HAL_InitTick
+                0x080023f4       0xb4 stm32f4xx_hal_timebase_tim.o
+                0x080023f4                HAL_InitTick
  .text.LL_GPIO_SetPinMode
-                0x08002188       0x7a stm32f4xx_ll_gpio.o
+                0x080024a8       0x7a stm32f4xx_ll_gpio.o
  .text.LL_GPIO_SetPinOutputType
-                0x08002202       0x30 stm32f4xx_ll_gpio.o
+                0x08002522       0x30 stm32f4xx_ll_gpio.o
  .text.LL_GPIO_SetPinSpeed
-                0x08002232       0x7a stm32f4xx_ll_gpio.o
+                0x08002552       0x7a stm32f4xx_ll_gpio.o
  .text.LL_GPIO_SetPinPull
-                0x080022ac       0x7a stm32f4xx_ll_gpio.o
+                0x080025cc       0x7a stm32f4xx_ll_gpio.o
  .text.LL_GPIO_SetAFPin_0_7
-                0x08002326       0x7a stm32f4xx_ll_gpio.o
+                0x08002646       0x7a stm32f4xx_ll_gpio.o
  .text.LL_GPIO_SetAFPin_8_15
-                0x080023a0       0x7e stm32f4xx_ll_gpio.o
+                0x080026c0       0x7e stm32f4xx_ll_gpio.o
  .text.LL_GPIO_Init
-                0x0800241e      0x102 stm32f4xx_ll_gpio.o
-                0x0800241e                LL_GPIO_Init
- .text.LL_I2C_Enable
-                0x08002520       0x20 stm32f4xx_ll_i2c.o
- .text.LL_I2C_Disable
-                0x08002540       0x20 stm32f4xx_ll_i2c.o
- .text.LL_I2C_ConfigFilters
-                0x08002560       0x2c stm32f4xx_ll_i2c.o
- .text.LL_I2C_SetOwnAddress1
-                0x0800258c       0x30 stm32f4xx_ll_i2c.o
- .text.LL_I2C_ConfigSpeed
-                0x080025bc      0x130 stm32f4xx_ll_i2c.o
- .text.LL_I2C_SetMode
-                0x080026ec       0x26 stm32f4xx_ll_i2c.o
- .text.LL_I2C_AcknowledgeNextData
-                0x08002712       0x26 stm32f4xx_ll_i2c.o
- .text.LL_I2C_Init
-                0x08002738       0x72 stm32f4xx_ll_i2c.o
-                0x08002738                LL_I2C_Init
- *fill*         0x080027aa        0x2 
+                0x0800273e      0x102 stm32f4xx_ll_gpio.o
+                0x0800273e                LL_GPIO_Init
+ .text.LL_ADC_REG_SetSequencerLength
+                0x08002840       0x26 stm32f4xx_ll_adc.o
+ .text.LL_ADC_IsEnabled
+                0x08002866       0x26 stm32f4xx_ll_adc.o
+ .text.LL_ADC_CommonInit
+                0x0800288c       0x90 stm32f4xx_ll_adc.o
+                0x0800288c                LL_ADC_CommonInit
+ .text.LL_ADC_Init
+                0x0800291c       0x58 stm32f4xx_ll_adc.o
+                0x0800291c                LL_ADC_Init
+ .text.LL_ADC_REG_Init
+                0x08002974       0x84 stm32f4xx_ll_adc.o
+                0x08002974                LL_ADC_REG_Init
  .text.LL_RCC_GetSysClkSource
-                0x080027ac       0x1c stm32f4xx_ll_rcc.o
+                0x080029f8       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_GetAHBPrescaler
-                0x080027c8       0x1c stm32f4xx_ll_rcc.o
+                0x08002a14       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_GetAPB1Prescaler
-                0x080027e4       0x1c stm32f4xx_ll_rcc.o
+                0x08002a30       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_GetAPB2Prescaler
-                0x08002800       0x1c stm32f4xx_ll_rcc.o
+                0x08002a4c       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_PLL_GetMainSource
-                0x0800281c       0x1c stm32f4xx_ll_rcc.o
+                0x08002a68       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_PLL_GetN
-                0x08002838       0x1c stm32f4xx_ll_rcc.o
+                0x08002a84       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_PLL_GetP
-                0x08002854       0x1c stm32f4xx_ll_rcc.o
+                0x08002aa0       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_PLL_GetDivider
-                0x08002870       0x1c stm32f4xx_ll_rcc.o
+                0x08002abc       0x1c stm32f4xx_ll_rcc.o
  .text.LL_RCC_GetSystemClocksFreq
-                0x0800288c       0x4a stm32f4xx_ll_rcc.o
-                0x0800288c                LL_RCC_GetSystemClocksFreq
- *fill*         0x080028d6        0x2 
+                0x08002ad8       0x4a stm32f4xx_ll_rcc.o
+                0x08002ad8                LL_RCC_GetSystemClocksFreq
+ *fill*         0x08002b22        0x2 
  .text.RCC_GetSystemClockFreq
-                0x080028d8       0x50 stm32f4xx_ll_rcc.o
-                0x080028d8                RCC_GetSystemClockFreq
+                0x08002b24       0x50 stm32f4xx_ll_rcc.o
+                0x08002b24                RCC_GetSystemClockFreq
  .text.RCC_GetHCLKClockFreq
-                0x08002928       0x2c stm32f4xx_ll_rcc.o
-                0x08002928                RCC_GetHCLKClockFreq
+                0x08002b74       0x2c stm32f4xx_ll_rcc.o
+                0x08002b74                RCC_GetHCLKClockFreq
  .text.RCC_GetPCLK1ClockFreq
-                0x08002954       0x28 stm32f4xx_ll_rcc.o
-                0x08002954                RCC_GetPCLK1ClockFreq
+                0x08002ba0       0x28 stm32f4xx_ll_rcc.o
+                0x08002ba0                RCC_GetPCLK1ClockFreq
  .text.RCC_GetPCLK2ClockFreq
-                0x0800297c       0x28 stm32f4xx_ll_rcc.o
-                0x0800297c                RCC_GetPCLK2ClockFreq
+                0x08002bc8       0x28 stm32f4xx_ll_rcc.o
+                0x08002bc8                RCC_GetPCLK2ClockFreq
  .text.RCC_PLL_GetFreqDomain_SYS
-                0x080029a4       0x7c stm32f4xx_ll_rcc.o
-                0x080029a4                RCC_PLL_GetFreqDomain_SYS
+                0x08002bf0       0x7c stm32f4xx_ll_rcc.o
+                0x08002bf0                RCC_PLL_GetFreqDomain_SYS
  .text.LL_SetSystemCoreClock
-                0x08002a20       0x20 stm32f4xx_ll_utils.o
-                0x08002a20                LL_SetSystemCoreClock
+                0x08002c6c       0x20 stm32f4xx_ll_utils.o
+                0x08002c6c                LL_SetSystemCoreClock
  .text.LL_EXTI_EnableIT_0_31
-                0x08002a40       0x24 stm32f4xx_ll_exti.o
+                0x08002c8c       0x24 stm32f4xx_ll_exti.o
  .text.LL_EXTI_DisableIT_0_31
-                0x08002a64       0x28 stm32f4xx_ll_exti.o
+                0x08002cb0       0x28 stm32f4xx_ll_exti.o
  .text.LL_EXTI_EnableEvent_0_31
-                0x08002a8c       0x24 stm32f4xx_ll_exti.o
+                0x08002cd8       0x24 stm32f4xx_ll_exti.o
  .text.LL_EXTI_DisableEvent_0_31
-                0x08002ab0       0x28 stm32f4xx_ll_exti.o
+                0x08002cfc       0x28 stm32f4xx_ll_exti.o
  .text.LL_EXTI_EnableRisingTrig_0_31
-                0x08002ad8       0x24 stm32f4xx_ll_exti.o
+                0x08002d24       0x24 stm32f4xx_ll_exti.o
  .text.LL_EXTI_DisableRisingTrig_0_31
-                0x08002afc       0x28 stm32f4xx_ll_exti.o
+                0x08002d48       0x28 stm32f4xx_ll_exti.o
  .text.LL_EXTI_EnableFallingTrig_0_31
-                0x08002b24       0x24 stm32f4xx_ll_exti.o
+                0x08002d70       0x24 stm32f4xx_ll_exti.o
  .text.LL_EXTI_DisableFallingTrig_0_31
-                0x08002b48       0x28 stm32f4xx_ll_exti.o
+                0x08002d94       0x28 stm32f4xx_ll_exti.o
  .text.LL_EXTI_Init
-                0x08002b70      0x102 stm32f4xx_ll_exti.o
-                0x08002b70                LL_EXTI_Init
- *fill*         0x08002c72        0x2 
+                0x08002dbc      0x102 stm32f4xx_ll_exti.o
+                0x08002dbc                LL_EXTI_Init
+ *fill*         0x08002ebe        0x2 
  .text.HAL_RCC_GetHCLKFreq
-                0x08002c74       0x18 stm32f4xx_hal_rcc.o
-                0x08002c74                HAL_RCC_GetHCLKFreq
+                0x08002ec0       0x18 stm32f4xx_hal_rcc.o
+                0x08002ec0                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08002c8c       0x28 stm32f4xx_hal_rcc.o
-                0x08002c8c                HAL_RCC_GetPCLK1Freq
+                0x08002ed8       0x28 stm32f4xx_hal_rcc.o
+                0x08002ed8                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetClockConfig
-                0x08002cb4       0x64 stm32f4xx_hal_rcc.o
-                0x08002cb4                HAL_RCC_GetClockConfig
+                0x08002f00       0x64 stm32f4xx_hal_rcc.o
+                0x08002f00                HAL_RCC_GetClockConfig
  .text.__NVIC_SetPriorityGrouping
-                0x08002d18       0x48 stm32f4xx_hal_cortex.o
+                0x08002f64       0x48 stm32f4xx_hal_cortex.o
  .text.__NVIC_GetPriorityGrouping
-                0x08002d60       0x1c stm32f4xx_hal_cortex.o
+                0x08002fac       0x1c stm32f4xx_hal_cortex.o
  .text.__NVIC_EnableIRQ
-                0x08002d7c       0x3c stm32f4xx_hal_cortex.o
+                0x08002fc8       0x3c stm32f4xx_hal_cortex.o
  .text.__NVIC_SetPriority
-                0x08002db8       0x54 stm32f4xx_hal_cortex.o
+                0x08003004       0x54 stm32f4xx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x08002e0c       0x66 stm32f4xx_hal_cortex.o
+                0x08003058       0x66 stm32f4xx_hal_cortex.o
  .text.HAL_NVIC_SetPriorityGrouping
-                0x08002e72       0x16 stm32f4xx_hal_cortex.o
-                0x08002e72                HAL_NVIC_SetPriorityGrouping
+                0x080030be       0x16 stm32f4xx_hal_cortex.o
+                0x080030be                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08002e88       0x38 stm32f4xx_hal_cortex.o
-                0x08002e88                HAL_NVIC_SetPriority
+                0x080030d4       0x38 stm32f4xx_hal_cortex.o
+                0x080030d4                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x08002ec0       0x1c stm32f4xx_hal_cortex.o
-                0x08002ec0                HAL_NVIC_EnableIRQ
+                0x0800310c       0x1c stm32f4xx_hal_cortex.o
+                0x0800310c                HAL_NVIC_EnableIRQ
  .text.HAL_Init
-                0x08002edc       0x44 stm32f4xx_hal.o
-                0x08002edc                HAL_Init
+                0x08003128       0x44 stm32f4xx_hal.o
+                0x08003128                HAL_Init
  .text.HAL_IncTick
-                0x08002f20       0x28 stm32f4xx_hal.o
-                0x08002f20                HAL_IncTick
+                0x0800316c       0x28 stm32f4xx_hal.o
+                0x0800316c                HAL_IncTick
+ .text.LL_I2C_Enable
+                0x08003194       0x20 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_Disable
+                0x080031b4       0x20 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_ConfigFilters
+                0x080031d4       0x2c stm32f4xx_ll_i2c.o
+ .text.LL_I2C_SetOwnAddress1
+                0x08003200       0x30 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_ConfigSpeed
+                0x08003230      0x130 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_SetMode
+                0x08003360       0x26 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_AcknowledgeNextData
+                0x08003386       0x26 stm32f4xx_ll_i2c.o
+ .text.LL_I2C_Init
+                0x080033ac       0x72 stm32f4xx_ll_i2c.o
+                0x080033ac                LL_I2C_Init
  .text.LL_SPI_IsEnabled
-                0x08002f48       0x26 stm32f4xx_ll_spi.o
+                0x0800341e       0x26 stm32f4xx_ll_spi.o
  .text.LL_SPI_SetCRCPolynomial
-                0x08002f6e       0x20 stm32f4xx_ll_spi.o
+                0x08003444       0x20 stm32f4xx_ll_spi.o
  .text.LL_SPI_Init
-                0x08002f8e       0xa4 stm32f4xx_ll_spi.o
-                0x08002f8e                LL_SPI_Init
+                0x08003464       0xa4 stm32f4xx_ll_spi.o
+                0x08003464                LL_SPI_Init
  .text.HAL_TIM_Base_Init
-                0x08003032       0x9e stm32f4xx_hal_tim.o
-                0x08003032                HAL_TIM_Base_Init
+                0x08003508       0x9e stm32f4xx_hal_tim.o
+                0x08003508                HAL_TIM_Base_Init
  .text.HAL_TIM_Base_MspInit
-                0x080030d0       0x14 stm32f4xx_hal_tim.o
-                0x080030d0                HAL_TIM_Base_MspInit
+                0x080035a6       0x14 stm32f4xx_hal_tim.o
+                0x080035a6                HAL_TIM_Base_MspInit
+ *fill*         0x080035ba        0x2 
  .text.HAL_TIM_Base_Start_IT
-                0x080030e4       0xe0 stm32f4xx_hal_tim.o
-                0x080030e4                HAL_TIM_Base_Start_IT
+                0x080035bc       0xe0 stm32f4xx_hal_tim.o
+                0x080035bc                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_IRQHandler
-                0x080031c4      0x210 stm32f4xx_hal_tim.o
-                0x080031c4                HAL_TIM_IRQHandler
+                0x0800369c      0x210 stm32f4xx_hal_tim.o
+                0x0800369c                HAL_TIM_IRQHandler
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x080033d4       0x14 stm32f4xx_hal_tim.o
-                0x080033d4                HAL_TIM_OC_DelayElapsedCallback
+                0x080038ac       0x14 stm32f4xx_hal_tim.o
+                0x080038ac                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x080033e8       0x14 stm32f4xx_hal_tim.o
-                0x080033e8                HAL_TIM_IC_CaptureCallback
+                0x080038c0       0x14 stm32f4xx_hal_tim.o
+                0x080038c0                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x080033fc       0x14 stm32f4xx_hal_tim.o
-                0x080033fc                HAL_TIM_PWM_PulseFinishedCallback
+                0x080038d4       0x14 stm32f4xx_hal_tim.o
+                0x080038d4                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08003410       0x14 stm32f4xx_hal_tim.o
-                0x08003410                HAL_TIM_TriggerCallback
+                0x080038e8       0x14 stm32f4xx_hal_tim.o
+                0x080038e8                HAL_TIM_TriggerCallback
  .text.TIM_Base_SetConfig
-                0x08003424      0x140 stm32f4xx_hal_tim.o
-                0x08003424                TIM_Base_SetConfig
+                0x080038fc      0x140 stm32f4xx_hal_tim.o
+                0x080038fc                TIM_Base_SetConfig
  .text.HAL_TIMEx_CommutCallback
-                0x08003564       0x14 stm32f4xx_hal_tim_ex.o
-                0x08003564                HAL_TIMEx_CommutCallback
+                0x08003a3c       0x14 stm32f4xx_hal_tim_ex.o
+                0x08003a3c                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x08003578       0x14 stm32f4xx_hal_tim_ex.o
-                0x08003578                HAL_TIMEx_BreakCallback
+                0x08003a50       0x14 stm32f4xx_hal_tim_ex.o
+                0x08003a50                HAL_TIMEx_BreakCallback
  .text.LL_TIM_SetPrescaler
-                0x0800358c       0x1c stm32f4xx_ll_tim.o
+                0x08003a64       0x1c stm32f4xx_ll_tim.o
  .text.LL_TIM_SetAutoReload
-                0x080035a8       0x1c stm32f4xx_ll_tim.o
+                0x08003a80       0x1c stm32f4xx_ll_tim.o
  .text.LL_TIM_SetRepetitionCounter
-                0x080035c4       0x1c stm32f4xx_ll_tim.o
+                0x08003a9c       0x1c stm32f4xx_ll_tim.o
  .text.LL_TIM_GenerateEvent_UPDATE
-                0x080035e0       0x20 stm32f4xx_ll_tim.o
+                0x08003ab8       0x20 stm32f4xx_ll_tim.o
  .text.LL_TIM_Init
-                0x08003600      0x134 stm32f4xx_ll_tim.o
-                0x08003600                LL_TIM_Init
+                0x08003ad8      0x134 stm32f4xx_ll_tim.o
+                0x08003ad8                LL_TIM_Init
  .text.LL_USART_IsEnabled
-                0x08003734       0x28 stm32f4xx_ll_usart.o
+                0x08003c0c       0x28 stm32f4xx_ll_usart.o
  .text.LL_USART_SetStopBitsLength
-                0x0800375c       0x26 stm32f4xx_ll_usart.o
+                0x08003c34       0x26 stm32f4xx_ll_usart.o
  .text.LL_USART_SetHWFlowCtrl
-                0x08003782       0x26 stm32f4xx_ll_usart.o
+                0x08003c5a       0x26 stm32f4xx_ll_usart.o
  .text.LL_USART_SetBaudRate
-                0x080037a8      0x320 stm32f4xx_ll_usart.o
+                0x08003c80      0x320 stm32f4xx_ll_usart.o
  .text.LL_USART_Init
-                0x08003ac8      0x124 stm32f4xx_ll_usart.o
-                0x08003ac8                LL_USART_Init
+                0x08003fa0      0x124 stm32f4xx_ll_usart.o
+                0x08003fa0                LL_USART_Init
  .text.SystemInit
-                0x08003bec       0x24 system_stm32f4xx.o
-                0x08003bec                SystemInit
+                0x080040c4       0x24 system_stm32f4xx.o
+                0x080040c4                SystemInit
  .text.Reset_Handler
-                0x08003c10       0x50 startup_stm32f429xx.o
-                0x08003c10                Reset_Handler
+                0x080040e8       0x50 startup_stm32f429zitx.o
+                0x080040e8                Reset_Handler
  .text.Default_Handler
-                0x08003c60        0x2 startup_stm32f429xx.o
-                0x08003c60                RTC_Alarm_IRQHandler
-                0x08003c60                HASH_RNG_IRQHandler
-                0x08003c60                EXTI2_IRQHandler
-                0x08003c60                TIM8_CC_IRQHandler
-                0x08003c60                UART8_IRQHandler
-                0x08003c60                SPI4_IRQHandler
-                0x08003c60                TIM1_CC_IRQHandler
-                0x08003c60                DMA2_Stream5_IRQHandler
-                0x08003c60                DMA1_Stream5_IRQHandler
-                0x08003c60                PVD_IRQHandler
-                0x08003c60                SDIO_IRQHandler
-                0x08003c60                TAMP_STAMP_IRQHandler
-                0x08003c60                CAN2_RX1_IRQHandler
-                0x08003c60                EXTI3_IRQHandler
-                0x08003c60                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08003c60                TIM1_UP_TIM10_IRQHandler
-                0x08003c60                TIM8_UP_TIM13_IRQHandler
-                0x08003c60                I2C3_ER_IRQHandler
-                0x08003c60                EXTI0_IRQHandler
-                0x08003c60                I2C2_EV_IRQHandler
-                0x08003c60                DMA1_Stream2_IRQHandler
-                0x08003c60                CAN1_RX0_IRQHandler
-                0x08003c60                FPU_IRQHandler
-                0x08003c60                OTG_HS_WKUP_IRQHandler
-                0x08003c60                LTDC_ER_IRQHandler
-                0x08003c60                CAN2_SCE_IRQHandler
-                0x08003c60                SPI1_IRQHandler
-                0x08003c60                TIM6_DAC_IRQHandler
-                0x08003c60                TIM1_BRK_TIM9_IRQHandler
-                0x08003c60                DCMI_IRQHandler
-                0x08003c60                CAN2_RX0_IRQHandler
-                0x08003c60                DMA2_Stream3_IRQHandler
-                0x08003c60                USART6_IRQHandler
-                0x08003c60                USART3_IRQHandler
-                0x08003c60                CAN1_RX1_IRQHandler
-                0x08003c60                UART5_IRQHandler
-                0x08003c60                DMA2_Stream0_IRQHandler
-                0x08003c60                TIM4_IRQHandler
-                0x08003c60                I2C1_EV_IRQHandler
-                0x08003c60                DMA1_Stream6_IRQHandler
-                0x08003c60                DMA1_Stream1_IRQHandler
-                0x08003c60                UART4_IRQHandler
-                0x08003c60                TIM3_IRQHandler
-                0x08003c60                RCC_IRQHandler
-                0x08003c60                TIM8_BRK_TIM12_IRQHandler
-                0x08003c60                Default_Handler
-                0x08003c60                EXTI15_10_IRQHandler
-                0x08003c60                ADC_IRQHandler
-                0x08003c60                DMA1_Stream7_IRQHandler
-                0x08003c60                SPI5_IRQHandler
-                0x08003c60                TIM7_IRQHandler
-                0x08003c60                CAN2_TX_IRQHandler
-                0x08003c60                DMA2_Stream7_IRQHandler
-                0x08003c60                I2C3_EV_IRQHandler
-                0x08003c60                EXTI9_5_IRQHandler
-                0x08003c60                RTC_WKUP_IRQHandler
-                0x08003c60                LTDC_IRQHandler
-                0x08003c60                ETH_WKUP_IRQHandler
-                0x08003c60                SPI2_IRQHandler
-                0x08003c60                OTG_HS_EP1_IN_IRQHandler
-                0x08003c60                DMA1_Stream0_IRQHandler
-                0x08003c60                CAN1_TX_IRQHandler
-                0x08003c60                EXTI4_IRQHandler
-                0x08003c60                ETH_IRQHandler
-                0x08003c60                OTG_HS_EP1_OUT_IRQHandler
-                0x08003c60                WWDG_IRQHandler
-                0x08003c60                SPI6_IRQHandler
-                0x08003c60                TIM2_IRQHandler
-                0x08003c60                OTG_FS_WKUP_IRQHandler
-                0x08003c60                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08003c60                OTG_HS_IRQHandler
-                0x08003c60                DMA2D_IRQHandler
-                0x08003c60                EXTI1_IRQHandler
-                0x08003c60                UART7_IRQHandler
-                0x08003c60                USART2_IRQHandler
-                0x08003c60                I2C2_ER_IRQHandler
-                0x08003c60                DMA2_Stream1_IRQHandler
-                0x08003c60                CAN1_SCE_IRQHandler
-                0x08003c60                FLASH_IRQHandler
-                0x08003c60                DMA2_Stream4_IRQHandler
-                0x08003c60                USART1_IRQHandler
-                0x08003c60                OTG_FS_IRQHandler
-                0x08003c60                SPI3_IRQHandler
-                0x08003c60                DMA1_Stream4_IRQHandler
-                0x08003c60                I2C1_ER_IRQHandler
-                0x08003c60                FMC_IRQHandler
-                0x08003c60                DMA2_Stream6_IRQHandler
-                0x08003c60                SAI1_IRQHandler
-                0x08003c60                DMA1_Stream3_IRQHandler
- *fill*         0x08003c62        0x2 
+                0x08004138        0x2 startup_stm32f429zitx.o
+                0x08004138                RTC_Alarm_IRQHandler
+                0x08004138                HASH_RNG_IRQHandler
+                0x08004138                EXTI2_IRQHandler
+                0x08004138                TIM8_CC_IRQHandler
+                0x08004138                UART8_IRQHandler
+                0x08004138                SPI4_IRQHandler
+                0x08004138                TIM1_CC_IRQHandler
+                0x08004138                DMA2_Stream5_IRQHandler
+                0x08004138                DMA1_Stream5_IRQHandler
+                0x08004138                PVD_IRQHandler
+                0x08004138                SDIO_IRQHandler
+                0x08004138                TAMP_STAMP_IRQHandler
+                0x08004138                CAN2_RX1_IRQHandler
+                0x08004138                EXTI3_IRQHandler
+                0x08004138                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08004138                TIM1_UP_TIM10_IRQHandler
+                0x08004138                TIM8_UP_TIM13_IRQHandler
+                0x08004138                I2C3_ER_IRQHandler
+                0x08004138                EXTI0_IRQHandler
+                0x08004138                I2C2_EV_IRQHandler
+                0x08004138                DMA1_Stream2_IRQHandler
+                0x08004138                CAN1_RX0_IRQHandler
+                0x08004138                FPU_IRQHandler
+                0x08004138                OTG_HS_WKUP_IRQHandler
+                0x08004138                LTDC_ER_IRQHandler
+                0x08004138                CAN2_SCE_IRQHandler
+                0x08004138                SPI1_IRQHandler
+                0x08004138                TIM6_DAC_IRQHandler
+                0x08004138                TIM1_BRK_TIM9_IRQHandler
+                0x08004138                DCMI_IRQHandler
+                0x08004138                CAN2_RX0_IRQHandler
+                0x08004138                DMA2_Stream3_IRQHandler
+                0x08004138                USART6_IRQHandler
+                0x08004138                USART3_IRQHandler
+                0x08004138                CAN1_RX1_IRQHandler
+                0x08004138                UART5_IRQHandler
+                0x08004138                TIM4_IRQHandler
+                0x08004138                I2C1_EV_IRQHandler
+                0x08004138                DMA1_Stream6_IRQHandler
+                0x08004138                DMA1_Stream1_IRQHandler
+                0x08004138                UART4_IRQHandler
+                0x08004138                TIM3_IRQHandler
+                0x08004138                RCC_IRQHandler
+                0x08004138                TIM8_BRK_TIM12_IRQHandler
+                0x08004138                Default_Handler
+                0x08004138                EXTI15_10_IRQHandler
+                0x08004138                ADC_IRQHandler
+                0x08004138                DMA1_Stream7_IRQHandler
+                0x08004138                SPI5_IRQHandler
+                0x08004138                TIM7_IRQHandler
+                0x08004138                CAN2_TX_IRQHandler
+                0x08004138                DMA2_Stream7_IRQHandler
+                0x08004138                I2C3_EV_IRQHandler
+                0x08004138                EXTI9_5_IRQHandler
+                0x08004138                RTC_WKUP_IRQHandler
+                0x08004138                LTDC_IRQHandler
+                0x08004138                ETH_WKUP_IRQHandler
+                0x08004138                SPI2_IRQHandler
+                0x08004138                OTG_HS_EP1_IN_IRQHandler
+                0x08004138                DMA1_Stream0_IRQHandler
+                0x08004138                CAN1_TX_IRQHandler
+                0x08004138                EXTI4_IRQHandler
+                0x08004138                ETH_IRQHandler
+                0x08004138                OTG_HS_EP1_OUT_IRQHandler
+                0x08004138                WWDG_IRQHandler
+                0x08004138                SPI6_IRQHandler
+                0x08004138                TIM2_IRQHandler
+                0x08004138                OTG_FS_WKUP_IRQHandler
+                0x08004138                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08004138                OTG_HS_IRQHandler
+                0x08004138                DMA2D_IRQHandler
+                0x08004138                EXTI1_IRQHandler
+                0x08004138                UART7_IRQHandler
+                0x08004138                USART2_IRQHandler
+                0x08004138                I2C2_ER_IRQHandler
+                0x08004138                DMA2_Stream1_IRQHandler
+                0x08004138                CAN1_SCE_IRQHandler
+                0x08004138                FLASH_IRQHandler
+                0x08004138                DMA2_Stream4_IRQHandler
+                0x08004138                USART1_IRQHandler
+                0x08004138                OTG_FS_IRQHandler
+                0x08004138                SPI3_IRQHandler
+                0x08004138                DMA1_Stream4_IRQHandler
+                0x08004138                I2C1_ER_IRQHandler
+                0x08004138                FMC_IRQHandler
+                0x08004138                DMA2_Stream6_IRQHandler
+                0x08004138                SAI1_IRQHandler
+                0x08004138                DMA1_Stream3_IRQHandler
+ *fill*         0x0800413a        0x2 
  .text.__libc_init_array
-                0x08003c64       0x48 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                0x08003c64                __libc_init_array
- .text.memset   0x08003cac       0x10 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                0x08003cac                memset
+                0x0800413c       0x48 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x0800413c                __libc_init_array
+ .text.memset   0x08004184       0x10 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x08004184                memset
  *(.glue_7)
- .glue_7        0x08003cbc        0x0 linker stubs
+ .glue_7        0x08004194        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08003cbc        0x0 linker stubs
+ .glue_7t       0x08004194        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08003cbc        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08004194        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08003cbc        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08003cbc                _init
- .init          0x08003cc0        0x8 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08004194        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08004194                _init
+ .init          0x08004198        0x8 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08003cc8        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08003cc8                _fini
- .fini          0x08003ccc        0x8 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08003cd4                . = ALIGN (0x4)
-                0x08003cd4                _etext = .
+ .fini          0x080041a0        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x080041a0                _fini
+ .fini          0x080041a4        0x8 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x080041ac                . = ALIGN (0x4)
+                0x080041ac                _etext = .
 
-.vfp11_veneer   0x08003cd4        0x0
- .vfp11_veneer  0x08003cd4        0x0 linker stubs
+.vfp11_veneer   0x080041ac        0x0
+ .vfp11_veneer  0x080041ac        0x0 linker stubs
 
-.v4_bx          0x08003cd4        0x0
- .v4_bx         0x08003cd4        0x0 linker stubs
+.v4_bx          0x080041ac        0x0
+ .v4_bx         0x080041ac        0x0 linker stubs
 
-.iplt           0x08003cd4        0x0
- .iplt          0x08003cd4        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x080041ac        0x0
+ .iplt          0x080041ac        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08003cd4       0x24
-                0x08003cd4                . = ALIGN (0x4)
+.rodata         0x080041ac       0x24
+                0x080041ac                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.stm32f4discovery_gettingstar_M
-                0x08003cd4        0x4 stm32f4discovery_gettingstarted.o
-                0x08003cd4                stm32f4discovery_gettingstar_M
+                0x080041ac        0x4 stm32f4discovery_gettingstarted.o
+                0x080041ac                stm32f4discovery_gettingstar_M
  .rodata.STREAM_OFFSET_TAB
-                0x08003cd8        0x8 main.o
+                0x080041b0        0x8 main.o
  .rodata.AHBPrescTable
-                0x08003ce0       0x10 system_stm32f4xx.o
-                0x08003ce0                AHBPrescTable
+                0x080041b8       0x10 system_stm32f4xx.o
+                0x080041b8                AHBPrescTable
  .rodata.APBPrescTable
-                0x08003cf0        0x8 system_stm32f4xx.o
-                0x08003cf0                APBPrescTable
-                0x08003cf8                . = ALIGN (0x4)
+                0x080041c8        0x8 system_stm32f4xx.o
+                0x080041c8                APBPrescTable
+                0x080041d0                . = ALIGN (0x4)
 
-.ARM.extab
+.ARM.extab      0x080041d0        0x0
+                0x080041d0                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x080041d0                . = ALIGN (0x4)
 
-.ARM            0x08003cf8        0x8
-                0x08003cf8                __exidx_start = .
+.ARM            0x080041d0        0x8
+                0x080041d0                . = ALIGN (0x4)
+                0x080041d0                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08003cf8        0x8 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08003d00                __exidx_end = .
+ .ARM.exidx     0x080041d0        0x8 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x080041d8                __exidx_end = .
+                0x080041d8                . = ALIGN (0x4)
 
-.rel.dyn        0x08003d00        0x0
- .rel.iplt      0x08003d00        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x080041d8        0x0
+ .rel.iplt      0x080041d8        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08003d00        0x0
-                0x08003d00                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x080041d8        0x0
+                0x080041d8                . = ALIGN (0x4)
+                0x080041d8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08003d00                PROVIDE (__preinit_array_end = .)
+                0x080041d8                PROVIDE (__preinit_array_end = .)
+                0x080041d8                . = ALIGN (0x4)
 
-.init_array     0x08003d00        0x4
-                0x08003d00                PROVIDE (__init_array_start = .)
+.init_array     0x080041d8        0x4
+                0x080041d8                . = ALIGN (0x4)
+                0x080041d8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08003d00        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08003d04                PROVIDE (__init_array_end = .)
+ .init_array    0x080041d8        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080041dc                PROVIDE (__init_array_end = .)
+                0x080041dc                . = ALIGN (0x4)
 
-.fini_array     0x08003d04        0x4
+.fini_array     0x080041dc        0x4
+                0x080041dc                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08003d04        0x4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x080041dc        0x4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08003d08                _sidata = LOADADDR (.data)
+                0x080041e0                . = ALIGN (0x4)
+                0x080041e0                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x28 load address 0x08003d08
+.data           0x20000000       0x28 load address 0x080041e0
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2052,27 +2152,20 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
  .data.SystemCoreClock
                 0x20000024        0x4 system_stm32f4xx.o
                 0x20000024                SystemCoreClock
+ *(.RamFunc)
+ *(.RamFunc*)
                 0x20000028                . = ALIGN (0x4)
                 0x20000028                _edata = .
-                0x08003d30                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x20000028        0x0 load address 0x08003d30
- .igot.plt      0x20000028        0x0 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.igot.plt       0x20000028        0x0 load address 0x08004208
+ .igot.plt      0x20000028        0x0 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x20000028                . = ALIGN (0x4)
 
-.ccmram         0x10000000        0x0 load address 0x08003d30
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _sccmram = .
- *(.ccmram)
- *(.ccmram*)
-                0x10000000                . = ALIGN (0x4)
-                0x10000000                _eccmram = .
-                0x10000000                . = ALIGN (0x4)
-
-.bss            0x20000028       0x88
+.bss            0x20000028       0x88 load address 0x08004208
                 0x20000028                _sbss = .
                 0x20000028                __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000028       0x1c c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x20000028       0x1c c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
  .bss.IsrOverrun
                 0x20000044        0x4 ert_main.o
@@ -2103,10 +2196,10 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
                 0x200000b0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200000b0      0x600
+                0x200000b0      0x600 load address 0x08004208
                 0x200000b0                . = ALIGN (0x8)
-                0x200000b0                PROVIDE (end = .)
-                [!provide]                PROVIDE (_end = .)
+                [!provide]                PROVIDE (end = .)
+                0x200000b0                PROVIDE (_end = .)
                 0x200002b0                . = (. + _Min_Heap_Size)
  *fill*         0x200000b0      0x200 
                 0x200006b0                . = (. + _Min_Stack_Size)
@@ -2122,9 +2215,9 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
                 0x00000000       0x30
  *(.ARM.attributes)
  .ARM.attributes
-                0x00000000       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x00000000       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crti.o
  .ARM.attributes
-                0x0000001e       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0000001e       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .ARM.attributes
                 0x00000052       0x34 ert_main.o
  .ARM.attributes
@@ -2132,74 +2225,79 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
  .ARM.attributes
                 0x000000ba       0x39 stm32f4discovery_gettingstarted_data.o
  .ARM.attributes
-                0x000000f3       0x34 SysTickScheduler.o
+                0x000000f3       0x34 platform_timer.o
  .ARM.attributes
-                0x00000127       0x34 m3m4m4f_multitasking.o
+                0x00000127       0x34 SysTickScheduler.o
  .ARM.attributes
-                0x0000015b       0x34 main.o
+                0x0000015b       0x34 m3m4m4f_multitasking.o
  .ARM.attributes
-                0x0000018f       0x34 stm32f4xx_it.o
+                0x0000018f       0x34 main.o
  .ARM.attributes
-                0x000001c3       0x34 stm32f4xx_hal_msp.o
+                0x000001c3       0x34 stm32f4xx_it.o
  .ARM.attributes
-                0x000001f7       0x34 stm32f4xx_hal_timebase_tim.o
+                0x000001f7       0x34 stm32f4xx_hal_msp.o
  .ARM.attributes
-                0x0000022b       0x34 stm32f4xx_ll_gpio.o
+                0x0000022b       0x34 stm32f4xx_hal_timebase_tim.o
  .ARM.attributes
-                0x0000025f       0x34 stm32f4xx_ll_i2c.o
+                0x0000025f       0x34 stm32f4xx_ll_gpio.o
  .ARM.attributes
-                0x00000293       0x34 stm32f4xx_ll_rcc.o
+                0x00000293       0x34 stm32f4xx_ll_adc.o
  .ARM.attributes
-                0x000002c7       0x34 stm32f4xx_ll_utils.o
+                0x000002c7       0x34 stm32f4xx_ll_rcc.o
  .ARM.attributes
-                0x000002fb       0x34 stm32f4xx_ll_exti.o
+                0x000002fb       0x34 stm32f4xx_ll_utils.o
  .ARM.attributes
-                0x0000032f       0x34 stm32f4xx_hal_rcc.o
+                0x0000032f       0x34 stm32f4xx_ll_exti.o
  .ARM.attributes
-                0x00000363       0x34 stm32f4xx_hal_cortex.o
+                0x00000363       0x34 stm32f4xx_hal_rcc.o
  .ARM.attributes
-                0x00000397       0x34 stm32f4xx_hal.o
+                0x00000397       0x34 stm32f4xx_hal_cortex.o
  .ARM.attributes
-                0x000003cb       0x34 stm32f4xx_ll_spi.o
+                0x000003cb       0x34 stm32f4xx_hal.o
  .ARM.attributes
-                0x000003ff       0x34 stm32f4xx_hal_tim.o
+                0x000003ff       0x34 stm32f4xx_ll_i2c.o
  .ARM.attributes
-                0x00000433       0x34 stm32f4xx_hal_tim_ex.o
+                0x00000433       0x34 stm32f4xx_ll_spi.o
  .ARM.attributes
-                0x00000467       0x34 stm32f4xx_ll_tim.o
+                0x00000467       0x34 stm32f4xx_hal_tim.o
  .ARM.attributes
-                0x0000049b       0x34 stm32f4xx_ll_usart.o
+                0x0000049b       0x34 stm32f4xx_hal_tim_ex.o
  .ARM.attributes
-                0x000004cf       0x34 system_stm32f4xx.o
+                0x000004cf       0x34 stm32f4xx_ll_tim.o
  .ARM.attributes
-                0x00000503       0x21 startup_stm32f429xx.o
+                0x00000503       0x34 stm32f4xx_ll_usart.o
  .ARM.attributes
-                0x00000524       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+                0x00000537       0x34 system_stm32f4xx.o
  .ARM.attributes
-                0x00000542       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+                0x0000056b       0x21 startup_stm32f429zitx.o
  .ARM.attributes
-                0x00000560       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x0000058c       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x0000057e       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x000005aa       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x000005b2       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+                0x000005c8       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000005d0       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x000005e6       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000604       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x0000061a       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000638       0x1e c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x00000638       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000066c       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000006a0       0x1e c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtn.o
 OUTPUT(../stm32f4discovery_gettingstarted.elf elf32-littlearm)
 LOAD linker stubs
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
-LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
+LOAD c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
 .comment        0x00000000       0x4c
  .comment       0x00000000       0x4c ert_main.o
                                  0x4d (size before relaxing)
  .comment       0x0000004c       0x4d stm32f4discovery_gettingstarted.o
  .comment       0x0000004c       0x4d stm32f4discovery_gettingstarted_data.o
+ .comment       0x0000004c       0x4d platform_timer.o
  .comment       0x0000004c       0x4d SysTickScheduler.o
  .comment       0x0000004c       0x4d m3m4m4f_multitasking.o
  .comment       0x0000004c       0x4d main.o
@@ -2207,13 +2305,14 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
  .comment       0x0000004c       0x4d stm32f4xx_hal_msp.o
  .comment       0x0000004c       0x4d stm32f4xx_hal_timebase_tim.o
  .comment       0x0000004c       0x4d stm32f4xx_ll_gpio.o
- .comment       0x0000004c       0x4d stm32f4xx_ll_i2c.o
+ .comment       0x0000004c       0x4d stm32f4xx_ll_adc.o
  .comment       0x0000004c       0x4d stm32f4xx_ll_rcc.o
  .comment       0x0000004c       0x4d stm32f4xx_ll_utils.o
  .comment       0x0000004c       0x4d stm32f4xx_ll_exti.o
  .comment       0x0000004c       0x4d stm32f4xx_hal_rcc.o
  .comment       0x0000004c       0x4d stm32f4xx_hal_cortex.o
  .comment       0x0000004c       0x4d stm32f4xx_hal.o
+ .comment       0x0000004c       0x4d stm32f4xx_ll_i2c.o
  .comment       0x0000004c       0x4d stm32f4xx_ll_spi.o
  .comment       0x0000004c       0x4d stm32f4xx_hal_tim.o
  .comment       0x0000004c       0x4d stm32f4xx_hal_tim_ex.o
@@ -2222,9 +2321,9 @@ LOAD c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib
  .comment       0x0000004c       0x4d system_stm32f4xx.o
 
 .debug_frame    0x00000000      0x21c
- .debug_frame   0x00000000       0xac c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x000000ac       0xc4 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00000170       0x2c c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000019c       0x34 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000001d0       0x2c c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x000001fc       0x20 c:/progra~3/matlab/suppor~1/r2021b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0xac c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000000ac       0xc4 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00000170       0x2c c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000019c       0x34 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000001d0       0x2c c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x000001fc       0x20 c:/progra~3/matlab/suppor~1/r2022b/3p778c~1.ins/gnuarm~1.ins/win/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
