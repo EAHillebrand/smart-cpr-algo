@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.24
+ * Model version                  : 3.25
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Mon Mar 20 19:10:56 2023
+ * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -38,23 +38,69 @@ volatile boolean_T stopRequested = false;
 volatile boolean_T runModel = true;
 SemaphoreHandle_t stopSem;
 SemaphoreHandle_t baserateTaskSem;
+SemaphoreHandle_t subrateTaskSem[2];
+int taskId[2];
 mw_thread_t schedulerThread;
 mw_thread_t baseRateThread;
 void *threadJoinStatus;
 int terminatingmodel = 0;
+mw_thread_t subRateThread[2];
+int subratePriority[2];
+void *subrateTask(void *arg)
+{
+  int tid = *((int *) arg);
+  int subRateId;
+  subRateId = tid + 2;
+  while (runModel) {
+    mw_osSemaphoreWaitEver(&subrateTaskSem[tid]);
+    if (terminatingmodel)
+      break;
+
+#ifdef MW_RTOS_DEBUG
+
+    printf(" -subrate task %d semaphore received\n", subRateId);
+
+#endif
+
+    top_level_algo_step(subRateId);
+
+    /* Get model outputs here */
+  }
+
+  mw_osThreadExit((void *)0);
+  return NULL;
+}
+
 void *baseRateTask(void *arg)
 {
+  int_T i;
   runModel = (rtmGetErrorStatus(top_level_algo_M) == (NULL));
   while (runModel) {
     mw_osSemaphoreWaitEver(&baserateTaskSem);
-    top_level_algo_step();
+
+#ifdef MW_RTOS_DEBUG
+
+    printf("*base rate task semaphore received\n");
+    fflush(stdout);
+
+#endif
+
+    for (i = 1
+         ; i <= 2; i++) {
+      if (rtmStepTask(top_level_algo_M, i + 1)
+          ) {
+        mw_osSemaphoreRelease(&subrateTaskSem[ i - 1
+                              ]);
+      }
+    }
+
+    top_level_algo_step(0);
 
     /* Get model outputs here */
     stopRequested = !((rtmGetErrorStatus(top_level_algo_M) == (NULL)));
     runModel = !stopRequested;
   }
 
-  runModel = 0;
   terminateTask(arg);
   mw_osThreadExit((void *)0);
   return NULL;
@@ -72,6 +118,22 @@ void *terminateTask(void *arg)
   terminatingmodel = 1;
 
   {
+    int i;
+
+    /* Signal all periodic tasks to complete */
+    for (i=0; i<2; i++) {
+      CHECK_STATUS(mw_osSemaphoreRelease(&subrateTaskSem[i]), 0,
+                   "mw_osSemaphoreRelease");
+      CHECK_STATUS(mw_osSemaphoreDelete(&subrateTaskSem[i]), 0,
+                   "mw_osSemaphoreDelete");
+    }
+
+    /* Wait for all periodic tasks to complete */
+    for (i=0; i<2; i++) {
+      CHECK_STATUS(mw_osThreadJoin(subRateThread[i], &threadJoinStatus), 0,
+                   "mw_osThreadJoin");
+    }
+
     runModel = 0;
   }
 
@@ -83,6 +145,8 @@ void *terminateTask(void *arg)
 
 int app_main(int argc, char **argv)
 {
+  subratePriority[0] = 15;
+  subratePriority[1] = 16;
   init();
   MW_Arduino_Init();
   rtmSetErrorStatus(top_level_algo_M, 0);
@@ -91,7 +155,7 @@ int app_main(int argc, char **argv)
   top_level_algo_initialize();
 
   /* Call RTOS Initialization function */
-  mw_RTOSInit(0.001, 0);
+  mw_RTOSInit(0.001, 2);
 
   /* Wait for stop semaphore */
   mw_osSemaphoreWaitEver(&stopSem);
