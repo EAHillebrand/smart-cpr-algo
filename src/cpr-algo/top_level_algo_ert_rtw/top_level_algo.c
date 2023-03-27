@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.25
+ * Model version                  : 3.28
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
+ * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -26,39 +26,39 @@
 #include "top_level_algo_types.h"
 #include <float.h>
 
-/* Named constants for Chart: '<S8>/sample and hold' */
-#define top_level_algo_IN_Holding      ((uint8_T)1U)
-#define top_level_algo_IN_Init         ((uint8_T)2U)
-
 /* Named constants for Chart: '<S11>/ClockLogic' */
-#define top_level_algo_IN_HIGH         ((uint8_T)1U)
-#define top_level_algo_IN_LOW          ((uint8_T)2U)
-#define top_level_algo_IN_START        ((uint8_T)3U)
-#define top_level_algo_IN_WAIT         ((uint8_T)4U)
+#define top_level_algo_IN_HIGH         (1U)
+#define top_level_algo_IN_LOW          (2U)
+#define top_level_algo_IN_START        (3U)
+#define top_level_algo_IN_WAIT         (4U)
 
 /* Named constants for Chart: '<S11>/DataLogic' */
-#define top_level_algo_IN_CHECK        ((uint8_T)1U)
-#define top_level_algo_IN_LOAD         ((uint8_T)2U)
-#define top_level_algo_IN_MASK         ((uint8_T)3U)
-#define top_level_algo_IN_START_n      ((uint8_T)4U)
-#define top_level_algo_IN_WAITING      ((uint8_T)5U)
-#define top_level_algo_IN_Wait         ((uint8_T)6U)
+#define top_level_algo_IN_CHECK        (1U)
+#define top_level_algo_IN_LOAD         (2U)
+#define top_level_algo_IN_MASK         (3U)
+#define top_level_algo_IN_START_n      (4U)
+#define top_level_algo_IN_WAITING      (5U)
+#define top_level_algo_IN_Wait         (6U)
 
 /* Named constants for Chart: '<S3>/Chart1' */
-#define top_level_algo_IN_Counting     ((uint8_T)1U)
-#define top_level_algo_IN_First        ((uint8_T)2U)
-#define top_level_algo_IN_INIT         ((uint8_T)3U)
+#define top_level_algo_IN_Counting     (1U)
+#define top_level_algo_IN_First        (2U)
+#define top_level_algo_IN_INIT         (3U)
 
 /* Named constants for Chart: '<S5>/timer' */
-#define top_level_algo_IN_Finished     ((uint8_T)1U)
-#define top_level_algo_IN_Starting     ((uint8_T)2U)
+#define top_level_algo_IN_Finished     (1U)
+#define top_level_algo_IN_Starting     (2U)
+
+/* Named constants for Chart: '<S8>/sample and hold' */
+#define top_level_algo_IN_Holding      (1U)
+#define top_level_algo_IN_Init         (2U)
 
 /* Named constants for Chart: '<Root>/Mode' */
-#define top_level_algo_IN_CALIBRATION  ((uint8_T)1U)
-#define top_level_algo_IN_DEBOUNCE1    ((uint8_T)2U)
-#define top_level_algo_IN_DEBOUNCE2    ((uint8_T)3U)
-#define top_level_algo_IN_EVALUATING   ((uint8_T)4U)
-#define top_level_algo_IN_RUNNING      ((uint8_T)5U)
+#define top_level_algo_IN_CALIBRATION  (1U)
+#define top_level_algo_IN_DEBOUNCE1    (2U)
+#define top_level_algo_IN_DEBOUNCE2    (3U)
+#define top_level_algo_IN_EVALUATING   (4U)
+#define top_level_algo_IN_RUNNING      (5U)
 
 /* Block signals (default storage) */
 B_top_level_algo_T top_level_algo_B;
@@ -130,7 +130,7 @@ static void rate_monotonic_scheduler(void)
   }
 
   (top_level_algo_M->Timing.TaskCounters.TID[3])++;
-  if ((top_level_algo_M->Timing.TaskCounters.TID[3]) > 99) {/* Sample time: [0.1s, 0.0s] */
+  if ((top_level_algo_M->Timing.TaskCounters.TID[3]) > 49) {/* Sample time: [0.05s, 0.0s] */
     top_level_algo_M->Timing.TaskCounters.TID[3] = 0;
   }
 }
@@ -156,43 +156,6 @@ void top_level_IfActionSubsystem(uint8_T *rty_Out1,
    *  Constant: '<S15>/Constant'
    */
   *rty_Out1 = localP->Constant_Value;
-}
-
-/*
- * System initialize for atomic system:
- *    '<S8>/sample and hold'
- *    '<S8>/sample and hold1'
- */
-void top_leve_sampleandhold_Init(real_T *rty_displacement)
-{
-  *rty_displacement = 0.0;
-}
-
-/*
- * Output and update for atomic system:
- *    '<S8>/sample and hold'
- *    '<S8>/sample and hold1'
- */
-void top_level_alg_sampleandhold(real_T rtu_max, boolean_T rtu_read, real_T
-  *rty_displacement, DW_sampleandhold_top_level_al_T *localDW)
-{
-  /* Chart: '<S8>/sample and hold' */
-  if (localDW->is_active_c1_top_level_algo == 0U) {
-    localDW->is_active_c1_top_level_algo = 1U;
-    localDW->is_c1_top_level_algo = top_level_algo_IN_Init;
-    *rty_displacement = 0.0;
-  } else if (localDW->is_c1_top_level_algo == top_level_algo_IN_Holding) {
-    if (rtu_read) {
-      *rty_displacement = rtu_max;
-    }
-
-    /* case IN_Init: */
-  } else if (rtu_read) {
-    localDW->is_c1_top_level_algo = top_level_algo_IN_Holding;
-    *rty_displacement = rtu_max;
-  }
-
-  /* End of Chart: '<S8>/sample and hold' */
 }
 
 real_T rt_roundd_snf(real_T u)
@@ -249,109 +212,175 @@ real_T rt_modd_snf(real_T u0, real_T u1)
   return y;
 }
 
+uint32_T MWDSP_EPH_R_D(real_T evt, uint32_T *sta)
+{
+  int32_T curState;
+  int32_T lastzcevent;
+  int32_T newState;
+  int32_T newStateR;
+  uint32_T previousState;
+  uint32_T retVal;
+
+  /* S-Function (sdspcount2): '<S3>/Counter1' */
+  /* Detect rising edge events */
+  previousState = *sta;
+  retVal = 0U;
+  lastzcevent = 0;
+  newState = 5;
+  newStateR = 5;
+  if (evt > 0.0) {
+    curState = 2;
+  } else {
+    curState = !(evt < 0.0);
+  }
+
+  if (*sta == 5U) {
+    newStateR = curState;
+  } else if ((uint32_T)curState != *sta) {
+    if (*sta == 3U) {
+      if ((uint32_T)curState == 1U) {
+        newStateR = 1;
+      } else {
+        lastzcevent = 2;
+        previousState = 1U;
+      }
+    }
+
+    if (previousState == 4U) {
+      if ((uint32_T)curState == 1U) {
+        newStateR = 1;
+      } else {
+        lastzcevent = 3;
+        previousState = 1U;
+      }
+    }
+
+    if ((previousState == 1U) && ((uint32_T)curState == 2U)) {
+      retVal = 2U;
+    }
+
+    if (previousState == 0U) {
+      retVal = 2U;
+    }
+
+    if (retVal == (uint32_T)lastzcevent) {
+      retVal = 0U;
+    }
+
+    if (((uint32_T)curState == 1U) && (retVal == 2U)) {
+      newState = 3;
+    } else {
+      newState = curState;
+    }
+  }
+
+  if ((uint32_T)newStateR != 5U) {
+    *sta = (uint32_T)newStateR;
+    retVal = 0U;
+  }
+
+  if ((uint32_T)newState != 5U) {
+    *sta = (uint32_T)newState;
+  }
+
+  /* End of S-Function (sdspcount2): '<S3>/Counter1' */
+  return retVal;
+}
+
+uint32_T MWDSP_EPH_R_B(boolean_T evt, uint32_T *sta)
+{
+  int32_T curState;
+  int32_T lastzcevent;
+  int32_T newState;
+  int32_T newStateR;
+  uint32_T previousState;
+  uint32_T retVal;
+
+  /* S-Function (sdspcount2): '<S3>/Counter1' */
+  /* Detect rising edge events */
+  previousState = *sta;
+  retVal = 0U;
+  lastzcevent = 0;
+  newState = 5;
+  newStateR = 5;
+  if (evt) {
+    curState = 2;
+  } else {
+    curState = 1;
+  }
+
+  if (*sta == 5U) {
+    newStateR = curState;
+  } else if ((uint32_T)curState != *sta) {
+    if (*sta == 3U) {
+      if ((uint32_T)curState == 1U) {
+        newStateR = 1;
+      } else {
+        lastzcevent = 2;
+        previousState = 1U;
+      }
+    }
+
+    if (previousState == 4U) {
+      if ((uint32_T)curState == 1U) {
+        newStateR = 1;
+      } else {
+        lastzcevent = 3;
+        previousState = 1U;
+      }
+    }
+
+    if ((previousState == 1U) && ((uint32_T)curState == 2U)) {
+      retVal = 2U;
+    }
+
+    if (previousState == 0U) {
+      retVal = 2U;
+    }
+
+    if (retVal == (uint32_T)lastzcevent) {
+      retVal = 0U;
+    }
+
+    if (((uint32_T)curState == 1U) && (retVal == 2U)) {
+      newState = 3;
+    } else {
+      newState = curState;
+    }
+  }
+
+  if ((uint32_T)newStateR != 5U) {
+    *sta = (uint32_T)newStateR;
+    retVal = 0U;
+  }
+
+  if ((uint32_T)newState != 5U) {
+    *sta = (uint32_T)newState;
+  }
+
+  /* End of S-Function (sdspcount2): '<S3>/Counter1' */
+  return retVal;
+}
+
 /* Model step function for TID0 */
 void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
 {
-  real_T Clock1;
+  real_T rtb_DividebyConstantandRound;
   real_T rtb_Mod1;
-  real_T rtb_PulseGenerator;
   real_T rtb_TmpMLSysMemLayoutBufferAt_k;
-  uint32_T rtb_Add;
-  uint8_T tmp;
+  real_T tmp;
+  uint8_T tmp_0;
   boolean_T rtb_Compare_bz;
 
   {                                    /* Sample time: [0.0s, 0.0s] */
     rate_monotonic_scheduler();
   }
 
-  /* DiscretePulseGenerator: '<S1>/Pulse Generator' */
-  rtb_PulseGenerator = (top_level_algo_DW.clockTickCounter <
-                        top_level_algo_P.PulseGenerator_Duty) &&
-    (top_level_algo_DW.clockTickCounter >= 0) ?
-    top_level_algo_P.PulseGenerator_Amp : 0.0;
-  if (top_level_algo_DW.clockTickCounter >=
-      top_level_algo_P.PulseGenerator_Period - 1.0) {
-    top_level_algo_DW.clockTickCounter = 0;
-  } else {
-    top_level_algo_DW.clockTickCounter++;
-  }
-
-  /* End of DiscretePulseGenerator: '<S1>/Pulse Generator' */
-
-  /* Chart: '<S11>/ClockLogic' */
-  if (top_level_algo_DW.temporalCounter_i1_o2 < 15U) {
-    top_level_algo_DW.temporalCounter_i1_o2++;
-  }
-
-  if (top_level_algo_DW.is_active_c17_top_level_algo == 0U) {
-    top_level_algo_DW.is_active_c17_top_level_algo = 1U;
-    top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_START;
-    top_level_algo_DW.counter = 0.0;
-    top_level_algo_B.CLK = 0.0;
-  } else {
-    switch (top_level_algo_DW.is_c17_top_level_algo) {
-     case top_level_algo_IN_HIGH:
-      if (top_level_algo_DW.temporalCounter_i1_o2 >= 10U) {
-        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_LOW;
-        top_level_algo_DW.temporalCounter_i1_o2 = 0U;
-        top_level_algo_B.CLK = 0.0;
-        top_level_algo_DW.counter++;
-      }
-      break;
-
-     case top_level_algo_IN_LOW:
-      if (top_level_algo_DW.counter == 36.0) {
-        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_START;
-        top_level_algo_DW.counter = 0.0;
-        top_level_algo_B.CLK = 0.0;
-      } else if (top_level_algo_DW.temporalCounter_i1_o2 >= 10U) {
-        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_HIGH;
-        top_level_algo_DW.temporalCounter_i1_o2 = 0U;
-        top_level_algo_B.CLK = 1.0;
-      }
-      break;
-
-     case top_level_algo_IN_START:
-      if (rtb_PulseGenerator == 1.0) {
-        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_WAIT;
-        top_level_algo_DW.temporalCounter_i1_o2 = 0U;
-      } else {
-        top_level_algo_DW.counter = 0.0;
-        top_level_algo_B.CLK = 0.0;
-      }
-      break;
-
-     default:
-      /* case IN_WAIT: */
-      if (top_level_algo_DW.temporalCounter_i1_o2 >= 10U) {
-        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_HIGH;
-        top_level_algo_DW.temporalCounter_i1_o2 = 0U;
-        top_level_algo_B.CLK = 1.0;
-      }
-      break;
-    }
-  }
-
-  /* End of Chart: '<S11>/ClockLogic' */
-
-  /* MATLABSystem: '<Root>/Digital Output2' */
-  Clock1 = rt_roundd_snf(top_level_algo_B.CLK);
-  if (Clock1 < 256.0) {
-    if (Clock1 >= 0.0) {
-      tmp = (uint8_T)Clock1;
-    } else {
-      tmp = 0U;
-    }
-  } else {
-    tmp = MAX_uint8_T;
-  }
-
-  writeDigitalPin(1, tmp);
-
-  /* End of MATLABSystem: '<Root>/Digital Output2' */
+  /* Reset subsysRan breadcrumbs */
+  srClearBC(top_level_algo_DW.IfActionSubsystem.IfActionSubsystem_SubsysRanBC);
 
   /* Clock: '<S3>/Clock1' */
-  Clock1 = top_level_algo_M->Timing.t[0];
+  top_level_algo_B.Clock1 = top_level_algo_M->Timing.t[0];
 
   /* RateTransition generated from: '<S3>/Chart1' */
   if (top_level_algo_M->Timing.RateInteraction.TID1_2) {
@@ -363,8 +392,8 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
   /* End of RateTransition generated from: '<S3>/Chart1' */
 
   /* Chart: '<S3>/Chart1' */
-  if (top_level_algo_DW.temporalCounter_i1_o < 2047U) {
-    top_level_algo_DW.temporalCounter_i1_o++;
+  if (top_level_algo_DW.temporalCounter_i1_jw < 2047U) {
+    top_level_algo_DW.temporalCounter_i1_jw++;
   }
 
   if (top_level_algo_DW.is_active_c12_top_level_algo == 0U) {
@@ -376,13 +405,14 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
   } else {
     switch (top_level_algo_DW.is_c12_top_level_algo) {
      case top_level_algo_IN_Counting:
-      if ((top_level_algo_DW.temporalCounter_i1_o >= 10U) &&
+      if ((top_level_algo_DW.temporalCounter_i1_jw >= 10U) &&
           top_level_algo_B.TmpRTBAtChart1Inport2) {
         top_level_algo_DW.is_c12_top_level_algo = top_level_algo_IN_Counting;
-        top_level_algo_DW.temporalCounter_i1_o = 0U;
-        top_level_algo_B.rate = 60.0 / (Clock1 - top_level_algo_DW.lastTs);
-        top_level_algo_DW.lastTs = Clock1;
-      } else if (top_level_algo_DW.temporalCounter_i1_o >= 2000U) {
+        top_level_algo_DW.temporalCounter_i1_jw = 0U;
+        top_level_algo_B.rate = 60.0 / (top_level_algo_B.Clock1 -
+          top_level_algo_DW.lastTs);
+        top_level_algo_DW.lastTs = top_level_algo_B.Clock1;
+      } else if (top_level_algo_DW.temporalCounter_i1_jw >= 2000U) {
         top_level_algo_DW.is_c12_top_level_algo = top_level_algo_IN_INIT;
         top_level_algo_DW.lastTs = 0.0;
         top_level_algo_B.rate = 0.0;
@@ -392,12 +422,13 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
 
      case top_level_algo_IN_First:
       top_level_algo_B.recoil_active = 1.0;
-      if ((top_level_algo_DW.temporalCounter_i1_o >= 50U) &&
+      if ((top_level_algo_DW.temporalCounter_i1_jw >= 50U) &&
           top_level_algo_B.TmpRTBAtChart1Inport2) {
         top_level_algo_DW.is_c12_top_level_algo = top_level_algo_IN_Counting;
-        top_level_algo_DW.temporalCounter_i1_o = 0U;
-        top_level_algo_B.rate = 60.0 / (Clock1 - top_level_algo_DW.lastTs);
-        top_level_algo_DW.lastTs = Clock1;
+        top_level_algo_DW.temporalCounter_i1_jw = 0U;
+        top_level_algo_B.rate = 60.0 / (top_level_algo_B.Clock1 -
+          top_level_algo_DW.lastTs);
+        top_level_algo_DW.lastTs = top_level_algo_B.Clock1;
       }
       break;
 
@@ -406,8 +437,8 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
       top_level_algo_B.recoil_active = 0.0;
       if (top_level_algo_B.TmpRTBAtChart1Inport2) {
         top_level_algo_DW.is_c12_top_level_algo = top_level_algo_IN_First;
-        top_level_algo_DW.temporalCounter_i1_o = 0U;
-        top_level_algo_DW.lastTs = Clock1;
+        top_level_algo_DW.temporalCounter_i1_jw = 0U;
+        top_level_algo_DW.lastTs = top_level_algo_B.Clock1;
         top_level_algo_B.recoil_active = 1.0;
       }
       break;
@@ -419,43 +450,122 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
   /* RateTransition generated from: '<Root>/Mode' */
   if (top_level_algo_M->Timing.RateInteraction.TID1_3) {
     /* RateTransition generated from: '<Root>/Mode' */
-    top_level_algo_B.TmpRTBAtModeOutport3 =
-      top_level_algo_DW.TmpRTBAtModeOutport3_Buffer0;
+    top_level_algo_B.TmpRTBAtModeOutport2 =
+      top_level_algo_DW.TmpRTBAtModeOutport2_Buffer0;
   }
 
   /* End of RateTransition generated from: '<Root>/Mode' */
 
-  /* Switch: '<Root>/Switch2' incorporates:
-   *  Constant: '<Root>/Constant4'
-   */
-  if (top_level_algo_B.TmpRTBAtModeOutport3 > top_level_algo_P.Switch2_Threshold)
+  /* Switch: '<Root>/Switch1' */
+  if (top_level_algo_B.TmpRTBAtModeOutport2 > top_level_algo_P.Switch1_Threshold)
   {
-    Clock1 = top_level_algo_B.rate;
+    /* Switch: '<S2>/Switch' */
+    if (top_level_algo_B.recoil_active > top_level_algo_P.Switch_Threshold) {
+      /* RelationalOperator: '<S47>/Compare' incorporates:
+       *  Constant: '<S47>/Constant'
+       */
+      rtb_Compare_bz = (top_level_algo_B.Merge <=
+                        top_level_algo_P.CompareToConstant_const);
+
+      /* Switch: '<Root>/Switch1' incorporates:
+       *  Logic: '<S2>/NOT'
+       *  SignalConversion generated from: '<S2>/Vector Concatenate'
+       */
+      top_level_algo_B.Switch1[0] = rtb_Compare_bz;
+      top_level_algo_B.Switch1[1] = !rtb_Compare_bz;
+    } else {
+      /* Switch: '<Root>/Switch1' incorporates:
+       *  Constant: '<S2>/Constant'
+       */
+      top_level_algo_B.Switch1[0] = top_level_algo_P.Constant_Value[0];
+      top_level_algo_B.Switch1[1] = top_level_algo_P.Constant_Value[1];
+    }
+
+    /* End of Switch: '<S2>/Switch' */
   } else {
-    Clock1 = top_level_algo_P.Constant4_Value;
+    /* Switch: '<Root>/Switch1' incorporates:
+     *  Constant: '<Root>/Constant3'
+     */
+    top_level_algo_B.Switch1[0] = top_level_algo_P.Constant3_Value[0];
+    top_level_algo_B.Switch1[1] = top_level_algo_P.Constant3_Value[1];
   }
 
-  /* End of Switch: '<Root>/Switch2' */
+  /* End of Switch: '<Root>/Switch1' */
+
+  /* MATLABSystem: '<Root>/Digital Output8' */
+  tmp = rt_roundd_snf(top_level_algo_B.Switch1[0]);
+  if (tmp < 256.0) {
+    if (tmp >= 0.0) {
+      tmp_0 = (uint8_T)tmp;
+    } else {
+      tmp_0 = 0U;
+    }
+  } else {
+    tmp_0 = MAX_uint8_T;
+  }
+
+  writeDigitalPin(23, tmp_0);
+
+  /* End of MATLABSystem: '<Root>/Digital Output8' */
+
+  /* MATLABSystem: '<Root>/Digital Output9' */
+  tmp = rt_roundd_snf(top_level_algo_B.Switch1[1]);
+  if (tmp < 256.0) {
+    if (tmp >= 0.0) {
+      tmp_0 = (uint8_T)tmp;
+    } else {
+      tmp_0 = 0U;
+    }
+  } else {
+    tmp_0 = MAX_uint8_T;
+  }
+
+  writeDigitalPin(22, tmp_0);
+
+  /* End of MATLABSystem: '<Root>/Digital Output9' */
+
+  /* RateTransition generated from: '<Root>/Scope3' */
+  if (top_level_algo_M->Timing.RateInteraction.TID1_2) {
+    /* RateTransition generated from: '<Root>/Scope3' */
+    top_level_algo_B.Max = top_level_algo_DW.displacement_Buffer0;
+  }
+
+  /* End of RateTransition generated from: '<Root>/Scope3' */
+  /* RateTransition generated from: '<S3>/Subtract3' */
+  if (top_level_algo_M->Timing.RateInteraction.TID1_2) {
+    /* RateTransition generated from: '<S3>/Subtract3' */
+    top_level_algo_B.displacement = top_level_algo_DW.displacement_Buffer0_g;
+  }
+
+  /* End of RateTransition generated from: '<S3>/Subtract3' */
+
+  /* Sum: '<S3>/Subtract3' */
+  top_level_algo_B.Subtract3 = top_level_algo_B.displacement -
+    top_level_algo_B.Merge;
 
   /* Math: '<S10>/Mod' incorporates:
    *  Constant: '<S10>/Constant1'
    */
-  rtb_TmpMLSysMemLayoutBufferAt_k = rt_modd_snf(Clock1,
+  rtb_TmpMLSysMemLayoutBufferAt_k = rt_modd_snf(top_level_algo_B.rate,
     top_level_algo_P.Constant1_Value);
 
-  /* SwitchCase: '<S12>/Switch Case' incorporates:
-   *  MATLABSystem: '<S10>/Divide by Constant and Round'
+  /* MATLABSystem: '<S10>/Divide by Constant and Round' incorporates:
    *  Sum: '<S10>/Subtract'
    */
-  Clock1 = floor((Clock1 - rtb_TmpMLSysMemLayoutBufferAt_k) * 0.01);
-  if (rtIsNaN(Clock1) || rtIsInf(Clock1)) {
-    Clock1 = 0.0;
+  rtb_DividebyConstantandRound = floor((top_level_algo_B.rate -
+    rtb_TmpMLSysMemLayoutBufferAt_k) * 0.01);
+
+  /* SwitchCase: '<S12>/Switch Case' incorporates:
+   *  SignalConversion generated from: '<S10>/Divide by Constant and Round'
+   */
+  if (rtIsNaN(rtb_DividebyConstantandRound) || rtIsInf
+      (rtb_DividebyConstantandRound)) {
+    tmp = 0.0;
   } else {
-    Clock1 = fmod(Clock1, 4.294967296E+9);
+    tmp = fmod(rtb_DividebyConstantandRound, 4.294967296E+9);
   }
 
-  switch (Clock1 < 0.0 ? -(int32_T)(uint32_T)-Clock1 : (int32_T)(uint32_T)Clock1)
-  {
+  switch (tmp < 0.0 ? -(int32_T)(uint32_T)-tmp : (int32_T)(uint32_T)tmp) {
    case 0:
     /* Outputs for IfAction SubSystem: '<S12>/If Action Subsystem' incorporates:
      *  ActionPort: '<S15>/Action Port'
@@ -565,19 +675,23 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
   rtb_Mod1 = rt_modd_snf(rtb_TmpMLSysMemLayoutBufferAt_k,
     top_level_algo_P.Constant2_Value_c);
 
-  /* SwitchCase: '<S13>/Switch Case' incorporates:
-   *  MATLABSystem: '<S10>/Divide by Constant and Round1'
+  /* MATLABSystem: '<S10>/Divide by Constant and Round1' incorporates:
    *  Sum: '<S10>/Subtract1'
    */
-  Clock1 = floor((rtb_TmpMLSysMemLayoutBufferAt_k - rtb_Mod1) * 0.1);
-  if (rtIsNaN(Clock1) || rtIsInf(Clock1)) {
-    Clock1 = 0.0;
+  rtb_TmpMLSysMemLayoutBufferAt_k = floor((rtb_TmpMLSysMemLayoutBufferAt_k -
+    rtb_Mod1) * 0.1);
+
+  /* SwitchCase: '<S13>/Switch Case' incorporates:
+   *  SignalConversion generated from: '<S10>/Divide by Constant and Round1'
+   */
+  if (rtIsNaN(rtb_TmpMLSysMemLayoutBufferAt_k) || rtIsInf
+      (rtb_TmpMLSysMemLayoutBufferAt_k)) {
+    tmp = 0.0;
   } else {
-    Clock1 = fmod(Clock1, 4.294967296E+9);
+    tmp = fmod(rtb_TmpMLSysMemLayoutBufferAt_k, 4.294967296E+9);
   }
 
-  switch (Clock1 < 0.0 ? -(int32_T)(uint32_T)-Clock1 : (int32_T)(uint32_T)Clock1)
-  {
+  switch (tmp < 0.0 ? -(int32_T)(uint32_T)-tmp : (int32_T)(uint32_T)tmp) {
    case 0:
     /* Outputs for IfAction SubSystem: '<S13>/If Action Subsystem' incorporates:
      *  ActionPort: '<S25>/Action Port'
@@ -683,24 +797,23 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
 
   /* SwitchCase: '<S14>/Switch Case' */
   if (rtb_Mod1 < 0.0) {
-    Clock1 = ceil(rtb_Mod1);
+    tmp = ceil(rtb_Mod1);
   } else {
-    Clock1 = floor(rtb_Mod1);
+    tmp = floor(rtb_Mod1);
   }
 
-  if (rtIsNaN(Clock1) || rtIsInf(Clock1)) {
-    Clock1 = 0.0;
+  if (rtIsNaN(tmp) || rtIsInf(tmp)) {
+    tmp = 0.0;
   } else {
-    Clock1 = fmod(Clock1, 4.294967296E+9);
+    tmp = fmod(tmp, 4.294967296E+9);
   }
 
-  switch (Clock1 < 0.0 ? -(int32_T)(uint32_T)-Clock1 : (int32_T)(uint32_T)Clock1)
-  {
+  switch (tmp < 0.0 ? -(int32_T)(uint32_T)-tmp : (int32_T)(uint32_T)tmp) {
    case 0:
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem' incorporates:
      *  ActionPort: '<S35>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem_b);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem' */
@@ -710,7 +823,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S36>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem1_m);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem1' */
@@ -720,7 +833,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem2' incorporates:
      *  ActionPort: '<S38>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem2_f);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem2' */
@@ -730,7 +843,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem3' incorporates:
      *  ActionPort: '<S39>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem3_e);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem3' */
@@ -740,7 +853,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem4' incorporates:
      *  ActionPort: '<S40>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem4_o);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem4' */
@@ -750,7 +863,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem5' incorporates:
      *  ActionPort: '<S41>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem5_e);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem5' */
@@ -760,7 +873,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem6' incorporates:
      *  ActionPort: '<S42>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem6_l);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem6' */
@@ -770,7 +883,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem7' incorporates:
      *  ActionPort: '<S43>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem7_e);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem7' */
@@ -780,7 +893,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem8' incorporates:
      *  ActionPort: '<S44>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem8_n);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem8' */
@@ -790,7 +903,7 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
     /* Outputs for IfAction SubSystem: '<S14>/If Action Subsystem10' incorporates:
      *  ActionPort: '<S37>/Action Port'
      */
-    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n,
+    top_level_IfActionSubsystem(&top_level_algo_B.Merge_n0,
       &top_level_algo_P.IfActionSubsystem10_g1);
 
     /* End of Outputs for SubSystem: '<S14>/If Action Subsystem10' */
@@ -806,69 +919,92 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
    *  DataTypeConversion: '<S10>/Cast To Double1'
    *  DataTypeConversion: '<S10>/Cast To Double2'
    */
-  rtb_Add = (((uint32_T)top_level_algo_B.Merge_d << 8) +
-             top_level_algo_B.Merge_i) + ((uint32_T)top_level_algo_B.Merge_n <<
-    16);
+  top_level_algo_B.Add = (((uint32_T)top_level_algo_B.Merge_d << 8) +
+    top_level_algo_B.Merge_i) + ((uint32_T)top_level_algo_B.Merge_n0 << 16);
+
+  /* Sum: '<S10>/Add1' incorporates:
+   *  ArithShift: '<S10>/Shift Arithmetic3'
+   *  Constant: '<S10>/Constant'
+   *  Sum: '<S10>/Add'
+   */
+  top_level_algo_B.Add1 = (top_level_algo_B.Add << 1) +
+    top_level_algo_P.Constant_Value_at;
+
+  /* DataTypeConversion: '<S11>/Cast To Double' */
+  top_level_algo_B.CastToDouble = top_level_algo_B.Add;
+
+  /* DiscretePulseGenerator: '<S1>/Pulse Generator' */
+  top_level_algo_B.PulseGenerator = (top_level_algo_DW.clockTickCounter <
+    top_level_algo_P.PulseGenerator_Duty) && (top_level_algo_DW.clockTickCounter
+    >= 0) ? top_level_algo_P.PulseGenerator_Amp : 0.0;
+
+  /* DiscretePulseGenerator: '<S1>/Pulse Generator' */
+  if (top_level_algo_DW.clockTickCounter >=
+      top_level_algo_P.PulseGenerator_Period - 1.0) {
+    top_level_algo_DW.clockTickCounter = 0;
+  } else {
+    top_level_algo_DW.clockTickCounter++;
+  }
 
   /* Chart: '<S11>/DataLogic' */
-  if (top_level_algo_DW.temporalCounter_i1_n < 31U) {
-    top_level_algo_DW.temporalCounter_i1_n++;
+  if (top_level_algo_DW.temporalCounter_i1_c < 31U) {
+    top_level_algo_DW.temporalCounter_i1_c++;
   }
 
   if (top_level_algo_DW.is_active_c18_top_level_algo == 0U) {
     top_level_algo_DW.is_active_c18_top_level_algo = 1U;
     top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_LOAD;
     top_level_algo_B.data = 0U;
-    top_level_algo_DW.Holder = rtb_Add;
+    top_level_algo_DW.Holder = top_level_algo_B.CastToDouble;
   } else {
     switch (top_level_algo_DW.is_c18_top_level_algo) {
      case top_level_algo_IN_CHECK:
       if (top_level_algo_DW.Holder == 0U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_WAITING;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
-      } else if (top_level_algo_DW.temporalCounter_i1_n >= 10U) {
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
+      } else if (top_level_algo_DW.temporalCounter_i1_c >= 10U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_MASK;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
         top_level_algo_B.data = top_level_algo_DW.Holder & 1U;
       }
       break;
 
      case top_level_algo_IN_LOAD:
-      if (rtb_PulseGenerator == 1.0) {
+      if (top_level_algo_B.PulseGenerator == 1.0) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_Wait;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
       }
       break;
 
      case top_level_algo_IN_MASK:
-      if (top_level_algo_DW.temporalCounter_i1_n >= 10U) {
+      if (top_level_algo_DW.temporalCounter_i1_c >= 10U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_CHECK;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
         top_level_algo_DW.Holder >>= 1;
       }
       break;
 
      case top_level_algo_IN_START_n:
-      if (top_level_algo_DW.temporalCounter_i1_n >= 20U) {
+      if (top_level_algo_DW.temporalCounter_i1_c >= 20U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_MASK;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
         top_level_algo_B.data = top_level_algo_DW.Holder & 1U;
       }
       break;
 
      case top_level_algo_IN_WAITING:
-      if (top_level_algo_DW.temporalCounter_i1_n >= 10U) {
+      if (top_level_algo_DW.temporalCounter_i1_c >= 10U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_LOAD;
         top_level_algo_B.data = 0U;
-        top_level_algo_DW.Holder = rtb_Add;
+        top_level_algo_DW.Holder = top_level_algo_B.CastToDouble;
       }
       break;
 
      default:
       /* case IN_Wait: */
-      if (top_level_algo_DW.temporalCounter_i1_n >= 5U) {
+      if (top_level_algo_DW.temporalCounter_i1_c >= 5U) {
         top_level_algo_DW.is_c18_top_level_algo = top_level_algo_IN_START_n;
-        top_level_algo_DW.temporalCounter_i1_n = 0U;
+        top_level_algo_DW.temporalCounter_i1_c = 0U;
         top_level_algo_B.data = 1U;
       }
       break;
@@ -877,87 +1013,100 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
 
   /* End of Chart: '<S11>/DataLogic' */
 
-  /* MATLABSystem: '<Root>/Digital Output3' */
-  rtb_Add = top_level_algo_B.data;
-  if (top_level_algo_B.data > 255U) {
-    rtb_Add = 255U;
-  }
-
-  writeDigitalPin(3, (uint8_T)rtb_Add);
-
-  /* End of MATLABSystem: '<Root>/Digital Output3' */
-
   /* RateTransition generated from: '<Root>/Mode' */
   if (top_level_algo_M->Timing.RateInteraction.TID1_3) {
     /* RateTransition generated from: '<Root>/Mode' */
-    top_level_algo_B.TmpRTBAtModeOutport2 =
-      top_level_algo_DW.TmpRTBAtModeOutport2_Buffer0;
+    top_level_algo_B.TmpRTBAtModeOutport3 =
+      top_level_algo_DW.TmpRTBAtModeOutport3_Buffer0;
   }
 
   /* End of RateTransition generated from: '<Root>/Mode' */
 
-  /* Switch: '<Root>/Switch1' incorporates:
-   *  Constant: '<Root>/Constant3'
-   */
-  if (top_level_algo_B.TmpRTBAtModeOutport2 > top_level_algo_P.Switch1_Threshold)
+  /* Switch: '<S1>/Switch2' */
+  if (top_level_algo_B.TmpRTBAtModeOutport3 > top_level_algo_P.Switch2_Threshold)
   {
-    /* Switch: '<S2>/Switch' incorporates:
-     *  Constant: '<S2>/Constant'
-     *  Logic: '<S2>/NOT'
-     *  SignalConversion generated from: '<S2>/Vector Concatenate'
+    /* Switch: '<S1>/Switch2' */
+    top_level_algo_B.Switch2 = top_level_algo_B.data;
+  } else {
+    /* Switch: '<S1>/Switch2' incorporates:
+     *  Constant: '<S1>/Constant4'
      */
-    if (top_level_algo_B.recoil_active > top_level_algo_P.Switch_Threshold) {
-      /* RelationalOperator: '<S47>/Compare' incorporates:
-       *  Constant: '<S47>/Constant'
-       */
-      rtb_Compare_bz = (top_level_algo_B.Merge <=
-                        top_level_algo_P.CompareToConstant_const);
-      Clock1 = rtb_Compare_bz;
-      rtb_PulseGenerator = !rtb_Compare_bz;
-    } else {
-      Clock1 = top_level_algo_P.Constant_Value[0];
-      rtb_PulseGenerator = top_level_algo_P.Constant_Value[1];
-    }
-
-    /* End of Switch: '<S2>/Switch' */
-  } else {
-    Clock1 = top_level_algo_P.Constant3_Value[0];
-    rtb_PulseGenerator = top_level_algo_P.Constant3_Value[1];
+    top_level_algo_B.Switch2 = (uint32_T)top_level_algo_P.Constant4_Value;
   }
 
-  /* End of Switch: '<Root>/Switch1' */
+  /* End of Switch: '<S1>/Switch2' */
 
-  /* MATLABSystem: '<Root>/Digital Output8' */
-  Clock1 = rt_roundd_snf(Clock1);
-  if (Clock1 < 256.0) {
-    if (Clock1 >= 0.0) {
-      tmp = (uint8_T)Clock1;
-    } else {
-      tmp = 0U;
-    }
-  } else {
-    tmp = MAX_uint8_T;
+  /* Chart: '<S11>/ClockLogic' */
+  if (top_level_algo_DW.temporalCounter_i1_f < 15U) {
+    top_level_algo_DW.temporalCounter_i1_f++;
   }
 
-  writeDigitalPin(23, tmp);
-
-  /* End of MATLABSystem: '<Root>/Digital Output8' */
-
-  /* MATLABSystem: '<Root>/Digital Output9' */
-  Clock1 = rt_roundd_snf(rtb_PulseGenerator);
-  if (Clock1 < 256.0) {
-    if (Clock1 >= 0.0) {
-      tmp = (uint8_T)Clock1;
-    } else {
-      tmp = 0U;
-    }
+  if (top_level_algo_DW.is_active_c17_top_level_algo == 0U) {
+    top_level_algo_DW.is_active_c17_top_level_algo = 1U;
+    top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_START;
+    top_level_algo_DW.counter = 0.0;
+    top_level_algo_B.CLK = 0.0;
   } else {
-    tmp = MAX_uint8_T;
+    switch (top_level_algo_DW.is_c17_top_level_algo) {
+     case top_level_algo_IN_HIGH:
+      if (top_level_algo_DW.temporalCounter_i1_f >= 10U) {
+        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_LOW;
+        top_level_algo_DW.temporalCounter_i1_f = 0U;
+        top_level_algo_B.CLK = 0.0;
+        top_level_algo_DW.counter++;
+      }
+      break;
+
+     case top_level_algo_IN_LOW:
+      if (top_level_algo_DW.counter == 36.0) {
+        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_START;
+        top_level_algo_DW.counter = 0.0;
+        top_level_algo_B.CLK = 0.0;
+      } else if (top_level_algo_DW.temporalCounter_i1_f >= 10U) {
+        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_HIGH;
+        top_level_algo_DW.temporalCounter_i1_f = 0U;
+        top_level_algo_B.CLK = 1.0;
+      }
+      break;
+
+     case top_level_algo_IN_START:
+      if (top_level_algo_B.PulseGenerator == 1.0) {
+        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_WAIT;
+        top_level_algo_DW.temporalCounter_i1_f = 0U;
+      } else {
+        top_level_algo_DW.counter = 0.0;
+        top_level_algo_B.CLK = 0.0;
+      }
+      break;
+
+     default:
+      /* case IN_WAIT: */
+      if (top_level_algo_DW.temporalCounter_i1_f >= 10U) {
+        top_level_algo_DW.is_c17_top_level_algo = top_level_algo_IN_HIGH;
+        top_level_algo_DW.temporalCounter_i1_f = 0U;
+        top_level_algo_B.CLK = 1.0;
+      }
+      break;
+    }
   }
 
-  writeDigitalPin(22, tmp);
+  /* End of Chart: '<S11>/ClockLogic' */
+  /* SignalConversion generated from: '<S10>/Vector Concatenate' incorporates:
+   *  Concatenate: '<S10>/Vector Concatenate'
+   *  SignalConversion generated from: '<S10>/Divide by Constant and Round'
+   */
+  top_level_algo_B.VectorConcatenate[0] = rtb_DividebyConstantandRound;
 
-  /* End of MATLABSystem: '<Root>/Digital Output9' */
+  /* SignalConversion generated from: '<S10>/Vector Concatenate' incorporates:
+   *  Concatenate: '<S10>/Vector Concatenate'
+   *  SignalConversion generated from: '<S10>/Divide by Constant and Round1'
+   */
+  top_level_algo_B.VectorConcatenate[1] = rtb_TmpMLSysMemLayoutBufferAt_k;
+
+  /* SignalConversion generated from: '<S10>/Vector Concatenate' incorporates:
+   *  Concatenate: '<S10>/Vector Concatenate'
+   */
+  top_level_algo_B.VectorConcatenate[2] = rtb_Mod1;
 
   /* Update absolute time */
   /* The "clockTick0" counts the number of times the code of this task has
@@ -982,27 +1131,33 @@ void top_level_algo_step0(void)        /* Sample time: [0.0s, 0.0s] */
 void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
 {
   /* local block i/o variables */
-  real_T rtb_Merge;
-  real_T rtb_Reset;
-  real_T rtb_Reset_b;
-  boolean_T rtb_IsPos;
-  boolean_T rtb_IsNeg;
-  boolean_T rtb_LogicalOperator3;
   boolean_T rtb_LogicalOperator7;
   boolean_T rtb_NOT;
   boolean_T rtb_NOT2;
 
   {
     codertarget_arduinobase_inter_T *obj;
+    real_T u;
     int32_T i;
-    int32_T rtb_measure_period;
+    int32_T measure_period;
     int32_T str;
     int16_T Mean_AccVal_f;
     uint8_T tmp;
+    boolean_T Delay1_DSTATE_m_tmp;
     boolean_T Delay7_DSTATE_tmp;
-    boolean_T rtb_AND;
-    boolean_T rtb_IsZero_tmp;
     boolean_T rtb_NOT_tmp;
+
+    /* Reset subsysRan breadcrumbs */
+    srClearBC(top_level_algo_DW.IfActionSubsystem_SubsysRanBC_e);
+
+    /* Reset subsysRan breadcrumbs */
+    srClearBC(top_level_algo_DW.IfActionSubsystem1_SubsysRanB_h);
+
+    /* Reset subsysRan breadcrumbs */
+    srClearBC(top_level_algo_DW.IfActionSubsystem_SubsysRanBC);
+
+    /* Reset subsysRan breadcrumbs */
+    srClearBC(top_level_algo_DW.IfActionSubsystem1_SubsysRanBC);
 
     /* S-Function (sdspstatfcns): '<S5>/Mean1' incorporates:
      *  S-Function (sfix_udelay): '<S5>/Tapped Delay1'
@@ -1014,28 +1169,29 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       str++;
     }
 
-    /* Chart: '<S5>/timer' incorporates:
-     *  S-Function (sdspstatfcns): '<S5>/Mean1'
-     */
-    if (top_level_algo_DW.temporalCounter_i1_c < 511U) {
-      top_level_algo_DW.temporalCounter_i1_c++;
+    /* S-Function (sdspstatfcns): '<S5>/Mean1' */
+    top_level_algo_B.Mean1 = top_level_algo_B.Mean1_AccVal / 20.0;
+
+    /* Chart: '<S5>/timer' */
+    if (top_level_algo_DW.temporalCounter_i1_j < 511U) {
+      top_level_algo_DW.temporalCounter_i1_j++;
     }
 
     if (top_level_algo_DW.is_active_c3_top_level_algo == 0U) {
       top_level_algo_DW.is_active_c3_top_level_algo = 1U;
       top_level_algo_DW.is_c3_top_level_algo = top_level_algo_IN_Starting;
-      top_level_algo_DW.temporalCounter_i1_c = 0U;
-      rtb_measure_period = 0;
+      top_level_algo_DW.temporalCounter_i1_j = 0U;
+      measure_period = 0;
     } else if (top_level_algo_DW.is_c3_top_level_algo ==
                top_level_algo_IN_Finished) {
-      rtb_measure_period = 1;
+      measure_period = 1;
     } else {
       /* case IN_Starting: */
-      rtb_measure_period = 0;
-      if (top_level_algo_DW.temporalCounter_i1_c >= 400U) {
+      measure_period = 0;
+      if (top_level_algo_DW.temporalCounter_i1_j >= 400U) {
         top_level_algo_DW.is_c3_top_level_algo = top_level_algo_IN_Finished;
-        top_level_algo_B.baseline = top_level_algo_B.Mean1_AccVal / 20.0;
-        rtb_measure_period = 1;
+        top_level_algo_B.baseline = top_level_algo_B.Mean1;
+        measure_period = 1;
       }
     }
 
@@ -1061,7 +1217,7 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       10) / top_level_algo_P.Constant1_Value_d * top_level_algo_P.Vdd;
 
     /* Switch: '<S5>/Switch' */
-    if (rtb_measure_period > top_level_algo_P.Switch_Threshold_c) {
+    if (measure_period > top_level_algo_P.Switch_Threshold_c) {
       top_level_algo_B.Mean1_AccVal = top_level_algo_B.baseline;
     } else {
       top_level_algo_B.Mean1_AccVal = top_level_algo_B.Product;
@@ -1073,12 +1229,12 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  Sum: '<S5>/Subtract'
      *  Switch: '<S5>/Switch'
      */
-    rtb_Merge = 6.2831853071795862 / top_level_algo_P.Vdd *
+    top_level_algo_B.Merge_n = 6.2831853071795862 / top_level_algo_P.Vdd *
       (top_level_algo_B.Mean1_AccVal - top_level_algo_B.Product) * (1.0 /
       top_level_algo_P.gear_ratio) * top_level_algo_P.Radiusmm_Gain;
 
     /* If: '<S53>/If' */
-    if (rtb_Merge < 0.0) {
+    if (top_level_algo_B.Merge_n < 0.0) {
       /* Outputs for IfAction SubSystem: '<S53>/If Action Subsystem' incorporates:
        *  ActionPort: '<S55>/Action Port'
        */
@@ -1087,9 +1243,25 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
        *  Merge: '<S53>/Merge'
        *  SignalConversion generated from: '<S55>/In1'
        */
-      rtb_Merge = top_level_algo_P.Constant_Value_a;
+      top_level_algo_B.Merge_n = top_level_algo_P.Constant_Value_a;
 
       /* End of Outputs for SubSystem: '<S53>/If Action Subsystem' */
+
+      /* Update for IfAction SubSystem: '<S53>/If Action Subsystem' incorporates:
+       *  ActionPort: '<S55>/Action Port'
+       */
+      /* Update for If: '<S53>/If' */
+      srUpdateBC(top_level_algo_DW.IfActionSubsystem_SubsysRanBC_e);
+
+      /* End of Update for SubSystem: '<S53>/If Action Subsystem' */
+    } else {
+      /* Update for IfAction SubSystem: '<S53>/If Action Subsystem1' incorporates:
+       *  ActionPort: '<S56>/Action Port'
+       */
+      /* Update for If: '<S53>/If' */
+      srUpdateBC(top_level_algo_DW.IfActionSubsystem1_SubsysRanB_h);
+
+      /* End of Update for SubSystem: '<S53>/If Action Subsystem1' */
     }
 
     /* End of If: '<S53>/If' */
@@ -1103,38 +1275,41 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
 
     /* End of RateTransition generated from: '<Root>/Mode' */
 
-    /* Switch: '<Root>/Switch' incorporates:
-     *  Constant: '<Root>/Constant2'
-     *  Constant: '<S57>/Constant'
-     *  Constant: '<S58>/Constant'
-     *  Constant: '<S59>/Constant'
-     *  Constant: '<S60>/Constant'
-     *  RelationalOperator: '<S57>/Compare'
-     *  RelationalOperator: '<S58>/Compare'
-     *  RelationalOperator: '<S59>/Compare'
-     *  RelationalOperator: '<S60>/Compare'
-     */
+    /* Switch: '<Root>/Switch' */
     if (top_level_algo_B.TmpRTBAtModeOutport1 >
         top_level_algo_P.Switch_Threshold_j) {
-      top_level_algo_B.Mean1_AccVal = (rtb_Merge >
+      /* Switch: '<Root>/Switch' incorporates:
+       *  Constant: '<S57>/Constant'
+       *  Constant: '<S58>/Constant'
+       *  Constant: '<S59>/Constant'
+       *  Constant: '<S60>/Constant'
+       *  RelationalOperator: '<S57>/Compare'
+       *  RelationalOperator: '<S58>/Compare'
+       *  RelationalOperator: '<S59>/Compare'
+       *  RelationalOperator: '<S60>/Compare'
+       */
+      top_level_algo_B.Switch[0] = (top_level_algo_B.Merge_n >
         top_level_algo_P.CompareToConstant1_const);
-      top_level_algo_B.rtb_Switch_idx_1 = (rtb_Merge >
+      top_level_algo_B.Switch[1] = (top_level_algo_B.Merge_n >
         top_level_algo_P.CompareToConstant2_const);
-      top_level_algo_B.rtb_Switch_idx_2 = (rtb_Merge >
+      top_level_algo_B.Switch[2] = (top_level_algo_B.Merge_n >
         top_level_algo_P.CompareToConstant3_const);
-      top_level_algo_B.rtb_Switch_idx_3 = (rtb_Merge >
+      top_level_algo_B.Switch[3] = (top_level_algo_B.Merge_n >
         top_level_algo_P.CompareToConstant4_const);
     } else {
-      top_level_algo_B.Mean1_AccVal = top_level_algo_P.Constant2_Value[0];
-      top_level_algo_B.rtb_Switch_idx_1 = top_level_algo_P.Constant2_Value[1];
-      top_level_algo_B.rtb_Switch_idx_2 = top_level_algo_P.Constant2_Value[2];
-      top_level_algo_B.rtb_Switch_idx_3 = top_level_algo_P.Constant2_Value[3];
+      /* Switch: '<Root>/Switch' incorporates:
+       *  Constant: '<Root>/Constant2'
+       */
+      top_level_algo_B.Switch[0] = top_level_algo_P.Constant2_Value[0];
+      top_level_algo_B.Switch[1] = top_level_algo_P.Constant2_Value[1];
+      top_level_algo_B.Switch[2] = top_level_algo_P.Constant2_Value[2];
+      top_level_algo_B.Switch[3] = top_level_algo_P.Constant2_Value[3];
     }
 
     /* End of Switch: '<Root>/Switch' */
 
     /* MATLABSystem: '<Root>/Digital Output4' */
-    top_level_algo_B.Mean1_AccVal = rt_roundd_snf(top_level_algo_B.Mean1_AccVal);
+    top_level_algo_B.Mean1_AccVal = rt_roundd_snf(top_level_algo_B.Switch[0]);
     if (top_level_algo_B.Mean1_AccVal < 256.0) {
       if (top_level_algo_B.Mean1_AccVal >= 0.0) {
         tmp = (uint8_T)top_level_algo_B.Mean1_AccVal;
@@ -1150,8 +1325,7 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     /* End of MATLABSystem: '<Root>/Digital Output4' */
 
     /* MATLABSystem: '<Root>/Digital Output5' */
-    top_level_algo_B.Mean1_AccVal = rt_roundd_snf
-      (top_level_algo_B.rtb_Switch_idx_1);
+    top_level_algo_B.Mean1_AccVal = rt_roundd_snf(top_level_algo_B.Switch[1]);
     if (top_level_algo_B.Mean1_AccVal < 256.0) {
       if (top_level_algo_B.Mean1_AccVal >= 0.0) {
         tmp = (uint8_T)top_level_algo_B.Mean1_AccVal;
@@ -1167,8 +1341,7 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     /* End of MATLABSystem: '<Root>/Digital Output5' */
 
     /* MATLABSystem: '<Root>/Digital Output6' */
-    top_level_algo_B.Mean1_AccVal = rt_roundd_snf
-      (top_level_algo_B.rtb_Switch_idx_2);
+    top_level_algo_B.Mean1_AccVal = rt_roundd_snf(top_level_algo_B.Switch[2]);
     if (top_level_algo_B.Mean1_AccVal < 256.0) {
       if (top_level_algo_B.Mean1_AccVal >= 0.0) {
         tmp = (uint8_T)top_level_algo_B.Mean1_AccVal;
@@ -1184,8 +1357,7 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     /* End of MATLABSystem: '<Root>/Digital Output6' */
 
     /* MATLABSystem: '<Root>/Digital Output7' */
-    top_level_algo_B.Mean1_AccVal = rt_roundd_snf
-      (top_level_algo_B.rtb_Switch_idx_3);
+    top_level_algo_B.Mean1_AccVal = rt_roundd_snf(top_level_algo_B.Switch[3]);
     if (top_level_algo_B.Mean1_AccVal < 256.0) {
       if (top_level_algo_B.Mean1_AccVal >= 0.0) {
         tmp = (uint8_T)top_level_algo_B.Mean1_AccVal;
@@ -1199,7 +1371,6 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     writeDigitalPin(5, tmp);
 
     /* End of MATLABSystem: '<Root>/Digital Output7' */
-
     /* MATLABSystem: '<Root>/Analog Input' */
     if (top_level_algo_DW.obj.SampleTime !=
         top_level_algo_P.AnalogInput_SampleTime) {
@@ -1215,45 +1386,45 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       (top_level_algo_DW.obj.AnalogInDriverObj.MW_ANALOGIN_HANDLE,
        &top_level_algo_B.AnalogInput, top_level_algo_B.datatype_id);
 
+    /* Sum: '<S4>/5to30 Diff' incorporates:
+     *  Delay: '<S4>/Delay4'
+     *  Delay: '<S4>/Delay5'
+     */
+    top_level_algo_B.Mean = top_level_algo_DW.Delay4_DSTATE[0] -
+      top_level_algo_DW.Delay5_DSTATE[0];
+
     /* Sum: '<S4>/First Diff' incorporates:
      *  Delay: '<S4>/Delay'
      */
-    top_level_algo_B.Mean1_AccVal = rtb_Merge - top_level_algo_DW.Delay_DSTATE;
+    top_level_algo_B.Mean1_AccVal = top_level_algo_B.Merge_n -
+      top_level_algo_DW.Delay_DSTATE;
 
     /* Sum: '<S4>/Second Diff' incorporates:
      *  Delay: '<S4>/Delay'
      *  Delay: '<S4>/Delay1'
      */
-    top_level_algo_B.rtb_Switch_idx_3 = top_level_algo_DW.Delay_DSTATE -
+    top_level_algo_B.u = top_level_algo_DW.Delay_DSTATE -
       top_level_algo_DW.Delay1_DSTATE[0];
 
     /* Sum: '<S4>/Third Diff' incorporates:
      *  Delay: '<S4>/Delay1'
      *  Delay: '<S4>/Delay2'
      */
-    top_level_algo_B.u = top_level_algo_DW.Delay1_DSTATE[0] -
+    top_level_algo_B.u_m = top_level_algo_DW.Delay1_DSTATE[0] -
       top_level_algo_DW.Delay2_DSTATE[0];
 
     /* Sum: '<S4>/Fourth Diff' incorporates:
      *  Delay: '<S4>/Delay2'
      *  Delay: '<S4>/Delay3'
      */
-    top_level_algo_B.u_m = top_level_algo_DW.Delay2_DSTATE[0] -
+    top_level_algo_B.u_c = top_level_algo_DW.Delay2_DSTATE[0] -
       top_level_algo_DW.Delay3_DSTATE[0];
 
     /* Sum: '<S4>/Fifth Diff' incorporates:
      *  Delay: '<S4>/Delay3'
      *  Delay: '<S4>/Delay4'
      */
-    top_level_algo_B.rtb_Switch_idx_2 = top_level_algo_DW.Delay3_DSTATE[0] -
-      top_level_algo_DW.Delay4_DSTATE[0];
-
-    /* Sum: '<S4>/5to30 Diff' incorporates:
-     *  Delay: '<S4>/Delay4'
-     *  Delay: '<S4>/Delay5'
-     */
-    top_level_algo_B.rtb_Switch_idx_1 = top_level_algo_DW.Delay4_DSTATE[0] -
-      top_level_algo_DW.Delay5_DSTATE[0];
+    u = top_level_algo_DW.Delay3_DSTATE[0] - top_level_algo_DW.Delay4_DSTATE[0];
 
     /* Signum: '<S4>/Sign' */
     if (rtIsNaN(top_level_algo_B.Mean1_AccVal)) {
@@ -1265,16 +1436,6 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     }
 
     /* Signum: '<S4>/Sign1' */
-    if (rtIsNaN(top_level_algo_B.rtb_Switch_idx_3)) {
-      top_level_algo_B.rtb_Switch_idx_3 = (rtNaN);
-    } else if (top_level_algo_B.rtb_Switch_idx_3 < 0.0) {
-      top_level_algo_B.rtb_Switch_idx_3 = -1.0;
-    } else {
-      top_level_algo_B.rtb_Switch_idx_3 = (top_level_algo_B.rtb_Switch_idx_3 >
-        0.0);
-    }
-
-    /* Signum: '<S4>/Sign2' */
     if (rtIsNaN(top_level_algo_B.u)) {
       top_level_algo_B.u = (rtNaN);
     } else if (top_level_algo_B.u < 0.0) {
@@ -1283,7 +1444,7 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       top_level_algo_B.u = (top_level_algo_B.u > 0.0);
     }
 
-    /* Signum: '<S4>/Sign3' */
+    /* Signum: '<S4>/Sign2' */
     if (rtIsNaN(top_level_algo_B.u_m)) {
       top_level_algo_B.u_m = (rtNaN);
     } else if (top_level_algo_B.u_m < 0.0) {
@@ -1292,24 +1453,31 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       top_level_algo_B.u_m = (top_level_algo_B.u_m > 0.0);
     }
 
-    /* Signum: '<S4>/Sign4' */
-    if (rtIsNaN(top_level_algo_B.rtb_Switch_idx_2)) {
-      top_level_algo_B.rtb_Switch_idx_2 = (rtNaN);
-    } else if (top_level_algo_B.rtb_Switch_idx_2 < 0.0) {
-      top_level_algo_B.rtb_Switch_idx_2 = -1.0;
+    /* Signum: '<S4>/Sign3' */
+    if (rtIsNaN(top_level_algo_B.u_c)) {
+      top_level_algo_B.u_c = (rtNaN);
+    } else if (top_level_algo_B.u_c < 0.0) {
+      top_level_algo_B.u_c = -1.0;
     } else {
-      top_level_algo_B.rtb_Switch_idx_2 = (top_level_algo_B.rtb_Switch_idx_2 >
-        0.0);
+      top_level_algo_B.u_c = (top_level_algo_B.u_c > 0.0);
+    }
+
+    /* Signum: '<S4>/Sign4' */
+    if (rtIsNaN(u)) {
+      u = (rtNaN);
+    } else if (u < 0.0) {
+      u = -1.0;
+    } else {
+      u = (u > 0.0);
     }
 
     /* Signum: '<S4>/Sign5' */
-    if (rtIsNaN(top_level_algo_B.rtb_Switch_idx_1)) {
-      top_level_algo_B.rtb_Switch_idx_1 = (rtNaN);
-    } else if (top_level_algo_B.rtb_Switch_idx_1 < 0.0) {
-      top_level_algo_B.rtb_Switch_idx_1 = -1.0;
+    if (rtIsNaN(top_level_algo_B.Mean)) {
+      top_level_algo_B.Mean = (rtNaN);
+    } else if (top_level_algo_B.Mean < 0.0) {
+      top_level_algo_B.Mean = -1.0;
     } else {
-      top_level_algo_B.rtb_Switch_idx_1 = (top_level_algo_B.rtb_Switch_idx_1 >
-        0.0);
+      top_level_algo_B.Mean = (top_level_algo_B.Mean > 0.0);
     }
 
     /* Sum: '<S4>/Add' incorporates:
@@ -1322,29 +1490,28 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  Signum: '<S4>/Sign4'
      *  Signum: '<S4>/Sign5'
      */
-    top_level_algo_B.Mean1_AccVal = ((((top_level_algo_P.Gain_Gain *
+    top_level_algo_B.MajorityVoterSlope = ((((top_level_algo_P.Gain_Gain *
       top_level_algo_B.Mean1_AccVal + top_level_algo_P.Gain1_Gain *
-      top_level_algo_B.rtb_Switch_idx_3) + top_level_algo_B.u) +
-      top_level_algo_B.u_m) + top_level_algo_B.rtb_Switch_idx_2) +
-      top_level_algo_B.rtb_Switch_idx_1;
+      top_level_algo_B.u) + top_level_algo_B.u_m) + top_level_algo_B.u_c) + u) +
+      top_level_algo_B.Mean;
 
     /* S-Function (sfix_udelay): '<S4>/Tapped Delay' */
     memcpy(&top_level_algo_B.TappedDelay[0], &top_level_algo_DW.TappedDelay_X[0],
            10U * sizeof(real_T));
 
     /* S-Function (sdspstatfcns): '<S4>/Mean' */
-    top_level_algo_B.rtb_Switch_idx_1 = top_level_algo_B.TappedDelay[0];
+    top_level_algo_B.Mean1_AccVal = top_level_algo_B.TappedDelay[0];
     str = 1;
     for (i = 8; i >= 0; i--) {
-      top_level_algo_B.rtb_Switch_idx_1 += top_level_algo_B.TappedDelay[str];
+      top_level_algo_B.Mean1_AccVal += top_level_algo_B.TappedDelay[str];
       str++;
     }
 
     /* Gain: '<S4>/Compression  Sensitivity' incorporates:
      *  S-Function (sdspstatfcns): '<S4>/Mean'
      */
-    top_level_algo_B.rtb_Switch_idx_1 = top_level_algo_B.rtb_Switch_idx_1 / 10.0
-      * top_level_algo_P.CompressionSensitivity_Gain;
+    top_level_algo_B.LongRangeDiff = top_level_algo_B.Mean1_AccVal / 10.0 *
+      top_level_algo_P.CompressionSensitivity_Gain;
 
     /* Logic: '<S4>/AND' incorporates:
      *  Constant: '<S50>/Constant'
@@ -1352,10 +1519,9 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  RelationalOperator: '<S50>/Compare'
      *  RelationalOperator: '<S52>/Compare'
      */
-    rtb_IsPos = ((top_level_algo_B.Mean1_AccVal >=
-                  top_level_algo_P.Positive_const) &&
-                 (top_level_algo_B.rtb_Switch_idx_1 >=
-                  top_level_algo_P.Longrangemotionup_const));
+    top_level_algo_B.IsPos = ((top_level_algo_B.MajorityVoterSlope >=
+      top_level_algo_P.Positive_const) && (top_level_algo_B.LongRangeDiff >=
+      top_level_algo_P.Longrangemotionup_const));
 
     /* Logic: '<S4>/AND1' incorporates:
      *  Constant: '<S49>/Constant'
@@ -1363,16 +1529,15 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  RelationalOperator: '<S49>/Compare'
      *  RelationalOperator: '<S51>/Compare'
      */
-    rtb_IsNeg = ((top_level_algo_B.Mean1_AccVal <=
-                  top_level_algo_P.Negative_const) &&
-                 (top_level_algo_B.rtb_Switch_idx_1 <=
-                  top_level_algo_P.Longrangemotiondown_const));
+    top_level_algo_B.IsNeg = ((top_level_algo_B.MajorityVoterSlope <=
+      top_level_algo_P.Negative_const) && (top_level_algo_B.LongRangeDiff <=
+      top_level_algo_P.Longrangemotiondown_const));
 
     /* Logic: '<S8>/Logical Operator' incorporates:
      *  Logic: '<S4>/Zero'
      *  Logic: '<S8>/OR1'
      */
-    Delay7_DSTATE_tmp = !rtb_IsNeg;
+    Delay7_DSTATE_tmp = !top_level_algo_B.IsNeg;
 
     /* Logic: '<S8>/Logical Operator1' incorporates:
      *  Delay: '<S8>/Delay7'
@@ -1387,67 +1552,123 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  Delay: '<S8>/Delay7'
      *  Logic: '<S8>/NOT4'
      */
-    rtb_LogicalOperator3 = (rtb_IsPos && (!top_level_algo_DW.Delay7_DSTATE));
+    top_level_algo_B.LogicalOperator3 = (top_level_algo_B.IsPos &&
+      (!top_level_algo_DW.Delay7_DSTATE));
 
     /* Logic: '<S8>/AND' incorporates:
      *  Delay: '<S8>/Delay6'
      *  Logic: '<S8>/NOT3'
      */
-    rtb_AND = (rtb_LogicalOperator3 && (!top_level_algo_DW.Delay6_DSTATE[0]));
+    top_level_algo_B.AND = (top_level_algo_B.LogicalOperator3 &&
+      (!top_level_algo_DW.Delay6_DSTATE[0]));
 
-    /* RateTransition generated from: '<S3>/Chart1' */
-    top_level_algo_DW.TmpRTBAtChart1Inport2_Buffer0 = rtb_AND;
+    /* Gain: '<Root>/Gain' */
+    top_level_algo_B.comp = (uint8_T)(top_level_algo_B.AND ? (int32_T)
+      top_level_algo_P.Gain_Gain_l : 0);
 
-    /* Sum: '<S4>/30 Diff' incorporates:
-     *  Delay: '<S4>/Delay5'
+    /* S-Function (sdspcount2): '<S3>/Counter1' incorporates:
+     *  Constant: '<S3>/Constant2'
      */
-    top_level_algo_B.u0Diff = rtb_Merge - top_level_algo_DW.Delay5_DSTATE[0];
+    if (MWDSP_EPH_R_D(top_level_algo_P.Constant2_Value_p,
+                      &top_level_algo_DW.Counter1_RstEphState) != 0U) {
+      top_level_algo_DW.Counter1_Count = top_level_algo_P.Counter1_InitialCount;
+    }
 
-    /* Logic: '<S4>/Zero' incorporates:
-     *  Logic: '<S8>/Logical Operator4'
-     *  Logic: '<S8>/OR'
-     */
-    rtb_IsZero_tmp = !rtb_IsPos;
+    if (MWDSP_EPH_R_B(top_level_algo_B.AND,
+                      &top_level_algo_DW.Counter1_ClkEphState) != 0U) {
+      if (top_level_algo_DW.Counter1_Count < 100) {
+        top_level_algo_DW.Counter1_Count++;
+      } else {
+        top_level_algo_DW.Counter1_Count = 0U;
+      }
+    }
 
-    /* Logic: '<S8>/Logical Operator5' incorporates:
-     *  Delay: '<S8>/Delay1'
-     *  Delay: '<S8>/Delay4'
-     *  Logic: '<S8>/Logical Operator6'
-     */
-    top_level_algo_DW.Delay1_DSTATE_m = (rtb_IsZero_tmp &&
-      (top_level_algo_DW.Delay4_DSTATE_a[0] || top_level_algo_DW.Delay1_DSTATE_m));
-
-    /* Logic: '<S8>/Logical Operator7' incorporates:
-     *  Delay: '<S8>/Delay1'
-     *  Logic: '<S8>/NOT5'
-     */
-    rtb_LogicalOperator7 = (rtb_IsNeg && (!top_level_algo_DW.Delay1_DSTATE_m));
+    /* S-Function (sdspcount2): '<S3>/Counter1' */
+    top_level_algo_B.Counter1 = top_level_algo_DW.Counter1_Count;
 
     /* Switch: '<S66>/Reset' incorporates:
      *  Delay: '<S8>/Delay'
-     *  Memory: '<S66>/Memory'
      *  MinMax: '<S61>/MinMax'
      */
     if (top_level_algo_DW.Delay_DSTATE_a[0U]) {
       /* Switch: '<S66>/Reset' incorporates:
        *  Constant: '<S66>/Initial Condition'
        */
-      rtb_Reset = top_level_algo_P.MaxBDC_vinit;
-    } else if ((rtb_Merge >= top_level_algo_DW.Memory_PreviousInput) || rtIsNaN
+      top_level_algo_B.Reset = top_level_algo_P.MaxBDC_vinit;
+    } else if ((top_level_algo_B.Merge_n >=
+                top_level_algo_DW.Memory_PreviousInput) || rtIsNaN
                (top_level_algo_DW.Memory_PreviousInput)) {
       /* MinMax: '<S61>/MinMax' incorporates:
        *  Switch: '<S66>/Reset'
        */
-      rtb_Reset = rtb_Merge;
+      top_level_algo_B.Reset = top_level_algo_B.Merge_n;
     } else {
       /* Switch: '<S66>/Reset' incorporates:
-       *  Memory: '<S66>/Memory'
        *  MinMax: '<S61>/MinMax'
        */
-      rtb_Reset = top_level_algo_DW.Memory_PreviousInput;
+      top_level_algo_B.Reset = top_level_algo_DW.Memory_PreviousInput;
     }
 
     /* End of Switch: '<S66>/Reset' */
+
+    /* Logic: '<S8>/Logical Operator4' incorporates:
+     *  Logic: '<S4>/Zero'
+     *  Logic: '<S8>/OR'
+     */
+    Delay1_DSTATE_m_tmp = !top_level_algo_B.IsPos;
+
+    /* Logic: '<S8>/Logical Operator5' incorporates:
+     *  Delay: '<S8>/Delay1'
+     *  Delay: '<S8>/Delay4'
+     *  Logic: '<S8>/Logical Operator4'
+     *  Logic: '<S8>/Logical Operator6'
+     */
+    top_level_algo_DW.Delay1_DSTATE_m = (Delay1_DSTATE_m_tmp &&
+      (top_level_algo_DW.Delay4_DSTATE_a[0] || top_level_algo_DW.Delay1_DSTATE_m));
+
+    /* Logic: '<S8>/Logical Operator7' incorporates:
+     *  Delay: '<S8>/Delay1'
+     *  Logic: '<S8>/NOT5'
+     */
+    rtb_LogicalOperator7 = (top_level_algo_B.IsNeg &&
+      (!top_level_algo_DW.Delay1_DSTATE_m));
+
+    /* Logic: '<S8>/AND1' incorporates:
+     *  Delay: '<S8>/Delay3'
+     *  Logic: '<S8>/NOT1'
+     */
+    top_level_algo_B.AND1 = (rtb_LogicalOperator7 &&
+      (!top_level_algo_DW.Delay3_DSTATE_m[0]));
+
+    /* Chart: '<S8>/sample and hold' */
+    if (top_level_algo_DW.is_active_c1_top_level_algo == 0U) {
+      top_level_algo_DW.is_active_c1_top_level_algo = 1U;
+      top_level_algo_DW.is_c1_top_level_algo = top_level_algo_IN_Init;
+      top_level_algo_B.displacement_a = 0.0;
+    } else if (top_level_algo_DW.is_c1_top_level_algo ==
+               top_level_algo_IN_Holding) {
+      if (top_level_algo_B.AND1) {
+        top_level_algo_B.displacement_a = top_level_algo_B.Reset;
+      }
+
+      /* case IN_Init: */
+    } else if (top_level_algo_B.AND1) {
+      top_level_algo_DW.is_c1_top_level_algo = top_level_algo_IN_Holding;
+      top_level_algo_B.displacement_a = top_level_algo_B.Reset;
+    }
+
+    /* End of Chart: '<S8>/sample and hold' */
+    /* RateTransition generated from: '<S3>/Chart1' */
+    top_level_algo_DW.TmpRTBAtChart1Inport2_Buffer0 = top_level_algo_B.AND;
+
+    /* RateTransition generated from: '<S3>/Subtract3' */
+    top_level_algo_DW.displacement_Buffer0_g = top_level_algo_B.displacement_a;
+
+    /* Sum: '<S4>/30 Diff' incorporates:
+     *  Delay: '<S4>/Delay5'
+     */
+    top_level_algo_B.u0Diff = top_level_algo_B.Merge_n -
+      top_level_algo_DW.Delay5_DSTATE[0];
 
     /* Switch: '<S67>/Reset' incorporates:
      *  Delay: '<S8>/Delay2'
@@ -1458,19 +1679,20 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       /* Switch: '<S67>/Reset' incorporates:
        *  Constant: '<S67>/Initial Condition'
        */
-      rtb_Reset_b = top_level_algo_P.MinBDC_vinit;
-    } else if ((rtb_Merge <= top_level_algo_DW.Memory_PreviousInput_m) ||
-               rtIsNaN(top_level_algo_DW.Memory_PreviousInput_m)) {
+      top_level_algo_B.Reset_b = top_level_algo_P.MinBDC_vinit;
+    } else if ((top_level_algo_B.Merge_n <=
+                top_level_algo_DW.Memory_PreviousInput_m) || rtIsNaN
+               (top_level_algo_DW.Memory_PreviousInput_m)) {
       /* MinMax: '<S62>/MinMax' incorporates:
        *  Switch: '<S67>/Reset'
        */
-      rtb_Reset_b = rtb_Merge;
+      top_level_algo_B.Reset_b = top_level_algo_B.Merge_n;
     } else {
       /* Switch: '<S67>/Reset' incorporates:
        *  Memory: '<S67>/Memory'
        *  MinMax: '<S62>/MinMax'
        */
-      rtb_Reset_b = top_level_algo_DW.Memory_PreviousInput_m;
+      top_level_algo_B.Reset_b = top_level_algo_DW.Memory_PreviousInput_m;
     }
 
     /* End of Switch: '<S67>/Reset' */
@@ -1479,12 +1701,12 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
      *  Logic: '<S4>/Zero'
      *  Logic: '<S8>/OR1'
      */
-    rtb_NOT_tmp = ((!rtb_IsZero_tmp) || (!Delay7_DSTATE_tmp));
+    rtb_NOT_tmp = ((!Delay1_DSTATE_m_tmp) || (!Delay7_DSTATE_tmp));
 
     /* Logic: '<S8>/NOT' incorporates:
      *  Logic: '<S8>/OR'
      */
-    rtb_NOT = (rtb_IsZero_tmp && rtb_NOT_tmp);
+    rtb_NOT = (Delay1_DSTATE_m_tmp && rtb_NOT_tmp);
 
     /* Logic: '<S8>/NOT2' incorporates:
      *  Logic: '<S8>/OR1'
@@ -1492,11 +1714,26 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     rtb_NOT2 = (rtb_NOT_tmp && Delay7_DSTATE_tmp);
 
     /* Chart: '<S8>/sample and hold1' */
-    top_level_alg_sampleandhold(rtb_Reset_b, rtb_AND,
-      &top_level_algo_B.displacement, &top_level_algo_DW.sf_sampleandhold1);
+    if (top_level_algo_DW.is_active_c2_top_level_algo == 0U) {
+      top_level_algo_DW.is_active_c2_top_level_algo = 1U;
+      top_level_algo_DW.is_c2_top_level_algo = top_level_algo_IN_Init;
+      top_level_algo_B.displacement_e = 0.0;
+    } else if (top_level_algo_DW.is_c2_top_level_algo ==
+               top_level_algo_IN_Holding) {
+      if (top_level_algo_B.AND) {
+        top_level_algo_B.displacement_e = top_level_algo_B.Reset_b;
+      }
+
+      /* case IN_Init: */
+    } else if (top_level_algo_B.AND) {
+      top_level_algo_DW.is_c2_top_level_algo = top_level_algo_IN_Holding;
+      top_level_algo_B.displacement_e = top_level_algo_B.Reset_b;
+    }
+
+    /* End of Chart: '<S8>/sample and hold1' */
 
     /* If: '<S63>/If' */
-    if (top_level_algo_B.displacement < 0.0) {
+    if (top_level_algo_B.displacement_e < 0.0) {
       /* Outputs for IfAction SubSystem: '<S63>/If Action Subsystem' incorporates:
        *  ActionPort: '<S68>/Action Port'
        */
@@ -1507,6 +1744,14 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       top_level_algo_B.Merge = top_level_algo_P.Constant_Value_i;
 
       /* End of Outputs for SubSystem: '<S63>/If Action Subsystem' */
+
+      /* Update for IfAction SubSystem: '<S63>/If Action Subsystem' incorporates:
+       *  ActionPort: '<S68>/Action Port'
+       */
+      /* Update for If: '<S63>/If' */
+      srUpdateBC(top_level_algo_DW.IfActionSubsystem_SubsysRanBC);
+
+      /* End of Update for SubSystem: '<S63>/If Action Subsystem' */
     } else {
       /* Outputs for IfAction SubSystem: '<S63>/If Action Subsystem1' incorporates:
        *  ActionPort: '<S69>/Action Port'
@@ -1514,21 +1759,23 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
       /* Merge: '<S63>/Merge' incorporates:
        *  SignalConversion generated from: '<S69>/In1'
        */
-      top_level_algo_B.Merge = top_level_algo_B.displacement;
+      top_level_algo_B.Merge = top_level_algo_B.displacement_e;
 
       /* End of Outputs for SubSystem: '<S63>/If Action Subsystem1' */
+
+      /* Update for IfAction SubSystem: '<S63>/If Action Subsystem1' incorporates:
+       *  ActionPort: '<S69>/Action Port'
+       */
+      /* Update for If: '<S63>/If' */
+      srUpdateBC(top_level_algo_DW.IfActionSubsystem1_SubsysRanBC);
+
+      /* End of Update for SubSystem: '<S63>/If Action Subsystem1' */
     }
 
     /* End of If: '<S63>/If' */
 
-    /* Chart: '<S8>/sample and hold' incorporates:
-     *  Delay: '<S8>/Delay3'
-     *  Logic: '<S8>/AND1'
-     *  Logic: '<S8>/NOT1'
-     */
-    top_level_alg_sampleandhold(rtb_Reset, rtb_LogicalOperator7 &&
-      (!top_level_algo_DW.Delay3_DSTATE_m[0]), &top_level_algo_B.Mean1_AccVal,
-      &top_level_algo_DW.sf_sampleandhold);
+    /* RateTransition generated from: '<Root>/Scope3' */
+    top_level_algo_DW.displacement_Buffer0 = top_level_algo_B.displacement_a;
   }
 
   {
@@ -1545,29 +1792,29 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     /* End of Update for S-Function (sfix_udelay): '<S5>/Tapped Delay1' */
 
     /* Update for Delay: '<S4>/Delay' */
-    top_level_algo_DW.Delay_DSTATE = rtb_Merge;
+    top_level_algo_DW.Delay_DSTATE = top_level_algo_B.Merge_n;
 
     /* Update for Delay: '<S4>/Delay1' */
     top_level_algo_DW.Delay1_DSTATE[0] = top_level_algo_DW.Delay1_DSTATE[1];
-    top_level_algo_DW.Delay1_DSTATE[1] = rtb_Merge;
+    top_level_algo_DW.Delay1_DSTATE[1] = top_level_algo_B.Merge_n;
 
     /* Update for Delay: '<S4>/Delay2' */
     top_level_algo_DW.Delay2_DSTATE[0] = top_level_algo_DW.Delay2_DSTATE[1];
     top_level_algo_DW.Delay2_DSTATE[1] = top_level_algo_DW.Delay2_DSTATE[2];
-    top_level_algo_DW.Delay2_DSTATE[2] = rtb_Merge;
+    top_level_algo_DW.Delay2_DSTATE[2] = top_level_algo_B.Merge_n;
 
     /* Update for Delay: '<S4>/Delay3' */
     top_level_algo_DW.Delay3_DSTATE[0] = top_level_algo_DW.Delay3_DSTATE[1];
     top_level_algo_DW.Delay3_DSTATE[1] = top_level_algo_DW.Delay3_DSTATE[2];
     top_level_algo_DW.Delay3_DSTATE[2] = top_level_algo_DW.Delay3_DSTATE[3];
-    top_level_algo_DW.Delay3_DSTATE[3] = rtb_Merge;
+    top_level_algo_DW.Delay3_DSTATE[3] = top_level_algo_B.Merge_n;
 
     /* Update for Delay: '<S4>/Delay4' */
     top_level_algo_DW.Delay4_DSTATE[0] = top_level_algo_DW.Delay4_DSTATE[1];
     top_level_algo_DW.Delay4_DSTATE[1] = top_level_algo_DW.Delay4_DSTATE[2];
     top_level_algo_DW.Delay4_DSTATE[2] = top_level_algo_DW.Delay4_DSTATE[3];
     top_level_algo_DW.Delay4_DSTATE[3] = top_level_algo_DW.Delay4_DSTATE[4];
-    top_level_algo_DW.Delay4_DSTATE[4] = rtb_Merge;
+    top_level_algo_DW.Delay4_DSTATE[4] = top_level_algo_B.Merge_n;
     for (i = 0; i < 9; i++) {
       /* Update for S-Function (sfix_udelay): '<S5>/Tapped Delay' */
       top_level_algo_DW.TappedDelay_X_f[i] = top_level_algo_DW.TappedDelay_X_f[i
@@ -1584,22 +1831,25 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     top_level_algo_DW.TappedDelay_X_f[9] = top_level_algo_B.AnalogInput;
 
     /* Update for Delay: '<S4>/Delay5' */
-    top_level_algo_DW.Delay5_DSTATE[9] = rtb_Merge;
+    top_level_algo_DW.Delay5_DSTATE[9] = top_level_algo_B.Merge_n;
 
     /* Update for S-Function (sfix_udelay): '<S4>/Tapped Delay' */
     top_level_algo_DW.TappedDelay_X[9] = top_level_algo_B.u0Diff;
 
     /* Update for Delay: '<S8>/Delay8' */
     top_level_algo_DW.Delay8_DSTATE[0] = top_level_algo_DW.Delay8_DSTATE[1];
-    top_level_algo_DW.Delay8_DSTATE[1] = rtb_IsPos;
+    top_level_algo_DW.Delay8_DSTATE[1] = top_level_algo_B.IsPos;
 
     /* Update for Delay: '<S8>/Delay6' */
     top_level_algo_DW.Delay6_DSTATE[0] = top_level_algo_DW.Delay6_DSTATE[1];
-    top_level_algo_DW.Delay6_DSTATE[1] = rtb_LogicalOperator3;
+    top_level_algo_DW.Delay6_DSTATE[1] = top_level_algo_B.LogicalOperator3;
+
+    /* Update for Memory: '<S66>/Memory' */
+    top_level_algo_DW.Memory_PreviousInput = top_level_algo_B.Reset;
 
     /* Update for Delay: '<S8>/Delay4' */
     top_level_algo_DW.Delay4_DSTATE_a[0] = top_level_algo_DW.Delay4_DSTATE_a[1];
-    top_level_algo_DW.Delay4_DSTATE_a[1] = rtb_IsNeg;
+    top_level_algo_DW.Delay4_DSTATE_a[1] = top_level_algo_B.IsNeg;
 
     /* Update for Delay: '<S8>/Delay3' */
     top_level_algo_DW.Delay3_DSTATE_m[0] = top_level_algo_DW.Delay3_DSTATE_m[1];
@@ -1635,19 +1885,22 @@ void top_level_algo_step2(void)        /* Sample time: [0.005s, 0.0s] */
     /* Update for Delay: '<S8>/Delay2' */
     top_level_algo_DW.Delay2_DSTATE_m[4] = rtb_NOT2;
 
-    /* Update for Memory: '<S66>/Memory' */
-    top_level_algo_DW.Memory_PreviousInput = rtb_Reset;
-
     /* Update for Memory: '<S67>/Memory' */
-    top_level_algo_DW.Memory_PreviousInput_m = rtb_Reset_b;
+    top_level_algo_DW.Memory_PreviousInput_m = top_level_algo_B.Reset_b;
   }
+
+  /* Update absolute time */
+  /* The "clockTick2" counts the number of times the code of this task has
+   * been executed. The resolution of this integer timer is 0.005, which is the step size
+   * of the task. Size of "clockTick2" ensures timer will not overflow during the
+   * application lifespan selected.
+   */
+  top_level_algo_M->Timing.clockTick2++;
 }
 
 /* Model step function for TID3 */
-void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
+void top_level_algo_step3(void)        /* Sample time: [0.05s, 0.0s] */
 {
-  boolean_T rtb_Compare_d;
-
   /* MATLABSystem: '<Root>/Digital Input' */
   if (top_level_algo_DW.obj_d.SampleTime !=
       top_level_algo_P.DigitalInput_SampleTime) {
@@ -1655,16 +1908,17 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       top_level_algo_P.DigitalInput_SampleTime;
   }
 
-  rtb_Compare_d = readDigitalPin(13);
+  /* MATLABSystem: '<Root>/Digital Input' */
+  top_level_algo_B.DigitalInput = readDigitalPin(13);
 
   /* RelationalOperator: '<S6>/Compare' incorporates:
    *  Constant: '<S6>/Constant'
-   *  MATLABSystem: '<Root>/Digital Input'
    */
-  rtb_Compare_d = (rtb_Compare_d == top_level_algo_P.Constant_Value_p);
+  top_level_algo_B.Compare = (top_level_algo_B.DigitalInput ==
+    top_level_algo_P.Constant_Value_p);
 
   /* Chart: '<Root>/Mode' */
-  if (top_level_algo_DW.temporalCounter_i1 < 1023U) {
+  if (top_level_algo_DW.temporalCounter_i1 < 2047U) {
     top_level_algo_DW.temporalCounter_i1++;
   }
 
@@ -1681,7 +1935,7 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       top_level_algo_B.depth_ctrl = 1.0;
       top_level_algo_B.recoil_ctrl = 0.0;
       top_level_algo_B.seven_seg_ctrl = 0.0;
-      if (top_level_algo_DW.temporalCounter_i1 >= 20U) {
+      if (top_level_algo_DW.temporalCounter_i1 >= 40U) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_RUNNING;
         top_level_algo_DW.temporalCounter_i1 = 0U;
         top_level_algo_B.depth_ctrl = 1.0;
@@ -1691,7 +1945,7 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       break;
 
      case top_level_algo_IN_DEBOUNCE1:
-      if (!rtb_Compare_d) {
+      if (!top_level_algo_B.Compare) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_EVALUATING;
         top_level_algo_DW.temporalCounter_i1 = 0U;
         top_level_algo_B.depth_ctrl = 0.0;
@@ -1701,7 +1955,7 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       break;
 
      case top_level_algo_IN_DEBOUNCE2:
-      if (!rtb_Compare_d) {
+      if (!top_level_algo_B.Compare) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_RUNNING;
         top_level_algo_DW.temporalCounter_i1 = 0U;
         top_level_algo_B.depth_ctrl = 1.0;
@@ -1714,9 +1968,10 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       top_level_algo_B.depth_ctrl = 0.0;
       top_level_algo_B.recoil_ctrl = 0.0;
       top_level_algo_B.seven_seg_ctrl = 0.0;
-      if (rtb_Compare_d && (top_level_algo_DW.temporalCounter_i1 >= 4U)) {
+      if (top_level_algo_B.Compare && (top_level_algo_DW.temporalCounter_i1 >=
+           8U)) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_DEBOUNCE2;
-      } else if (top_level_algo_DW.temporalCounter_i1 >= 600U) {
+      } else if (top_level_algo_DW.temporalCounter_i1 >= 1200U) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_RUNNING;
         top_level_algo_DW.temporalCounter_i1 = 0U;
         top_level_algo_B.depth_ctrl = 1.0;
@@ -1730,7 +1985,8 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
       top_level_algo_B.depth_ctrl = 1.0;
       top_level_algo_B.recoil_ctrl = 1.0;
       top_level_algo_B.seven_seg_ctrl = 1.0;
-      if (rtb_Compare_d && (top_level_algo_DW.temporalCounter_i1 >= 4U)) {
+      if (top_level_algo_B.Compare && (top_level_algo_DW.temporalCounter_i1 >=
+           8U)) {
         top_level_algo_DW.is_c16_top_level_algo = top_level_algo_IN_DEBOUNCE1;
       }
       break;
@@ -1748,6 +2004,14 @@ void top_level_algo_step3(void)        /* Sample time: [0.1s, 0.0s] */
   /* RateTransition generated from: '<Root>/Mode' */
   top_level_algo_DW.TmpRTBAtModeOutport3_Buffer0 =
     top_level_algo_B.seven_seg_ctrl;
+
+  /* Update absolute time */
+  /* The "clockTick3" counts the number of times the code of this task has
+   * been executed. The resolution of this integer timer is 0.05, which is the step size
+   * of the task. Size of "clockTick3" ensures timer will not overflow during the
+   * application lifespan selected.
+   */
+  top_level_algo_M->Timing.clockTick3++;
 }
 
 /* Use this function only if you need to maintain compatibility with an existing static main program. */
@@ -1795,11 +2059,127 @@ void top_level_algo_initialize(void)
   rtsiSetSimTimeStep(&top_level_algo_M->solverInfo, MAJOR_TIME_STEP);
   rtsiSetSolverName(&top_level_algo_M->solverInfo,"FixedStepDiscrete");
   rtmSetTPtr(top_level_algo_M, &top_level_algo_M->Timing.tArray[0]);
+  rtmSetTFinal(top_level_algo_M, -1);
   top_level_algo_M->Timing.stepSize0 = 0.001;
+
+  /* External mode info */
+  top_level_algo_M->Sizes.checksums[0] = (1904375682U);
+  top_level_algo_M->Sizes.checksums[1] = (1822814097U);
+  top_level_algo_M->Sizes.checksums[2] = (3332816149U);
+  top_level_algo_M->Sizes.checksums[3] = (415183859U);
+
+  {
+    static const sysRanDType rtAlwaysEnabled = SUBSYS_RAN_BC_ENABLE;
+    static RTWExtModeInfo rt_ExtModeInfo;
+    static const sysRanDType *systemRan[63];
+    top_level_algo_M->extModeInfo = (&rt_ExtModeInfo);
+    rteiSetSubSystemActiveVectorAddresses(&rt_ExtModeInfo, systemRan);
+    systemRan[0] = &rtAlwaysEnabled;
+    systemRan[1] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem.IfActionSubsystem_SubsysRanBC;
+    systemRan[2] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem1.IfActionSubsystem_SubsysRanBC;
+    systemRan[3] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem10.IfActionSubsystem_SubsysRanBC;
+    systemRan[4] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem2.IfActionSubsystem_SubsysRanBC;
+    systemRan[5] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem3.IfActionSubsystem_SubsysRanBC;
+    systemRan[6] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem4.IfActionSubsystem_SubsysRanBC;
+    systemRan[7] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem5.IfActionSubsystem_SubsysRanBC;
+    systemRan[8] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem6.IfActionSubsystem_SubsysRanBC;
+    systemRan[9] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem7.IfActionSubsystem_SubsysRanBC;
+    systemRan[10] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem8.IfActionSubsystem_SubsysRanBC;
+    systemRan[11] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem_e.IfActionSubsystem_SubsysRanBC;
+    systemRan[12] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem1_g.IfActionSubsystem_SubsysRanBC;
+    systemRan[13] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem10_g.IfActionSubsystem_SubsysRanBC;
+    systemRan[14] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem2_n.IfActionSubsystem_SubsysRanBC;
+    systemRan[15] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem3_d.IfActionSubsystem_SubsysRanBC;
+    systemRan[16] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem4_b.IfActionSubsystem_SubsysRanBC;
+    systemRan[17] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem5_b.IfActionSubsystem_SubsysRanBC;
+    systemRan[18] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem6_j.IfActionSubsystem_SubsysRanBC;
+    systemRan[19] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem7_i.IfActionSubsystem_SubsysRanBC;
+    systemRan[20] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem8_i.IfActionSubsystem_SubsysRanBC;
+    systemRan[21] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem_b.IfActionSubsystem_SubsysRanBC;
+    systemRan[22] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem1_m.IfActionSubsystem_SubsysRanBC;
+    systemRan[23] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem10_g1.IfActionSubsystem_SubsysRanBC;
+    systemRan[24] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem2_f.IfActionSubsystem_SubsysRanBC;
+    systemRan[25] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem3_e.IfActionSubsystem_SubsysRanBC;
+    systemRan[26] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem4_o.IfActionSubsystem_SubsysRanBC;
+    systemRan[27] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem5_e.IfActionSubsystem_SubsysRanBC;
+    systemRan[28] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem6_l.IfActionSubsystem_SubsysRanBC;
+    systemRan[29] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem7_e.IfActionSubsystem_SubsysRanBC;
+    systemRan[30] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem8_n.IfActionSubsystem_SubsysRanBC;
+    systemRan[31] = &rtAlwaysEnabled;
+    systemRan[32] = &rtAlwaysEnabled;
+    systemRan[33] = &rtAlwaysEnabled;
+    systemRan[34] = &rtAlwaysEnabled;
+    systemRan[35] = &rtAlwaysEnabled;
+    systemRan[36] = &rtAlwaysEnabled;
+    systemRan[37] = &rtAlwaysEnabled;
+    systemRan[38] = &rtAlwaysEnabled;
+    systemRan[39] = &rtAlwaysEnabled;
+    systemRan[40] = &rtAlwaysEnabled;
+    systemRan[41] = &rtAlwaysEnabled;
+    systemRan[42] = &rtAlwaysEnabled;
+    systemRan[43] = &rtAlwaysEnabled;
+    systemRan[44] = &rtAlwaysEnabled;
+    systemRan[45] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem_SubsysRanBC_e;
+    systemRan[46] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem1_SubsysRanB_h;
+    systemRan[47] = &rtAlwaysEnabled;
+    systemRan[48] = &rtAlwaysEnabled;
+    systemRan[49] = &rtAlwaysEnabled;
+    systemRan[50] = &rtAlwaysEnabled;
+    systemRan[51] = &rtAlwaysEnabled;
+    systemRan[52] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem_SubsysRanBC;
+    systemRan[53] = (sysRanDType *)
+      &top_level_algo_DW.IfActionSubsystem1_SubsysRanBC;
+    systemRan[54] = &rtAlwaysEnabled;
+    systemRan[55] = &rtAlwaysEnabled;
+    systemRan[56] = &rtAlwaysEnabled;
+    systemRan[57] = &rtAlwaysEnabled;
+    systemRan[58] = &rtAlwaysEnabled;
+    systemRan[59] = &rtAlwaysEnabled;
+    systemRan[60] = &rtAlwaysEnabled;
+    systemRan[61] = &rtAlwaysEnabled;
+    systemRan[62] = &rtAlwaysEnabled;
+    rteiSetModelMappingInfoPtr(top_level_algo_M->extModeInfo,
+      &top_level_algo_M->SpecialInfo.mappingInfo);
+    rteiSetChecksumsPtr(top_level_algo_M->extModeInfo,
+                        top_level_algo_M->Sizes.checksums);
+    rteiSetTPtr(top_level_algo_M->extModeInfo, rtmGetTPtr(top_level_algo_M));
+  }
 
   {
     codertarget_arduinobase_inter_T *obj;
-    real_T displacement_a;
     int32_T i;
 
     /* Start for RateTransition generated from: '<S3>/Chart1' */
@@ -1807,12 +2187,22 @@ void top_level_algo_initialize(void)
       top_level_algo_P.TmpRTBAtChart1Inport2_InitialCo;
 
     /* Start for RateTransition generated from: '<Root>/Mode' */
-    top_level_algo_B.TmpRTBAtModeOutport3 =
-      top_level_algo_P.TmpRTBAtModeOutport3_InitialCon;
-
-    /* Start for RateTransition generated from: '<Root>/Mode' */
     top_level_algo_B.TmpRTBAtModeOutport2 =
       top_level_algo_P.TmpRTBAtModeOutport2_InitialCon;
+
+    /* Start for RateTransition generated from: '<Root>/Scope3' */
+    top_level_algo_B.Max = top_level_algo_P.displacement_InitialCondition;
+
+    /* Start for RateTransition generated from: '<S3>/Subtract3' */
+    top_level_algo_B.displacement =
+      top_level_algo_P.displacement_InitialCondition_j;
+
+    /* Start for DiscretePulseGenerator: '<S1>/Pulse Generator' */
+    top_level_algo_DW.clockTickCounter = -2000;
+
+    /* Start for RateTransition generated from: '<Root>/Mode' */
+    top_level_algo_B.TmpRTBAtModeOutport3 =
+      top_level_algo_P.TmpRTBAtModeOutport3_InitialCon;
 
     /* Start for RateTransition generated from: '<Root>/Mode' */
     top_level_algo_B.TmpRTBAtModeOutport1 =
@@ -1823,12 +2213,20 @@ void top_level_algo_initialize(void)
       top_level_algo_P.TmpRTBAtChart1Inport2_InitialCo;
 
     /* InitializeConditions for RateTransition generated from: '<Root>/Mode' */
-    top_level_algo_DW.TmpRTBAtModeOutport3_Buffer0 =
-      top_level_algo_P.TmpRTBAtModeOutport3_InitialCon;
-
-    /* InitializeConditions for RateTransition generated from: '<Root>/Mode' */
     top_level_algo_DW.TmpRTBAtModeOutport2_Buffer0 =
       top_level_algo_P.TmpRTBAtModeOutport2_InitialCon;
+
+    /* InitializeConditions for RateTransition generated from: '<Root>/Scope3' */
+    top_level_algo_DW.displacement_Buffer0 =
+      top_level_algo_P.displacement_InitialCondition;
+
+    /* InitializeConditions for RateTransition generated from: '<S3>/Subtract3' */
+    top_level_algo_DW.displacement_Buffer0_g =
+      top_level_algo_P.displacement_InitialCondition_j;
+
+    /* InitializeConditions for RateTransition generated from: '<Root>/Mode' */
+    top_level_algo_DW.TmpRTBAtModeOutport3_Buffer0 =
+      top_level_algo_P.TmpRTBAtModeOutport3_InitialCon;
 
     /* InitializeConditions for S-Function (sfix_udelay): '<S5>/Tapped Delay1' */
     for (i = 0; i < 20; i++) {
@@ -1895,10 +2293,6 @@ void top_level_algo_initialize(void)
     /* InitializeConditions for Delay: '<S8>/Delay7' */
     top_level_algo_DW.Delay7_DSTATE = top_level_algo_P.Delay7_InitialCondition;
 
-    /* InitializeConditions for Delay: '<S8>/Delay1' */
-    top_level_algo_DW.Delay1_DSTATE_m =
-      top_level_algo_P.Delay1_InitialCondition_d;
-
     /* InitializeConditions for Delay: '<S8>/Delay8' */
     top_level_algo_DW.Delay8_DSTATE[0] =
       top_level_algo_P.Delay8_InitialCondition;
@@ -1907,14 +2301,6 @@ void top_level_algo_initialize(void)
     top_level_algo_DW.Delay6_DSTATE[0] =
       top_level_algo_P.Delay6_InitialCondition;
 
-    /* InitializeConditions for Delay: '<S8>/Delay4' */
-    top_level_algo_DW.Delay4_DSTATE_a[0] =
-      top_level_algo_P.Delay4_InitialCondition_f;
-
-    /* InitializeConditions for Delay: '<S8>/Delay3' */
-    top_level_algo_DW.Delay3_DSTATE_m[0] =
-      top_level_algo_P.Delay3_InitialCondition_k;
-
     /* InitializeConditions for Delay: '<S8>/Delay8' */
     top_level_algo_DW.Delay8_DSTATE[1] =
       top_level_algo_P.Delay8_InitialCondition;
@@ -1922,6 +2308,26 @@ void top_level_algo_initialize(void)
     /* InitializeConditions for Delay: '<S8>/Delay6' */
     top_level_algo_DW.Delay6_DSTATE[1] =
       top_level_algo_P.Delay6_InitialCondition;
+
+    /* InitializeConditions for S-Function (sdspcount2): '<S3>/Counter1' */
+    top_level_algo_DW.Counter1_ClkEphState = 5U;
+    top_level_algo_DW.Counter1_RstEphState = 5U;
+    top_level_algo_DW.Counter1_Count = top_level_algo_P.Counter1_InitialCount;
+
+    /* InitializeConditions for Memory: '<S66>/Memory' */
+    top_level_algo_DW.Memory_PreviousInput = top_level_algo_P.MaxBDC_vinit;
+
+    /* InitializeConditions for Delay: '<S8>/Delay1' */
+    top_level_algo_DW.Delay1_DSTATE_m =
+      top_level_algo_P.Delay1_InitialCondition_d;
+
+    /* InitializeConditions for Delay: '<S8>/Delay4' */
+    top_level_algo_DW.Delay4_DSTATE_a[0] =
+      top_level_algo_P.Delay4_InitialCondition_f;
+
+    /* InitializeConditions for Delay: '<S8>/Delay3' */
+    top_level_algo_DW.Delay3_DSTATE_m[0] =
+      top_level_algo_P.Delay3_InitialCondition_k;
 
     /* InitializeConditions for Delay: '<S8>/Delay4' */
     top_level_algo_DW.Delay4_DSTATE_a[1] =
@@ -1940,9 +2346,6 @@ void top_level_algo_initialize(void)
         top_level_algo_P.Delay2_InitialCondition_c;
     }
 
-    /* InitializeConditions for Memory: '<S66>/Memory' */
-    top_level_algo_DW.Memory_PreviousInput = top_level_algo_P.MaxBDC_vinit;
-
     /* InitializeConditions for Memory: '<S67>/Memory' */
     top_level_algo_DW.Memory_PreviousInput_m = top_level_algo_P.MinBDC_vinit;
 
@@ -1953,25 +2356,7 @@ void top_level_algo_initialize(void)
     top_level_algo_B.Merge_d = top_level_algo_P.Merge_InitialOutput_k;
 
     /* SystemInitialize for Merge: '<S14>/Merge' */
-    top_level_algo_B.Merge_n = top_level_algo_P.Merge_InitialOutput_j;
-
-    /* SystemInitialize for Chart: '<S8>/sample and hold' */
-    top_leve_sampleandhold_Init(&displacement_a);
-
-    /* SystemInitialize for Chart: '<S8>/sample and hold1' */
-    top_leve_sampleandhold_Init(&top_level_algo_B.displacement);
-
-    /* Start for MATLABSystem: '<Root>/Digital Output2' */
-    top_level_algo_DW.obj_a.matlabCodegenIsDeleted = false;
-    top_level_algo_DW.obj_a.isInitialized = 1;
-    digitalIOSetup(1, 1);
-    top_level_algo_DW.obj_a.isSetupComplete = true;
-
-    /* Start for MATLABSystem: '<Root>/Digital Output3' */
-    top_level_algo_DW.obj_l.matlabCodegenIsDeleted = false;
-    top_level_algo_DW.obj_l.isInitialized = 1;
-    digitalIOSetup(3, 1);
-    top_level_algo_DW.obj_l.isSetupComplete = true;
+    top_level_algo_B.Merge_n0 = top_level_algo_P.Merge_InitialOutput_j;
 
     /* Start for MATLABSystem: '<Root>/Digital Output8' */
     top_level_algo_DW.obj_m.matlabCodegenIsDeleted = false;
@@ -2032,20 +2417,6 @@ void top_level_algo_terminate(void)
 {
   codertarget_arduinobase_inter_T *obj;
 
-  /* Terminate for MATLABSystem: '<Root>/Digital Output2' */
-  if (!top_level_algo_DW.obj_a.matlabCodegenIsDeleted) {
-    top_level_algo_DW.obj_a.matlabCodegenIsDeleted = true;
-  }
-
-  /* End of Terminate for MATLABSystem: '<Root>/Digital Output2' */
-
-  /* Terminate for MATLABSystem: '<Root>/Digital Output3' */
-  if (!top_level_algo_DW.obj_l.matlabCodegenIsDeleted) {
-    top_level_algo_DW.obj_l.matlabCodegenIsDeleted = true;
-  }
-
-  /* End of Terminate for MATLABSystem: '<Root>/Digital Output3' */
-
   /* Terminate for MATLABSystem: '<Root>/Digital Output8' */
   if (!top_level_algo_DW.obj_m.matlabCodegenIsDeleted) {
     top_level_algo_DW.obj_m.matlabCodegenIsDeleted = true;
@@ -2059,7 +2430,6 @@ void top_level_algo_terminate(void)
   }
 
   /* End of Terminate for MATLABSystem: '<Root>/Digital Output9' */
-
   /* Terminate for MATLABSystem: '<Root>/Digital Output4' */
   if (!top_level_algo_DW.obj_k.matlabCodegenIsDeleted) {
     top_level_algo_DW.obj_k.matlabCodegenIsDeleted = true;
@@ -2101,7 +2471,6 @@ void top_level_algo_terminate(void)
   }
 
   /* End of Terminate for MATLABSystem: '<Root>/Analog Input' */
-
   /* Terminate for MATLABSystem: '<Root>/Digital Input' */
   if (!top_level_algo_DW.obj_d.matlabCodegenIsDeleted) {
     top_level_algo_DW.obj_d.matlabCodegenIsDeleted = true;

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.25
+ * Model version                  : 3.28
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
+ * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -107,15 +107,20 @@ P_top_level_algo_T top_level_algo_P = {
    */
   0U,
 
+  /* Mask Parameter: Counter1_InitialCount
+   * Referenced by: '<S3>/Counter1'
+   */
+  0U,
+
   /* Expression: 0.005
    * Referenced by: '<Root>/Analog Input'
    */
   0.005,
 
-  /* Expression: 0.1
+  /* Expression: 0.05
    * Referenced by: '<Root>/Digital Input'
    */
-  0.1,
+  0.05,
 
   /* Expression: [0,0]
    * Referenced by: '<S2>/Constant'
@@ -137,6 +142,36 @@ P_top_level_algo_T top_level_algo_P = {
    */
   { 0.0, 0.0, 0.0, 0.0 },
 
+  /* Expression: 0
+   * Referenced by:
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by: '<Root>/Switch1'
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by:
+   */
+  0.0,
+
+  /* Expression: 0
+   * Referenced by:
+   */
+  0.0,
+
+  /* Expression: 100
+   * Referenced by: '<S10>/Constant1'
+   */
+  100.0,
+
+  /* Expression: 10
+   * Referenced by: '<S10>/Constant2'
+   */
+  10.0,
+
   /* Expression: 1
    * Referenced by: '<S1>/Pulse Generator'
    */
@@ -152,10 +187,10 @@ P_top_level_algo_T top_level_algo_P = {
    */
   1.0,
 
-  /* Expression: 0
+  /* Expression: 2
    * Referenced by: '<S1>/Pulse Generator'
    */
-  0.0,
+  2.0,
 
   /* Expression: 0
    * Referenced by:
@@ -163,27 +198,7 @@ P_top_level_algo_T top_level_algo_P = {
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<Root>/Switch2'
-   */
-  0.0,
-
-  /* Expression: 100
-   * Referenced by: '<S10>/Constant1'
-   */
-  100.0,
-
-  /* Expression: 10
-   * Referenced by: '<S10>/Constant2'
-   */
-  10.0,
-
-  /* Expression: 0
-   * Referenced by:
-   */
-  0.0,
-
-  /* Expression: 0
-   * Referenced by: '<Root>/Switch1'
+   * Referenced by: '<S1>/Switch2'
    */
   0.0,
 
@@ -263,14 +278,24 @@ P_top_level_algo_T top_level_algo_P = {
   0.5,
 
   /* Expression: 0
+   * Referenced by: '<S3>/Constant2'
+   */
+  0.0,
+
+  /* Expression: 0
    * Referenced by: '<S63>/Constant'
    */
   0.0,
 
   /* Computed Parameter: Constant4_Value
-   * Referenced by: '<Root>/Constant4'
+   * Referenced by: '<S1>/Constant4'
    */
   0,
+
+  /* Computed Parameter: Constant_Value_at
+   * Referenced by: '<S10>/Constant'
+   */
+  1U,
 
   /* Computed Parameter: Constant_Value_p
    * Referenced by: '<S6>/Constant'
@@ -297,6 +322,11 @@ P_top_level_algo_T top_level_algo_P = {
    */
   true,
 
+  /* Computed Parameter: Delay_InitialCondition_d
+   * Referenced by: '<S8>/Delay'
+   */
+  false,
+
   /* Computed Parameter: Delay4_InitialCondition_f
    * Referenced by: '<S8>/Delay4'
    */
@@ -312,15 +342,15 @@ P_top_level_algo_T top_level_algo_P = {
    */
   true,
 
-  /* Computed Parameter: Delay_InitialCondition_d
-   * Referenced by: '<S8>/Delay'
-   */
-  false,
-
   /* Computed Parameter: Delay2_InitialCondition_c
    * Referenced by: '<S8>/Delay2'
    */
   false,
+
+  /* Computed Parameter: Gain_Gain_l
+   * Referenced by: '<Root>/Gain'
+   */
+  200U,
 
   /* Computed Parameter: Merge_InitialOutput
    * Referenced by: '<S12>/Merge'

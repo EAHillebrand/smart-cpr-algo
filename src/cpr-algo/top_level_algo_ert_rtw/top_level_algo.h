@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.25
+ * Model version                  : 3.28
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
+ * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -22,6 +22,8 @@
 #ifndef top_level_algo_COMMON_INCLUDES_
 #define top_level_algo_COMMON_INCLUDES_
 #include "rtwtypes.h"
+#include "rtw_extmode.h"
+#include "sysran_types.h"
 #include "rtw_continuous.h"
 #include "rtw_solver.h"
 #include "MW_AnalogIn.h"
@@ -34,6 +36,14 @@
 #include <stddef.h>
 
 /* Macros for accessing real-time model data structure */
+#ifndef rtmGetFinalTime
+#define rtmGetFinalTime(rtm)           ((rtm)->Timing.tFinal)
+#endif
+
+#ifndef rtmGetRTWExtModeInfo
+#define rtmGetRTWExtModeInfo(rtm)      ((rtm)->extModeInfo)
+#endif
+
 #ifndef rtmGetErrorStatus
 #define rtmGetErrorStatus(rtm)         ((rtm)->errorStatus)
 #endif
@@ -46,8 +56,24 @@
 #define rtmStepTask(rtm, idx)          ((rtm)->Timing.TaskCounters.TID[(idx)] == 0)
 #endif
 
+#ifndef rtmGetStopRequested
+#define rtmGetStopRequested(rtm)       ((rtm)->Timing.stopRequestedFlag)
+#endif
+
+#ifndef rtmSetStopRequested
+#define rtmSetStopRequested(rtm, val)  ((rtm)->Timing.stopRequestedFlag = (val))
+#endif
+
+#ifndef rtmGetStopRequestedPtr
+#define rtmGetStopRequestedPtr(rtm)    (&((rtm)->Timing.stopRequestedFlag))
+#endif
+
 #ifndef rtmGetT
 #define rtmGetT(rtm)                   (rtmGetTPtr((rtm))[0])
+#endif
+
+#ifndef rtmGetTFinal
+#define rtmGetTFinal(rtm)              ((rtm)->Timing.tFinal)
 #endif
 
 #ifndef rtmGetTPtr
@@ -58,42 +84,68 @@
 #define rtmTaskCounter(rtm, idx)       ((rtm)->Timing.TaskCounters.TID[(idx)])
 #endif
 
-/* Block states (default storage) for system '<S8>/sample and hold' */
+/* Block states (default storage) for system '<S12>/If Action Subsystem' */
 typedef struct {
-  uint8_T is_c1_top_level_algo;        /* '<S8>/sample and hold' */
-  uint8_T is_active_c1_top_level_algo; /* '<S8>/sample and hold' */
-} DW_sampleandhold_top_level_al_T;
+  int8_T IfActionSubsystem_SubsysRanBC;/* '<S12>/If Action Subsystem' */
+} DW_IfActionSubsystem_top_leve_T;
 
 /* Block signals (default storage) */
 typedef struct {
   real_T TappedDelay[20];              /* '<S4>/Tapped Delay' */
   MW_AnalogIn_ResultDataType_Type datatype_id;
-  real_T TmpRTBAtModeOutport3;         /* '<Root>/Mode' */
   real_T Merge;                        /* '<S63>/Merge' */
+  real_T Clock1;                       /* '<S3>/Clock1' */
   real_T TmpRTBAtModeOutport2;         /* '<Root>/Mode' */
+  real_T Switch1[2];                   /* '<Root>/Switch1' */
+  real_T Max;                          /* '<Root>/MinMax' */
+  real_T displacement;
+  real_T Subtract3;                    /* '<S3>/Subtract3' */
+  real_T PulseGenerator;               /* '<S1>/Pulse Generator' */
+  real_T TmpRTBAtModeOutport3;         /* '<Root>/Mode' */
+  real_T VectorConcatenate[3];         /* '<S10>/Vector Concatenate' */
+  real_T Mean1;                        /* '<S5>/Mean1' */
   real_T Product;                      /* '<S5>/Product' */
+  real_T Merge_n;                      /* '<S53>/Merge' */
   real_T TmpRTBAtModeOutport1;         /* '<Root>/Mode' */
+  real_T Switch[4];                    /* '<Root>/Switch' */
+  real_T MajorityVoterSlope;           /* '<S4>/Add' */
+  real_T LongRangeDiff;                /* '<S4>/Compression  Sensitivity' */
+  real_T Reset;                        /* '<S66>/Reset' */
   real_T u0Diff;                       /* '<S4>/30 Diff' */
+  real_T Reset_b;                      /* '<S67>/Reset' */
   real_T depth_ctrl;                   /* '<Root>/Mode' */
   real_T recoil_ctrl;                  /* '<Root>/Mode' */
   real_T seven_seg_ctrl;               /* '<Root>/Mode' */
-  real_T displacement;                 /* '<S8>/sample and hold1' */
+  real_T displacement_e;               /* '<S8>/sample and hold1' */
+  real_T displacement_a;               /* '<S8>/sample and hold' */
   real_T baseline;                     /* '<S5>/timer' */
   real_T rate;                         /* '<S3>/Chart1' */
   real_T recoil_active;                /* '<S3>/Chart1' */
   real_T CLK;                          /* '<S11>/ClockLogic' */
+  real_T Mean;                         /* '<S4>/Mean' */
   real_T Mean1_AccVal;
-  real_T rtb_Switch_idx_1;
-  real_T rtb_Switch_idx_2;
-  real_T rtb_Switch_idx_3;
   real_T u;
   real_T u_m;
+  real_T u_c;
+  uint32_T Add;                        /* '<S10>/Add' */
+  uint32_T Add1;                       /* '<S10>/Add1' */
+  uint32_T CastToDouble;               /* '<S11>/Cast To Double' */
+  uint32_T Switch2;                    /* '<S1>/Switch2' */
   uint32_T data;                       /* '<S11>/DataLogic' */
+  uint16_T Counter1;                   /* '<S3>/Counter1' */
   uint16_T AnalogInput;                /* '<Root>/Analog Input' */
   uint8_T Merge_i;                     /* '<S12>/Merge' */
   uint8_T Merge_d;                     /* '<S13>/Merge' */
-  uint8_T Merge_n;                     /* '<S14>/Merge' */
+  uint8_T Merge_n0;                    /* '<S14>/Merge' */
+  uint8_T comp;                        /* '<Root>/Gain' */
   boolean_T TmpRTBAtChart1Inport2;
+  boolean_T IsPos;                     /* '<S4>/AND' */
+  boolean_T IsNeg;                     /* '<S4>/AND1' */
+  boolean_T LogicalOperator3;          /* '<S8>/Logical Operator3' */
+  boolean_T AND;                       /* '<S8>/AND' */
+  boolean_T AND1;                      /* '<S8>/AND1' */
+  boolean_T Compare;                   /* '<S6>/Compare' */
+  boolean_T DigitalInput;              /* '<Root>/Digital Input' */
 } B_top_level_algo_T;
 
 /* Block states (default storage) for system '<Root>' */
@@ -106,8 +158,6 @@ typedef struct {
   codertarget_arduinobase_blo_o_T obj_p;/* '<Root>/Digital Output6' */
   codertarget_arduinobase_blo_o_T obj_j;/* '<Root>/Digital Output5' */
   codertarget_arduinobase_blo_o_T obj_k;/* '<Root>/Digital Output4' */
-  codertarget_arduinobase_blo_o_T obj_l;/* '<Root>/Digital Output3' */
-  codertarget_arduinobase_blo_o_T obj_a;/* '<Root>/Digital Output2' */
   real_T TappedDelay1_X[20];           /* '<S5>/Tapped Delay1' */
   real_T Delay_DSTATE;                 /* '<S4>/Delay' */
   real_T Delay1_DSTATE[2];             /* '<S4>/Delay1' */
@@ -116,42 +166,139 @@ typedef struct {
   real_T Delay4_DSTATE[5];             /* '<S4>/Delay4' */
   real_T Delay5_DSTATE[10];            /* '<S4>/Delay5' */
   real_T TappedDelay_X[10];            /* '<S4>/Tapped Delay' */
-  real_T TmpRTBAtModeOutport3_Buffer0; /* synthesized block */
   real_T TmpRTBAtModeOutport2_Buffer0; /* synthesized block */
+  real_T displacement_Buffer0;         /* synthesized block */
+  real_T displacement_Buffer0_g;       /* synthesized block */
+  real_T TmpRTBAtModeOutport3_Buffer0; /* synthesized block */
   real_T TmpRTBAtModeOutport1_Buffer0; /* synthesized block */
   real_T Memory_PreviousInput;         /* '<S66>/Memory' */
   real_T Memory_PreviousInput_m;       /* '<S67>/Memory' */
   real_T lastTs;                       /* '<S3>/Chart1' */
   real_T counter;                      /* '<S11>/ClockLogic' */
+  struct {
+    void *LoggedData[2];
+  } Scope3_PWORK;                      /* '<Root>/Scope3' */
+
+  struct {
+    void *LoggedData;
+  } Scope5_PWORK;                      /* '<Root>/Scope5' */
+
+  struct {
+    void *LoggedData;
+  } Scope9_PWORK;                      /* '<Root>/Scope9' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope12_PWORK;                     /* '<S1>/Scope12' */
+
+  struct {
+    void *LoggedData;
+  } Scope_PWORK;                       /* '<Root>/Scope' */
+
+  struct {
+    void *LoggedData;
+  } Scope1_PWORK;                      /* '<Root>/Scope1' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope10_PWORK;                     /* '<Root>/Scope10' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope2_PWORK;                      /* '<Root>/Scope2' */
+
+  struct {
+    void *LoggedData;
+  } Scope6_PWORK;                      /* '<Root>/Scope6' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope7_PWORK;                      /* '<Root>/Scope7' */
+
+  struct {
+    void *LoggedData;
+  } Scope8_PWORK;                      /* '<Root>/Scope8' */
+
+  struct {
+    void *LoggedData[2];
+  } Scope_PWORK_d;                     /* '<S4>/Scope' */
+
+  struct {
+    void *LoggedData;
+  } Scope_PWORK_o;                     /* '<S8>/Scope' */
+
+  struct {
+    void *LoggedData;
+  } Scope4_PWORK;                      /* '<Root>/Scope4' */
+
   int32_T clockTickCounter;            /* '<S1>/Pulse Generator' */
+  uint32_T Counter1_ClkEphState;       /* '<S3>/Counter1' */
+  uint32_T Counter1_RstEphState;       /* '<S3>/Counter1' */
+  uint32_T is_c16_top_level_algo;      /* '<Root>/Mode' */
+  uint32_T is_c2_top_level_algo;       /* '<S8>/sample and hold1' */
+  uint32_T is_c1_top_level_algo;       /* '<S8>/sample and hold' */
+  uint32_T is_c3_top_level_algo;       /* '<S5>/timer' */
+  uint32_T is_c12_top_level_algo;      /* '<S3>/Chart1' */
+  uint32_T is_c18_top_level_algo;      /* '<S11>/DataLogic' */
   uint32_T Holder;                     /* '<S11>/DataLogic' */
+  uint32_T is_c17_top_level_algo;      /* '<S11>/ClockLogic' */
   uint16_T TappedDelay_X_f[10];        /* '<S5>/Tapped Delay' */
   uint16_T temporalCounter_i1;         /* '<Root>/Mode' */
-  uint16_T temporalCounter_i1_c;       /* '<S5>/timer' */
-  uint16_T temporalCounter_i1_o;       /* '<S3>/Chart1' */
+  uint16_T temporalCounter_i1_j;       /* '<S5>/timer' */
+  uint16_T temporalCounter_i1_jw;      /* '<S3>/Chart1' */
   boolean_T Delay8_DSTATE[2];          /* '<S8>/Delay8' */
   boolean_T Delay7_DSTATE;             /* '<S8>/Delay7' */
   boolean_T Delay6_DSTATE[2];          /* '<S8>/Delay6' */
+  boolean_T Delay_DSTATE_a[5];         /* '<S8>/Delay' */
   boolean_T Delay4_DSTATE_a[2];        /* '<S8>/Delay4' */
   boolean_T Delay1_DSTATE_m;           /* '<S8>/Delay1' */
   boolean_T Delay3_DSTATE_m[2];        /* '<S8>/Delay3' */
-  boolean_T Delay_DSTATE_a[5];         /* '<S8>/Delay' */
   boolean_T Delay2_DSTATE_m[5];        /* '<S8>/Delay2' */
-  uint8_T is_c16_top_level_algo;       /* '<Root>/Mode' */
+  int8_T IfActionSubsystem1_SubsysRanBC;/* '<S63>/If Action Subsystem1' */
+  int8_T IfActionSubsystem_SubsysRanBC;/* '<S63>/If Action Subsystem' */
+  int8_T IfActionSubsystem1_SubsysRanB_h;/* '<S53>/If Action Subsystem1' */
+  int8_T IfActionSubsystem_SubsysRanBC_e;/* '<S53>/If Action Subsystem' */
+  uint8_T Counter1_Count;              /* '<S3>/Counter1' */
   uint8_T is_active_c16_top_level_algo;/* '<Root>/Mode' */
-  uint8_T is_c3_top_level_algo;        /* '<S5>/timer' */
+  uint8_T is_active_c2_top_level_algo; /* '<S8>/sample and hold1' */
+  uint8_T is_active_c1_top_level_algo; /* '<S8>/sample and hold' */
   uint8_T is_active_c3_top_level_algo; /* '<S5>/timer' */
-  uint8_T is_c12_top_level_algo;       /* '<S3>/Chart1' */
   uint8_T is_active_c12_top_level_algo;/* '<S3>/Chart1' */
-  uint8_T is_c18_top_level_algo;       /* '<S11>/DataLogic' */
   uint8_T is_active_c18_top_level_algo;/* '<S11>/DataLogic' */
-  uint8_T temporalCounter_i1_n;        /* '<S11>/DataLogic' */
-  uint8_T is_c17_top_level_algo;       /* '<S11>/ClockLogic' */
+  uint8_T temporalCounter_i1_c;        /* '<S11>/DataLogic' */
   uint8_T is_active_c17_top_level_algo;/* '<S11>/ClockLogic' */
-  uint8_T temporalCounter_i1_o2;       /* '<S11>/ClockLogic' */
+  uint8_T temporalCounter_i1_f;        /* '<S11>/ClockLogic' */
   boolean_T TmpRTBAtChart1Inport2_Buffer0;/* synthesized block */
-  DW_sampleandhold_top_level_al_T sf_sampleandhold1;/* '<S8>/sample and hold1' */
-  DW_sampleandhold_top_level_al_T sf_sampleandhold;/* '<S8>/sample and hold' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem10_g1;/* '<S14>/If Action Subsystem10' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem8_n;/* '<S14>/If Action Subsystem8' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem7_e;/* '<S14>/If Action Subsystem7' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem6_l;/* '<S14>/If Action Subsystem6' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem5_e;/* '<S14>/If Action Subsystem5' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem4_o;/* '<S14>/If Action Subsystem4' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem3_e;/* '<S14>/If Action Subsystem3' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem2_f;/* '<S14>/If Action Subsystem2' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem1_m;/* '<S14>/If Action Subsystem1' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem_b;/* '<S14>/If Action Subsystem' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem10_g;/* '<S13>/If Action Subsystem10' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem8_i;/* '<S13>/If Action Subsystem8' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem7_i;/* '<S13>/If Action Subsystem7' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem6_j;/* '<S13>/If Action Subsystem6' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem5_b;/* '<S13>/If Action Subsystem5' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem4_b;/* '<S13>/If Action Subsystem4' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem3_d;/* '<S13>/If Action Subsystem3' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem2_n;/* '<S13>/If Action Subsystem2' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem1_g;/* '<S13>/If Action Subsystem1' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem_e;/* '<S13>/If Action Subsystem' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem10;/* '<S12>/If Action Subsystem10' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem8;/* '<S12>/If Action Subsystem8' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem7;/* '<S12>/If Action Subsystem7' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem6;/* '<S12>/If Action Subsystem6' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem5;/* '<S12>/If Action Subsystem5' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem4;/* '<S12>/If Action Subsystem4' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem3;/* '<S12>/If Action Subsystem3' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem2;/* '<S12>/If Action Subsystem2' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem1;/* '<S12>/If Action Subsystem1' */
+  DW_IfActionSubsystem_top_leve_T IfActionSubsystem;/* '<S12>/If Action Subsystem' */
 } DW_top_level_algo_T;
 
 /* Parameters for system: '<S12>/If Action Subsystem' */
@@ -217,10 +364,13 @@ struct P_top_level_algo_T_ {
   uint16_T TappedDelay_vinit_l;        /* Mask Parameter: TappedDelay_vinit_l
                                         * Referenced by: '<S5>/Tapped Delay'
                                         */
+  uint8_T Counter1_InitialCount;       /* Mask Parameter: Counter1_InitialCount
+                                        * Referenced by: '<S3>/Counter1'
+                                        */
   real_T AnalogInput_SampleTime;       /* Expression: 0.005
                                         * Referenced by: '<Root>/Analog Input'
                                         */
-  real_T DigitalInput_SampleTime;      /* Expression: 0.1
+  real_T DigitalInput_SampleTime;      /* Expression: 0.05
                                         * Referenced by: '<Root>/Digital Input'
                                         */
   real_T Constant_Value[2];            /* Expression: [0,0]
@@ -235,6 +385,24 @@ struct P_top_level_algo_T_ {
   real_T Constant2_Value[4];           /* Expression: [0,0,0,0]
                                         * Referenced by: '<Root>/Constant2'
                                         */
+  real_T TmpRTBAtModeOutport2_InitialCon;/* Expression: 0
+                                          * Referenced by:
+                                          */
+  real_T Switch1_Threshold;            /* Expression: 0
+                                        * Referenced by: '<Root>/Switch1'
+                                        */
+  real_T displacement_InitialCondition;/* Expression: 0
+                                        * Referenced by:
+                                        */
+  real_T displacement_InitialCondition_j;/* Expression: 0
+                                          * Referenced by:
+                                          */
+  real_T Constant1_Value;              /* Expression: 100
+                                        * Referenced by: '<S10>/Constant1'
+                                        */
+  real_T Constant2_Value_c;            /* Expression: 10
+                                        * Referenced by: '<S10>/Constant2'
+                                        */
   real_T PulseGenerator_Amp;           /* Expression: 1
                                         * Referenced by: '<S1>/Pulse Generator'
                                         */
@@ -244,26 +412,14 @@ struct P_top_level_algo_T_ {
   real_T PulseGenerator_Duty;         /* Computed Parameter: PulseGenerator_Duty
                                        * Referenced by: '<S1>/Pulse Generator'
                                        */
-  real_T PulseGenerator_PhaseDelay;    /* Expression: 0
+  real_T PulseGenerator_PhaseDelay;    /* Expression: 2
                                         * Referenced by: '<S1>/Pulse Generator'
                                         */
   real_T TmpRTBAtModeOutport3_InitialCon;/* Expression: 0
                                           * Referenced by:
                                           */
   real_T Switch2_Threshold;            /* Expression: 0
-                                        * Referenced by: '<Root>/Switch2'
-                                        */
-  real_T Constant1_Value;              /* Expression: 100
-                                        * Referenced by: '<S10>/Constant1'
-                                        */
-  real_T Constant2_Value_c;            /* Expression: 10
-                                        * Referenced by: '<S10>/Constant2'
-                                        */
-  real_T TmpRTBAtModeOutport2_InitialCon;/* Expression: 0
-                                          * Referenced by:
-                                          */
-  real_T Switch1_Threshold;            /* Expression: 0
-                                        * Referenced by: '<Root>/Switch1'
+                                        * Referenced by: '<S1>/Switch2'
                                         */
   real_T Constant1_Value_d;            /* Expression: 4095
                                         * Referenced by: '<S5>/Constant1'
@@ -310,11 +466,17 @@ struct P_top_level_algo_T_ {
   real_T CompressionSensitivity_Gain;  /* Expression: 0.5
                                         * Referenced by: '<S4>/Compression  Sensitivity'
                                         */
+  real_T Constant2_Value_p;            /* Expression: 0
+                                        * Referenced by: '<S3>/Constant2'
+                                        */
   real_T Constant_Value_i;             /* Expression: 0
                                         * Referenced by: '<S63>/Constant'
                                         */
   int32_T Constant4_Value;             /* Computed Parameter: Constant4_Value
-                                        * Referenced by: '<Root>/Constant4'
+                                        * Referenced by: '<S1>/Constant4'
+                                        */
+  uint32_T Constant_Value_at;          /* Computed Parameter: Constant_Value_at
+                                        * Referenced by: '<S10>/Constant'
                                         */
   boolean_T Constant_Value_p;          /* Computed Parameter: Constant_Value_p
                                         * Referenced by: '<S6>/Constant'
@@ -335,6 +497,10 @@ struct P_top_level_algo_T_ {
                                   /* Computed Parameter: Delay6_InitialCondition
                                    * Referenced by: '<S8>/Delay6'
                                    */
+  boolean_T Delay_InitialCondition_d;
+                                 /* Computed Parameter: Delay_InitialCondition_d
+                                  * Referenced by: '<S8>/Delay'
+                                  */
   boolean_T Delay4_InitialCondition_f;
                                 /* Computed Parameter: Delay4_InitialCondition_f
                                  * Referenced by: '<S8>/Delay4'
@@ -347,14 +513,13 @@ struct P_top_level_algo_T_ {
                                 /* Computed Parameter: Delay3_InitialCondition_k
                                  * Referenced by: '<S8>/Delay3'
                                  */
-  boolean_T Delay_InitialCondition_d;
-                                 /* Computed Parameter: Delay_InitialCondition_d
-                                  * Referenced by: '<S8>/Delay'
-                                  */
   boolean_T Delay2_InitialCondition_c;
                                 /* Computed Parameter: Delay2_InitialCondition_c
                                  * Referenced by: '<S8>/Delay2'
                                  */
+  uint8_T Gain_Gain_l;                 /* Computed Parameter: Gain_Gain_l
+                                        * Referenced by: '<Root>/Gain'
+                                        */
   uint8_T Merge_InitialOutput;        /* Computed Parameter: Merge_InitialOutput
                                        * Referenced by: '<S12>/Merge'
                                        */
@@ -399,7 +564,27 @@ struct P_top_level_algo_T_ {
 /* Real-time Model Data Structure */
 struct tag_RTM_top_level_algo_T {
   const char_T *errorStatus;
+  RTWExtModeInfo *extModeInfo;
   RTWSolverInfo solverInfo;
+
+  /*
+   * Sizes:
+   * The following substructure contains sizes information
+   * for many of the model attributes such as inputs, outputs,
+   * dwork, sample times, etc.
+   */
+  struct {
+    uint32_T checksums[4];
+  } Sizes;
+
+  /*
+   * SpecialInfo:
+   * The following substructure contains special information
+   * related to other components that are dependent on RTW.
+   */
+  struct {
+    const void *mappingInfo;
+  } SpecialInfo;
 
   /*
    * Timing:
@@ -410,6 +595,8 @@ struct tag_RTM_top_level_algo_T {
     uint32_T clockTick0;
     time_T stepSize0;
     uint32_T clockTick1;
+    uint32_T clockTick2;
+    uint32_T clockTick3;
     struct {
       uint8_T TID[4];
     } TaskCounters;
@@ -420,7 +607,9 @@ struct tag_RTM_top_level_algo_T {
       boolean_T TID2_3;
     } RateInteraction;
 
+    time_T tFinal;
     SimTimeStep simTimeStep;
+    boolean_T stopRequestedFlag;
     time_T *t;
     time_T tArray[4];
   } Timing;
@@ -454,39 +643,11 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S1>/Display1' : Unused code path elimination
- * Block '<S1>/Display2' : Unused code path elimination
- * Block '<S10>/Add1' : Unused code path elimination
- * Block '<S10>/Constant' : Unused code path elimination
- * Block '<S10>/Display1' : Unused code path elimination
- * Block '<S10>/Display2' : Unused code path elimination
- * Block '<S10>/Shift Arithmetic3' : Unused code path elimination
- * Block '<S1>/Scope12' : Unused code path elimination
- * Block '<S3>/Constant2' : Unused code path elimination
- * Block '<S3>/Counter1' : Unused code path elimination
- * Block '<S3>/Subtract3' : Unused code path elimination
- * Block '<S4>/Scope' : Unused code path elimination
- * Block '<Root>/Display' : Unused code path elimination
- * Block '<Root>/Display1' : Unused code path elimination
- * Block '<Root>/Display2' : Unused code path elimination
- * Block '<Root>/Display3' : Unused code path elimination
- * Block '<Root>/Gain' : Unused code path elimination
  * Block '<S61>/Data Type Duplicate' : Unused code path elimination
  * Block '<S66>/FixPt Data Type Duplicate2' : Unused code path elimination
  * Block '<S62>/Data Type Duplicate' : Unused code path elimination
  * Block '<S67>/FixPt Data Type Duplicate2' : Unused code path elimination
- * Block '<S8>/Scope' : Unused code path elimination
- * Block '<Root>/Scope' : Unused code path elimination
- * Block '<Root>/Scope1' : Unused code path elimination
- * Block '<Root>/Scope10' : Unused code path elimination
- * Block '<Root>/Scope2' : Unused code path elimination
- * Block '<Root>/Scope3' : Unused code path elimination
- * Block '<Root>/Scope4' : Unused code path elimination
- * Block '<Root>/Scope7' : Unused code path elimination
- * Block '<Root>/Scope8' : Unused code path elimination
- * Block '<Root>/Scope9' : Unused code path elimination
  * Block '<S10>/Shift Arithmetic' : Eliminated trivial shift
- * Block '<S11>/Cast To Double' : Eliminate redundant data type conversion
  */
 
 /*-

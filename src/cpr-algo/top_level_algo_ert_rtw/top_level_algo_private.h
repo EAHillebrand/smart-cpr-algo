@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.25
+ * Model version                  : 3.28
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
+ * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -20,6 +20,7 @@
 #ifndef RTW_HEADER_top_level_algo_private_h_
 #define RTW_HEADER_top_level_algo_private_h_
 #include "rtwtypes.h"
+#include "multiword_types.h"
 #include "top_level_algo.h"
 #include "top_level_algo_types.h"
 
@@ -30,6 +31,10 @@
 
 #ifndef rtmIsMinorTimeStep
 #define rtmIsMinorTimeStep(rtm)        (((rtm)->Timing.simTimeStep) == MINOR_TIME_STEP)
+#endif
+
+#ifndef rtmSetTFinal
+#define rtmSetTFinal(rtm, val)         ((rtm)->Timing.tFinal = (val))
 #endif
 
 #ifndef rtmSetTPtr
@@ -86,12 +91,11 @@ preprocessor word size checks.
 
 extern real_T rt_roundd_snf(real_T u);
 extern real_T rt_modd_snf(real_T u0, real_T u1);
+extern uint32_T MWDSP_EPH_R_D(real_T evt, uint32_T *sta);
+extern uint32_T MWDSP_EPH_R_B(boolean_T evt, uint32_T *sta);
 extern int32_T div_nde_s32_floor(int32_T numerator, int32_T denominator);
 extern void top_level_IfActionSubsystem(uint8_T *rty_Out1,
   P_IfActionSubsystem_top_level_T *localP);
-extern void top_leve_sampleandhold_Init(real_T *rty_displacement);
-extern void top_level_alg_sampleandhold(real_T rtu_max, boolean_T rtu_read,
-  real_T *rty_displacement, DW_sampleandhold_top_level_al_T *localDW);
 
 #endif                                /* RTW_HEADER_top_level_algo_private_h_ */
 

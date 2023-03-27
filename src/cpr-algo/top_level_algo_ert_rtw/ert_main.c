@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.25
+ * Model version                  : 3.28
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Mar 25 13:47:25 2023
+ * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -24,6 +24,7 @@
 #include "rtwtypes.h"
 #include "limits.h"
 #include "rt_nonfinite.h"
+#include "ext_mode.h"
 #include "MW_ArduinoHWInit.h"
 #include "mw_freertos.h"
 #define UNUSED(x)                      x = x
@@ -36,6 +37,7 @@ void *baseRateTask(void *arg);
 void *subrateTask(void *arg);
 volatile boolean_T stopRequested = false;
 volatile boolean_T runModel = true;
+extmodeErrorCode_T errorCode;
 SemaphoreHandle_t stopSem;
 SemaphoreHandle_t baserateTaskSem;
 SemaphoreHandle_t subrateTaskSem[2];
@@ -46,6 +48,24 @@ void *threadJoinStatus;
 int terminatingmodel = 0;
 mw_thread_t subRateThread[2];
 int subratePriority[2];
+extmodeSimulationTime_T getCurrentTaskTime(int tid)
+{
+  extmodeSimulationTime_T currentTime = 0;
+  switch (tid) {
+   case 2:
+    currentTime = (extmodeSimulationTime_T)
+      ((top_level_algo_M->Timing.clockTick2) * 0.005);
+    break;
+
+   case 3:
+    currentTime = (extmodeSimulationTime_T)
+      ((top_level_algo_M->Timing.clockTick3) * 0.05);
+    break;
+  }
+
+  return currentTime;
+}
+
 void *subrateTask(void *arg)
 {
   int tid = *((int *) arg);
@@ -62,9 +82,13 @@ void *subrateTask(void *arg)
 
 #endif
 
+    extmodeSimulationTime_T currentTime = getCurrentTaskTime(subRateId);
     top_level_algo_step(subRateId);
 
     /* Get model outputs here */
+
+    /* Trigger External Mode event */
+    extmodeEvent(subRateId, currentTime);
   }
 
   mw_osThreadExit((void *)0);
@@ -94,11 +118,25 @@ void *baseRateTask(void *arg)
       }
     }
 
+    extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T)
+      ((top_level_algo_M->Timing.clockTick1) * 0.001);
+
+    /* Run External Mode background activities */
+    errorCode = extmodeBackgroundRun();
+    if (errorCode != EXTMODE_SUCCESS) {
+      /* Code to handle External Mode background task errors
+         may be added here */
+    }
+
     top_level_algo_step(0);
 
     /* Get model outputs here */
+
+    /* Trigger External Mode event */
+    extmodeEvent(1, currentTime);
     stopRequested = !((rtmGetErrorStatus(top_level_algo_M) == (NULL)));
-    runModel = !stopRequested;
+    runModel = !stopRequested && !extmodeSimulationComplete() &&
+      !extmodeStopRequested();
   }
 
   terminateTask(arg);
@@ -139,6 +177,7 @@ void *terminateTask(void *arg)
 
   /* Terminate model */
   top_level_algo_terminate();
+  extmodeReset();
   mw_osSemaphoreRelease(&stopSem);
   return NULL;
 }
@@ -151,8 +190,30 @@ int app_main(int argc, char **argv)
   MW_Arduino_Init();
   rtmSetErrorStatus(top_level_algo_M, 0);
 
+  /* Parse External Mode command line arguments */
+  errorCode = extmodeParseArgs(argc, (const char_T **)argv);
+  if (errorCode != EXTMODE_SUCCESS) {
+    return (errorCode);
+  }
+
   /* Initialize model */
   top_level_algo_initialize();
+
+  /* External Mode initialization */
+  errorCode = extmodeInit(top_level_algo_M->extModeInfo, &rtmGetTFinal
+    (top_level_algo_M));
+  if (errorCode != EXTMODE_SUCCESS) {
+    /* Code to handle External Mode initialization errors
+       may be added here */
+  }
+
+  if (errorCode == EXTMODE_SUCCESS) {
+    /* Wait until a Start or Stop Request has been received from the Host */
+    extmodeWaitForHostRequest(EXTMODE_WAIT_FOREVER);
+    if (extmodeStopRequested()) {
+      rtmSetStopRequested(top_level_algo_M, true);
+    }
+  }
 
   /* Call RTOS Initialization function */
   mw_RTOSInit(0.001, 2);
