@@ -1,0 +1,1 @@
+var modelInfo = {model:"arduino_gettingstarted"};var modelHierarchy=[{model:"arduino_gettingstarted",relativePath:"_internal.html",parent:"null"},];

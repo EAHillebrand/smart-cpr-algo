@@ -7,9 +7,9 @@
  *
  * Code generation for model "top_level_algo".
  *
- * Model version              : 3.28
+ * Model version              : 3.40
  * Simulink Coder version : 9.8 (R2022b) 13-May-2022
- * C source code generated on : Sun Mar 26 15:35:11 2023
+ * C source code generated on : Sat Apr  1 11:05:00 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -43,7 +43,7 @@ typedef real_T extmodeClassicTriggerSignal_T;
 #define XCP_UINT32_MAX                 0xFFFFFFFFU
 
 /** External Mode Base rate event id */
-#define EXTMODE_BASE_RATE_EVENT_ID     1
+#define EXTMODE_BASE_RATE_EVENT_ID     0
 
 /** External Mode Max Event Id */
 #define EXTMODE_MAX_EVENT_ID           0xFF

@@ -29,7 +29,7 @@
 #define MW_EXTMODE_RUNNING on
 #define MW_RTOS FreeRTOS
 #define MW_RTOSBASERATETASKPRIORITY 14
-#define MW_DETECTTASKOVERRUNS 0
+#define MW_DETECTTASKOVERRUNS 0.000000
 #define MW_SCHEDULER_INTERRUPT_SOURCE 0
 #define MW_ESP32_ESP32_BOARD -1
 #define MW_RUNTIME_BUILDACTION 1
@@ -107,7 +107,6 @@
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_BLOCKCLASS codertarget.targetHiddenBlkInsert.internal.pushButton
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_REGFCN codertarget.arduinobase.blocks.registerDashboardBlk
 #define MW_DASHBOARDCODEGENINFO_PUSHBUTTON_VALIDATEFCN codertarget.targetHiddenBlkInsert.internal.isDashboardBlockCodegenEnabled
-#define MW_STM32_DIGITALPORTWRITE_ID 2688
 #define MW_IOBLOCKSMODE deployed
 
 #endif /* __MW_TARGET_HARDWARE_RESOURCES_H__ */

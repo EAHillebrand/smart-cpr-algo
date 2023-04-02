@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.28
+ * Model version                  : 3.40
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sun Mar 26 15:35:11 2023
+ * C/C++ source code generated on : Sat Apr  1 11:05:00 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,7 +23,6 @@
 #include "top_level_algo_private.h"
 #include "rtwtypes.h"
 #include "limits.h"
-#include "rt_nonfinite.h"
 #include "ext_mode.h"
 #include "MW_ArduinoHWInit.h"
 #include "mw_freertos.h"
@@ -40,26 +39,21 @@ volatile boolean_T runModel = true;
 extmodeErrorCode_T errorCode;
 SemaphoreHandle_t stopSem;
 SemaphoreHandle_t baserateTaskSem;
-SemaphoreHandle_t subrateTaskSem[2];
-int taskId[2];
+SemaphoreHandle_t subrateTaskSem[1];
+int taskId[1];
 mw_thread_t schedulerThread;
 mw_thread_t baseRateThread;
 void *threadJoinStatus;
 int terminatingmodel = 0;
-mw_thread_t subRateThread[2];
-int subratePriority[2];
+mw_thread_t subRateThread[1];
+int subratePriority[1];
 extmodeSimulationTime_T getCurrentTaskTime(int tid)
 {
   extmodeSimulationTime_T currentTime = 0;
   switch (tid) {
-   case 2:
+   case 1:
     currentTime = (extmodeSimulationTime_T)
-      ((top_level_algo_M->Timing.clockTick2) * 0.005);
-    break;
-
-   case 3:
-    currentTime = (extmodeSimulationTime_T)
-      ((top_level_algo_M->Timing.clockTick3) * 0.05);
+      ((top_level_algo_M->Timing.clockTick1) * 0.005);
     break;
   }
 
@@ -70,7 +64,7 @@ void *subrateTask(void *arg)
 {
   int tid = *((int *) arg);
   int subRateId;
-  subRateId = tid + 2;
+  subRateId = tid + 1;
   while (runModel) {
     mw_osSemaphoreWaitEver(&subrateTaskSem[tid]);
     if (terminatingmodel)
@@ -97,7 +91,6 @@ void *subrateTask(void *arg)
 
 void *baseRateTask(void *arg)
 {
-  int_T i;
   runModel = (rtmGetErrorStatus(top_level_algo_M) == (NULL));
   while (runModel) {
     mw_osSemaphoreWaitEver(&baserateTaskSem);
@@ -109,17 +102,13 @@ void *baseRateTask(void *arg)
 
 #endif
 
-    for (i = 1
-         ; i <= 2; i++) {
-      if (rtmStepTask(top_level_algo_M, i + 1)
-          ) {
-        mw_osSemaphoreRelease(&subrateTaskSem[ i - 1
-                              ]);
-      }
+    if (rtmStepTask(top_level_algo_M, 1)
+        ) {
+      mw_osSemaphoreRelease(&subrateTaskSem[0]);
     }
 
     extmodeSimulationTime_T currentTime = (extmodeSimulationTime_T)
-      ((top_level_algo_M->Timing.clockTick1) * 0.001);
+      top_level_algo_M->Timing.taskTime0;
 
     /* Run External Mode background activities */
     errorCode = extmodeBackgroundRun();
@@ -133,7 +122,7 @@ void *baseRateTask(void *arg)
     /* Get model outputs here */
 
     /* Trigger External Mode event */
-    extmodeEvent(1, currentTime);
+    extmodeEvent(0, currentTime);
     stopRequested = !((rtmGetErrorStatus(top_level_algo_M) == (NULL)));
     runModel = !stopRequested && !extmodeSimulationComplete() &&
       !extmodeStopRequested();
@@ -159,7 +148,7 @@ void *terminateTask(void *arg)
     int i;
 
     /* Signal all periodic tasks to complete */
-    for (i=0; i<2; i++) {
+    for (i=0; i<1; i++) {
       CHECK_STATUS(mw_osSemaphoreRelease(&subrateTaskSem[i]), 0,
                    "mw_osSemaphoreRelease");
       CHECK_STATUS(mw_osSemaphoreDelete(&subrateTaskSem[i]), 0,
@@ -167,7 +156,7 @@ void *terminateTask(void *arg)
     }
 
     /* Wait for all periodic tasks to complete */
-    for (i=0; i<2; i++) {
+    for (i=0; i<1; i++) {
       CHECK_STATUS(mw_osThreadJoin(subRateThread[i], &threadJoinStatus), 0,
                    "mw_osThreadJoin");
     }
@@ -185,7 +174,6 @@ void *terminateTask(void *arg)
 int app_main(int argc, char **argv)
 {
   subratePriority[0] = 15;
-  subratePriority[1] = 16;
   init();
   MW_Arduino_Init();
   rtmSetErrorStatus(top_level_algo_M, 0);
@@ -216,7 +204,7 @@ int app_main(int argc, char **argv)
   }
 
   /* Call RTOS Initialization function */
-  mw_RTOSInit(0.001, 2);
+  mw_RTOSInit(0.001, 1);
 
   /* Wait for stop semaphore */
   mw_osSemaphoreWaitEver(&stopSem);
