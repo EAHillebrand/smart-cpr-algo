@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   4 \
+    NumChartData   3 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -16,14 +16,6 @@
     ChartData {\
       Name         "is_c3_top_level_algo"\
       Description  "StateActiveChild"\
-      SFName       "is_c3_top_level_algo"\
-      Path         "is_c3_top_level_algo"\
-      SrcLocation  ""\
-      IsTestPoint  1\
-    }\
-    ChartData {\
-      Name         "sfEvent"\
-      Description  "ActiveChartEvent"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\
@@ -31,10 +23,9 @@
     ChartData {\
       Name         "is_active_c3_top_level_algo"\
       Description  "StateIsActive"\
-      SFName       "is_active_c3_top_level_algo"\
-      Path         "is_active_c3_top_level_algo"\
+      SFName       ""\
+      Path         ""\
       SrcLocation  ""\
-      IsTestPoint  1\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\

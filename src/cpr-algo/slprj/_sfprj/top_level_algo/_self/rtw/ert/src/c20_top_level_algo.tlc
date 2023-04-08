@@ -16,10 +16,16 @@
     ChartData {\
       Name         "is_c20_top_level_algo"\
       Description  "StateActiveChild"\
-      SFName       "is_c20_top_level_algo"\
-      Path         "is_c20_top_level_algo"\
+      SFName       ""\
+      Path         ""\
       SrcLocation  ""\
-      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_EVALUATING"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "EVALUATING"\
+      SrcLocation  ""\
     }\
     ChartData {\
       Name         "rates"\
@@ -43,19 +49,11 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "sfEvent"\
-      Description  "ActiveChartEvent"\
+      Name         "is_active_c20_top_level_algo"\
+      Description  "StateIsActive"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_active_c20_top_level_algo"\
-      Description  "StateIsActive"\
-      SFName       "is_active_c20_top_level_algo"\
-      Path         "is_active_c20_top_level_algo"\
-      SrcLocation  ""\
-      IsTestPoint  1\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\

@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   7 \
+    NumChartData   4 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -16,23 +16,8 @@
     ChartData {\
       Name         "is_c12_top_level_algo"\
       Description  "StateActiveChild"\
-      SFName       "is_c12_top_level_algo"\
-      Path         "is_c12_top_level_algo"\
-      SrcLocation  ""\
-      IsTestPoint  1\
-    }\
-    ChartData {\
-      Name         "sumDetect"\
-      Description  "ChartLocal"\
       SFName       ""\
-      Path         "sumDetect"\
-      SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "newTs"\
-      Description  "ChartLocal"\
-      SFName       ""\
-      Path         "newTs"\
+      Path         ""\
       SrcLocation  ""\
     }\
     ChartData {\
@@ -43,19 +28,11 @@
       SrcLocation  ""\
     }\
     ChartData {\
-      Name         "sfEvent"\
-      Description  "ActiveChartEvent"\
+      Name         "is_active_c12_top_level_algo"\
+      Description  "StateIsActive"\
       SFName       ""\
       Path         ""\
       SrcLocation  ""\
-    }\
-    ChartData {\
-      Name         "is_active_c12_top_level_algo"\
-      Description  "StateIsActive"\
-      SFName       "is_active_c12_top_level_algo"\
-      Path         "is_active_c12_top_level_algo"\
-      SrcLocation  ""\
-      IsTestPoint  1\
     }\
     ChartData {\
       Name         "temporalCounter_i1"\
