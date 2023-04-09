@@ -7,7 +7,7 @@
 %endfunction
 %function ChartDataMap(block, system) void
   %createrecord ChartDataElements {\
-    NumChartData   7 \
+    NumChartData   14 \
     ChartDataDefaults {\
       RecordType   "ChartData"\
       Dimensions   []\
@@ -46,6 +46,55 @@
       Description  "ChartLocal"\
       SFName       ""\
       Path         "recoils"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "depths"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "depths"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "max_r"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "max_r"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "min_d"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "min_d"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "rate_sum"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "rate_sum"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "min_r"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "min_r"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "max_d"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "max_d"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "depth_sum"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "depth_sum"\
       SrcLocation  ""\
     }\
     ChartData {\
