@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'top_level_algo'.
  *
- * Model version                  : 3.56
+ * Model version                  : 3.60
  * Simulink Coder version         : 9.8 (R2022b) 13-May-2022
- * C/C++ source code generated on : Sat Apr  8 20:58:24 2023
+ * C/C++ source code generated on : Mon Apr 10 16:36:37 2023
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -98,6 +98,24 @@ typedef struct tag_8ohiN1FAOgR98njPNu14NC codertarget_arduinobase_inter_T;
 
 #endif                             /* typedef_codertarget_arduinobase_inter_T */
 
+#ifndef struct_tag_ydfAS3v1Vw0VUnrQuJh0FC
+#define struct_tag_ydfAS3v1Vw0VUnrQuJh0FC
+
+struct tag_ydfAS3v1Vw0VUnrQuJh0FC
+{
+  int32_T isInitialized;
+  uint8_T Index;
+};
+
+#endif                                 /* struct_tag_ydfAS3v1Vw0VUnrQuJh0FC */
+
+#ifndef typedef_codertarget_arduinobase_int_o_T
+#define typedef_codertarget_arduinobase_int_o_T
+
+typedef struct tag_ydfAS3v1Vw0VUnrQuJh0FC codertarget_arduinobase_int_o_T;
+
+#endif                             /* typedef_codertarget_arduinobase_int_o_T */
+
 #ifndef struct_tag_vboetmpsA6pP5KWZSA57JC
 #define struct_tag_vboetmpsA6pP5KWZSA57JC
 
@@ -153,7 +171,7 @@ typedef struct tag_mPMPiw8t0JZKYO8orfnwRG codertarget_arduinobase_blo_o_T;
 
 #endif                             /* typedef_codertarget_arduinobase_blo_o_T */
 
-/* Parameters for system: '<S20>/If Action Subsystem' */
+/* Parameters for system: '<S22>/If Action Subsystem' */
 typedef struct P_IfActionSubsystem_top_level_T_ P_IfActionSubsystem_top_level_T;
 
 /* Parameters (default storage) */
